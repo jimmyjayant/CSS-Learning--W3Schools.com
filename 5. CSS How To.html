@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS How To 
+        </title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            How To Add CSS 
+        </h1>
+
+        <br>
+
+        <p>
+            When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet. 
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            Three Ways to Insert CSS 
+        </h2>
+
+        <br>
+
+        <p>
+            There are three ways of inserting a style sheet:- 
+            <br>
+            <ul>
+                <li>External CSS</li>
+                <li>Internal CSS</li>
+                <li>Inline CSS</li>
+            </ul>
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            External CSS 
+        </h2>
+
+        <br>
+
+        <p>
+            With an external style sheet, you can change the look of an entire website by changing just one file! 
+            <br>
+            Each HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element, inside the head section. 
+            <br>
+            Example:- 
+            <br>
+            External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of a HTML page:- 
+            <br>
+            <a href="5. CSS How To-External CSS 1.html" target="_blank">External CSS Example 1</a>
+
+            <br>
+            <br>
+
+            An external style sheet can be written in any text editor, and must be saved with a .css extension. 
+            <br>
+            The external .css file should not contain any HTML tags. 
+            <br>
+            Here is how the "mystyle.css" file looks:- 
+            <br>
+            <u>"mystyle.css"</u>
+            <p style="background-color:yellow;padding:10px;">
+            body {
+                <br>
+                background-color:lightblue;
+                <br>
+            }
+            <br>
+            h1 {
+                <br>
+                color:navy;
+                <br>
+                margin-left:20px;
+                <br>
+            }
+            </p>
+
+            <br>
+            <br>
+
+            <p style="background-color:pink;padding:20px;">
+            <strong>Note:- </strong>Do not add a space between the property value and the unit:- 
+            <br>
+            Incorrect (space): <span style="color:red;background-color:#d3d3d3;">margin-left: 20 px;</span>
+            <br>
+            Correct (nospace): <span style="color:red;background-color:#d3d3d3;">margin-left: 20px;</span>
+            </p>
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            Internal CSS 
+        </h2>
+
+        <br>
+
+        <p>
+            An internal style sheet may be used if one single HTML page has a unique style. 
+            <br>
+            The internal style is defined inside the &lt;style&gt; element, inside the head section. 
+            <br>
+            Example:- 
+            <br>
+            Internal styles are defined within the &lt;style&gt; element, inside the &lt;head&gt; section of a HTML page:- 
+            <br>
+            <a href="5. CSS How To-Internal Stylesheet.html" target="_blank">Internal Stylesheet Example</a>
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            Inline CSS 
+        </h2>
+
+        <br>
+
+        <p>
+            An inline style may be used to apply a unique style for a single element. 
+            <br>
+            To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property. 
+            <br>
+            Example:- 
+            <br>
+            Inline styles are defined within the "style" attribute of the relevant element:- 
+            <br>
+            <a href="5. CSS How To-Inline CSS.html" target="_blank">Inline CSS Example </a>
+
+            <br>
+
+
+            <p style="background-color:yellow;padding:20px;">
+                <strong>Tip:- </strong>An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly. 
+            </p>
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            Multiple Style Sheets 
+        </h2>
+
+        <br>
+
+        <p>
+            If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. 
+            <br>
+            <p style="background-color:yellow;border:grey;padding:1px;">
+            Assume that an <b>external style sheet</b> has the following style for the &lt;h1&gt; element:- 
+            <br>
+            h1 {
+                <br>
+                color:navy;
+                <br>
+            }
+            </p>
+
+            <br>
+            <br>
+            
+            <p style="background-color:yellow;border:grey;padding:1px;">
+            Then, assume that an <b>internal style sheet</b> also has the following style for the &lt;h1&gt; element:- 
+            <br>
+            h1 {
+                <br>
+                color:orange;
+                <br>
+            }
+            </p>
+
+            <br>
+            <br>
+            
+            Example:- 
+            <br>
+            If the internal style is defined <b>after</b> the link to the external style sheet, the &lt;h1&gt; elements will be "orange":- 
+            <br>
+            <a href="5. CSS How To-Internal After External.html" target="_blank">Internal After External Example</a>
+
+            <br>
+            <br>
+
+            Example:- 
+            <br>
+            However, if the internal style is defined <b>before</b> the link to the external style sheet, the &lt;h1&gt; elements will be "navy":- 
+            <br>
+            <a href="5. CSS How To-External After Internal.html" target="_blank">External After Internal Example</a>
+
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            Cascading Order 
+        </h2>
+
+        <br>
+
+        <p>
+            What style will be used when there is more than one style specified for a HTML element? 
+            <br>
+            All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:- 
+            <br>
+            <br>
+            <ol>
+                <li>Inline style (inside a HTML element)</li>
+                <li>External and internal style sheets (in the head section)</li>
+                <li>Browser default</li>
+            </ol>
+
+            <br>
+            <br>
+
+            So, an inline style has the highest priority, and will override external and internal styles and browser defaults. 
+            <br>
+            Example:- 
+            <br>
+            <a href="5. CSS How To-Highest Priority Style.html" target="_blank">Highest Priority Style Example</a>
+        </p>
+
+
+    </body>
+</html>
