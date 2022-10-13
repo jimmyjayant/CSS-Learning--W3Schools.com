@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Backgrounds 
+        </title>
+        <style>
+            table {
+                width:50%;
+                border:1px solid #f1f1f1;
+                border-collapse:collapse;
+            }
+            tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            th {
+                text-align:left;
+            }
+            tr {
+                height:40px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>
+            CSS Backgrounds 
+        </h1>
+
+        <br>
+
+        <p>
+            The CSS background properties are used to add background effects for elements. 
+            <br>
+            <br>
+            <div style="background-image:url('Image2.jpg');background-repeat:no-repeat;padding:30px;">
+                In these chapters, you will learn about the following CSS background properties:- 
+                <br>
+                <ul>
+                    <li><span style="color:red;background-color:#f1f1f1;">background-color</span></li>
+                    <li><span style="color:red;background-color:#f1f1f1;">background-image</span></li>
+                    <li><span style="color:red;background-color:#f1f1f1;">background-repeat</span></li>
+                    <li><span style="color:red;background-color:#f1f1f1;">background-attachment</span></li>
+                    <li><span style="color:red;background-color:#f1f1f1;">background-position</span></li>
+                    <li><span style="color:red;background-color:#f1f1f1;">background</span> (shorthand property)</li>
+                </ul>
+            </div>
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            CSS background-color 
+        </h2>
+
+        <br>
+
+        <p>
+            The <span style="background-color:#f1f1f1;color:red;">background-color</span> property specifies the background color of an element. 
+            <br>
+            Example:- 
+            <br>
+            <div style="background-color:lightblue;padding:40px;">
+            <h1>Hello World!</h1>
+            <p>This div element has a light blue background color!</p>
+            </div>
+
+            <br>
+            <br>
+
+            With CSS, a color is most often specified by:- 
+            <br>
+            <br>
+            <ul>
+                <li>a valid color name - like "red"</li>
+                <li>a HEX value - like "#ff0000"</li>
+                <li>a RGB value - like "rgb(255,0,0)"</li>
+            </ul>
+
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            Other Elements 
+        </h2>
+
+        <br>
+
+        <p>
+            You can set the background color for any HTML element. 
+            <br>
+            Example:- 
+            <br>
+            <h1 style="background-color:green;">CSS background-color example!</h1>
+            <div style="background-color:lightblue;">
+                This is a text inside a div element. 
+            <p style="background-color:yellow;">
+               This paragraph has its own background color.  
+            </p>
+            We are still in the div element. 
+            </div>
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            Opacity / Transparency
+        </h2>
+
+        <br>
+
+        <p>
+            The <span style="background-color:#f1f1f1;color:red;">opacity</span> property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent. 
+            <br>
+            Example:- 
+            <br>
+            <div style="background-color:green;opacity:1;padding:20px;margin:0;height:90px;width:20%;text-align:center;float:left;">
+             Opacity 1
+            </div>
+            <div style="background-color:green;opacity:0.6;padding:20px;margin:0;height:90px;width:20%;text-align:center;float:left;">
+            Opacity 0.6
+            </div>
+            <div style="background-color:green;opacity:0.3;padding:20px;margin:0;height:90px;width:20%;text-align:center;float:left;">
+            Opacity 0.3
+            </div>
+            <div style="background-color:green;opacity:0.1;padding:20px;margin:0;height:90px;width:20%;text-align:center;float:left;">
+            Opacity 0.1
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <p style="clear:both;">
+            Example:- 
+            </p>
+            <br>
+            <p>
+                When using the opacity property to add transparency to the background of an element, all of its child elements become transparent as well. This can make the text inside a fully transparent element hard to read. 
+            </p>
+
+            <br>
+            <br>
+
+            <div style="background-color:green;opacity:0.1;">
+            <h1>Opacity 0.1</h1>
+            </div>
+            <br>
+            <div style="background-color:green;opacity:0.3;">
+            <h1>Opacity 0.3</h1>
+            </div>
+            <br>
+            <div style="background-color:green;opacity:0.6;">
+            <h1>Opacity 0.6</h1>
+            </div>
+            <br>
+            <div style="background-color:green;opacity:1;">
+            <h1>Opacity 1 (default)</h1>
+            </div>
+
+            <br>
+            <br>
+
+            <p style="background-color:yellow;opacity:0.8;padding:10px;">
+            <strong>Note:- </strong>When using the <span style="background-color:#f1f1f1;color:red;">opacity</span> property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read. 
+            </p>
+            
+
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            Transparency using RGBA 
+        </h2>
+
+        <br>
+
+        <p>
+           If you do not want to apply opacity to child elements, like in our example above, use <b>RGBA </b>color values. The following example sets the opacity for the background color and not the text. 
+           <br>
+           Example:- 
+           <br>
+           <div style="background-color:rgba(0,128,0,1);float:left;margin:0;padding-top:50px;height:90px;width:20%;text-align:center;">
+           <p>100% opacity</p>
+           </div>
+           <div style="background-color:rgba(0,128,0,0.6);float:left;margin:0;padding-top:50px;height:90px;width:20%;text-align:center;">
+            <p>60% opacity</p>
+           </div>
+           <div style="background-color:rgba(0,128,0,0.3);float:left;margin:0;padding-top:50px;height:90px;width:20%;text-align:center;">
+            <p>30% opacity</p>
+           </div>
+           <div style="background-color:rgba(0,128,0,0.1);float:left;margin:0;padding-top:50px;height:90px;width:20%;text-align:center;">
+            <p>10% opacity</p>
+           </div>
+
+           <br>
+           <br>
+           <div style="clear:both;height:10px;">
+    
+           </div>
+
+           <br>
+
+          
+           You learned from our CSS Colors Chapter, that you can use RGB as a color value. In addition to RGB, you can use a RGB color value with an <b>alpha</b> channel (RGB<b>A</b>) - which specifies the opacity for a color. 
+           <br>
+           An RGBA color value is specified with: rgba(red, green, blue, <i>alpha</i>). The <i>alpha</i> parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque). 
+           <br>
+           <strong>Tip:- </strong>You will learn more about RGBA Colors in our CSS Colors Chapter. 
+           <br>
+           Example:- 
+           <br>
+           <p>
+            Result with opacity:- 
+           </p>
+           <br>
+           <div style="background-color:green;opacity:0.1;">
+           <h1>10% opacity</h1>
+           </div>
+           <br>
+           <div style="background-color:green;opacity:0.3;">
+           <h1>30% opacity</h1>
+           </div>
+           <br>
+           <div style="background-color:green;opacity:0.6;">
+           <h1>60% opacity</h1>
+           </div>
+           <br>
+           <div style="background-color:green;opacity:1;">
+           <h1>Opacity 1</h1>
+           </div>
+           <br>
+           <br>
+           <p>
+            Result with rgba():- 
+           </p>
+           <br>
+           <div style="background-color:rgba(0,128,0,0.1);">
+           <h1>10% opacity</h1>
+           </div>
+           <br>
+           <div style="background-color:rgba(0,128,0,0.3);">
+           <h1>30% opacity</h1>
+           </div>
+           <br>
+           <div style="background-color:rgba(0,128,0,0.6);">
+           <h1>60% opacity</h1>
+           </div>
+           <br>
+           <div style="background-color:rgba(0,128,0,1);">
+           <h1>Opacity 1</h1>
+           </div>
+           <br>
+           <br>
+           Notice how the text gets transparent as well as the background color when using the opacity property. 
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            The CSS Background Color Property 
+        </h2>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>background-color</td>
+                <td>Sets the background color of an element</td>
+            </tr>
+        </table>
+
+
+    </body>
+</html>
