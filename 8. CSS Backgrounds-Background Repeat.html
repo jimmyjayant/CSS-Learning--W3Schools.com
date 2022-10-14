@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Background Image Repeat 
+        </title>
+        <style>
+        table {
+            border:1px solid #f1f1f1;
+            width:100%;
+            border-collapse:collapse;
+        }
+        tr:nth-child(even) {
+            background-color:#f1f1f1;
+        }
+        tr {
+            height:40px;
+        }
+        th {
+            text-align:left;
+        }
+        
+        </style>
+
+    </head>
+    <body>
+        <h1>
+            CSS Background Image Repeat 
+        </h1>
+
+        <br>
+        <br>
+
+        <h2>
+            CSS background-repeat 
+        </h2>
+
+        <br>
+
+        <p>
+            By default, the <span style="background-color:#f1f1f1;color:red;">background-image</span> property repeats an image horizontally and vertically. 
+            <br>
+            Some images should be repeated only horizontally or vertically, or they will look strange, like this:- 
+            <br>
+            Example:- 
+            <br>
+            <div style="width:100%;height:500px;background-image:url('Image5.png');">
+            <h1>Hello World!</h1>
+            <p>Strange background image..........</p>
+            </div>
+
+            <br>
+            <br>
+
+            If the image above is repeated only horizontally (<span style="background-color:#f1f1f1;color:red;">background-repeat:repeat-x;</span>), the background will look better:- 
+            <br>
+            Example:- 
+            <br>
+            <div style="background-image:url('Image5.png');height:300px;background-repeat:repeat-x;">
+                <h1>Hello World!</h1>
+                <p>Here, a background image is repeated only horizontally!</p>
+            </div>
+
+            <br>
+            <br>
+
+            <p style="background-color:rgba(255,255,0,0.3); padding:20px;">
+            <strong>Tip:- </strong>To repeat an image vertically, set <span style="background-color:#f1f1f1;color:red;">background-repeat:repeat-y;</span>
+            </p>
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            CSS background-repeat: no-repeat 
+        </h2>
+
+        <br>
+
+        <p>
+            Showing the background image only once is also specified by the <span style="background-color:#f1f1f1;color:red;">background-repeat</span> property. 
+            <br>
+            Example:- 
+            <br>
+            Show the background image only once:- 
+            <br>
+            <div style="width:100%;height:500px;border:1px solid black;background-image:url('Image6.png');background-repeat:no-repeat;">
+            <h1>Hello World! </h1>
+            <p>W3Schools background image example.</p>
+            <p>The background image only shows once, but it is disturbing the reader!</p>
+            </div>
+
+            <br>
+
+            In the example above, the background image is placed in the same place as the text. We want to change the position of the image, so that it does not disturb the text too much. 
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            CSS background-position 
+        </h2>
+
+        <br>
+
+        <p>
+            The <span style="background-color:#f1f1f1;color:red;">background-position</span> property is used to specify the position of the background image. 
+            <br>
+            Example:- 
+            <br>
+            Position the background image in the top-right corner:- 
+            <br>
+            <div style="width:100%;height:500px;border:1px solid black;background-image:url('Image6.png');background-repeat:no-repeat;background-position:right top;margin-right:200px;">
+            <h1>
+                Hello World! 
+            </h1>
+
+            <p>
+                Here, the background image is only shown once. In addition, it is positioned away from the text. 
+            </p>
+
+            <p>
+                In this example, we have also added a margin on the right side, so that the background image will not disturb the text. 
+            </p>
+
+            </div>
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            The CSS Background Repeat and Position Properties 
+        </h2>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>background-position</td>
+                <td>Sets the starting position of a background image</td>
+            </tr>
+            <tr>
+                <td>background-repeat</td>
+                <td>Sets how a background image will be repeated</td>
+            </tr>
+        </table>
+    </body>
+</html>
