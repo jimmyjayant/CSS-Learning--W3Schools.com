@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Margin Collapse 
+        </title>
+        <style>
+
+        </style>
+
+    </head>
+    <body>
+        <h1>
+            CSS Margin Collapse 
+        </h1>
+        <hr>
+        
+        <p>
+            Sometimes two margins collapse into a single margin. 
+        </p>
+        <hr>
+        <br>
+        <br>
+
+        <h2>
+            Margin Collapse 
+        </h2>
+
+        <br>
+
+        <p>
+          Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins. 
+          <br>
+          This does not happen on left and right margins! Only top and bottom margins! 
+          <br>
+          Look at the following example:- 
+          <br>
+          Example:- 
+          <br>
+          Demonstration of margin collapse:- 
+          <br>
+          <p>
+            In this example the h1 element has a bottom margin of 50px and the h2 element has a top margin of 20px. So, the vertical margin between h1 and h2 should have been 70px (50px + 20px). However, due to margin collapse, the actual margin ends up being 50px. 
+          </p>
+          <h1 style="margin:0 0 50px 0;">
+            Heading 1
+          </h1>
+          <h2 style="margin:20px 0 0 0;">
+            Heading 2
+          </h2>
+
+          <br>
+          <br>
+
+          In the example above, the &lt;h1&gt; element has a bottom margin of 50px and the &lt;h2&gt; element has a top margin set to 20px. 
+          <br>
+          Common sense would seem to suggest that the vertical margin between the &lt;h1&gt; and the &lt;h2&gt; would be a total of 70px (50px + 20px). But due to margin collapse, the actual margin ends up being 50px. 
+
+        </p>
+
+    </body>
+</html>

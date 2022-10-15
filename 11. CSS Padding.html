@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Padding 
+        </title>
+        <style>
+            table {
+                border:1px solid #f1f1f1;
+                width:70%;
+                border-collapse:collapse;
+            }
+            tr {
+                height:40px;
+            }
+            tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            th {
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Padding 
+        </h1>
+        
+        <hr>
+
+        <p>
+            Padding is used to create space around an element's content, inside of any defined borders. 
+        
+
+        <hr>
+
+        Example:- 
+        <br>
+        <div style="padding:70px;border:1px solid green;">
+        This element has a padding of 70px. 
+        </div>
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            CSS Padding 
+        </h2>
+
+        <br>
+
+        <p>
+            The CSS <span style="background-color:#f1f1f1;color:red;">padding</span> properties are used to generate space around an element's content, inside of any defined borders. 
+            <br>
+            With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left). 
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Padding - Individual Sides 
+        </h2>
+
+        <br>
+
+        <p>
+          CSS has properties for specifying the padding for each side of an element:- 
+          <br>
+          <ul>
+            <li><span style="background-color:#f1f1f1;color:red;">padding-top</span></li>
+            <li><span style="background-color:#f1f1f1;color:red;">padding-right</span></li>
+            <li><span style="background-color:#f1f1f1;color:red;">padding-bottom</span></li>
+            <li><span style="background-color:#f1f1f1;color:red;">padding-left</span></li>
+          </ul>
+
+          <br>
+          <br>
+
+          All the padding properties can have the following values:- 
+          <br>
+          <ul>
+            <li><i>length</i> - specifies a padding in px, pt, cm, etc. </li>
+            <li><i>%</i> - specifies a padding in % of the width of the containing element</li>
+            <li>inherit - specifies that the padding should be inherited from the parent element</li>
+          </ul>
+
+          <br>
+
+          <strong>Note:- </strong>Negative values are not allowed. 
+          <hr>
+          <br>
+          Example:- 
+          <br>
+          Set different padding for all four sides of a &lt;span&gt; element:- 
+          <br>
+          <br>
+          <br>
+          <br>
+          <span style="border:1px solid black;background-color:lightblue;padding-top:50px;padding-right:30px;padding-bottom:50px;padding-left:80px;">This span element has a top padding of 50px, a right padding of 30px, a bottom padding of 50px, and a left padding of 80px.
+         </span>
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Padding - Shorthand Property 
+        </h2>
+
+        <br>
+
+        <p>
+          To shorten the code, it is possible to specify all the padding properties in one property. 
+          <br>
+          The <span style="background-color:#f1f1f1;color:red;">padding</span> property is a shorthand property for the following individual padding properties:- 
+          <br>
+          <ul>
+            <li><span style="background-color:#f1f1f1;color:red;">padding-top</span></li>
+            <li><span style="background-color:#f1f1f1;color:red;">padding-right</span></li>
+            <li><span style="background-color:#f1f1f1;color:red;">padding-bottom</span></li>
+            <li><span style="background-color:#f1f1f1;color:red;">padding-left</span></li>
+          </ul>
+
+          <br>
+
+          So, here is how it looks:- 
+          <br>
+          If the <span style="background-color:#f1f1f1;color:red;">padding</span> property has four values:- 
+          <br>
+          <ul>
+            <li><b>padding: 25px 50px 75px 100px;</b>
+            <ul>
+                <li>top padding is 25px</li>
+                <li>right padding is 50px</li>
+                <li>bottom padding is 75px</li>
+                <li>left padding is 100px</li>
+            </ul>
+
+            </li>
+          </ul>
+
+          <br>
+          Example:- 
+          <br>
+          Use the padding shorthand property with four values:- 
+          <br>
+          <div style="border:1px solid black;padding:25px 50px 75px 100px;background-color:lightblue;">
+
+            This div element has a top padding of 25px, a right padding of 50px, a bottom padding of 75px, and a left padding of 100px. 
+          </div>
+
+          <br>
+          <br>
+
+          If the <span style="background-color:#f1f1f1;color:red;">padding</span> property has three values:- 
+          <br>
+          <ul>
+            <li><b>padding: 25px 50px 75px;</b>
+            <ul>
+                <li>top padding is 25px</li>
+                <li>right and left paddings are 50px</li>
+                <li>bottom padding is 75px</li>
+            </ul>
+            </li>
+          </ul>
+          <br>
+          Example:- 
+          <br>
+          Use the padding shorthand property with three values:- 
+          <br>
+          <div style="border:1px solid black;padding:25px 50px 75px;background-color:lightblue;">
+          This div element has a top padding of 25px, a right and left padding of 50px, and a bottom padding of 75px. 
+          </div>
+
+          <br>
+          <br>
+
+          If the <span style="background-color:#f1f1f1;color:red;">padding</span> property has two values:- 
+          <br>
+          <ul>
+            <li><b>padding: 25px 50px;</b>
+            <ul>
+                <li>top and bottom paddings are 25px</li>
+                <li>right and left paddings are 50px</li>
+            </ul>
+            </li>
+          </ul>
+
+          <br>
+          Example:- 
+          <br>
+          Use the padding shorthand property with two values:- 
+          <br>
+          <div style="border:1px solid black;padding:25px 50px;background-color:lightblue;">
+            This div element has a top and bottom padding of 25px, and a right and left padding of 50px. 
+          </div>
+
+          <br>
+          <br>
+
+          If the <span style="background-color:#f1f1f1;color:red;">padding</span> property has one value:- 
+          <br>
+          <ul>
+            <li><b>padding: 25px;</b>
+            <ul>
+                <li>all four paddings are 25px</li>
+            </ul>
+            </li>
+          </ul>
+
+          <br>
+          Example:- 
+          <br>
+          Use the padding shorthand property with one value:- 
+          <br>
+          <div style="border:1px solid black;padding:25px;background-color:lightblue;">
+          This div element has a top, bottom, left and right padding of 25px.   
+          </div>
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Padding and Element Width 
+        </h2>
+
+        <br>
+
+        <p>
+            The CSS <span style="background-color:#f1f1f1;color:red;">width</span> property specifies the width of the element's content area. The content area is the portion inside the padding, border, and the margin of an element (the box model). 
+            <br>
+            So, if an element has a specified width, the padding added to that element will be added to the total width of the element. This is often an undesirable result. 
+            <br>
+            Example:- 
+            <br>
+            Here, the &lt;div&gt; element is given a width of 300px. However, the actual width of the &lt;div&gt; element will be 350px (300px + 25px of left padding + 25px of right padding):- 
+            <br>
+            <div style="width:300px;background-color:yellow;">
+            This div is 300px wide. 
+            </div>
+            <br>
+            <div style="width:300px;padding:25px;background-color:lightblue;">
+            The width of this div is 350px, even though it is defined as 300px in the CSS. 
+            </div>
+
+            <br>
+            <br>
+
+            To keep the width at 300px, no matter the amount of padding, you can use the <span style="background-color:#f1f1f1;color:red;">box-sizing</span> property. This causes the element to maintain its actual width; if you increase the padding, the available content space will decrease. 
+            <br>
+            Example:- 
+            <br>
+            Use the box-sizing property to keep the width at 300px, no matter the amount of padding:- 
+            <br>
+            <div style="width:300px;background-color:yellow;">
+            This div is 300px wide. 
+            </div>
+            <br>
+            <div style="width:300px;padding:25px;box-sizing:border-box;background-color:lightblue;">
+            The width of this div remains at 300px, in spite of the 50px of total left and right padding, because of the box-sizing: border-box property. 
+            </div>
+            <br>
+            <div style="width:300px;padding:125px;box-sizing:border-box;background-color:lightblue;">
+            If you increase the padding, the actual content space will decrease so as to maintain the width. 
+            </div>
+
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            All CSS Padding Properties 
+        </h2>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>padding</td>
+                <td>A shorthand property for setting all the padding properties in one declaration</td>
+            </tr>
+            <tr>
+                <td>padding-bottom</td>
+                <td>Sets the bottom padding of an element</td>
+            </tr>
+            <tr>
+                <td>padding-left</td>
+                <td>Sets the left padding of an element</td>
+            </tr>
+            <tr>
+                <td>padding-right</td>
+                <td>Sets the right padding of an element</td>
+            </tr>
+            <tr>
+                <td>padding-top</td>
+                <td>Sets the top padding of an element</td>
+            </tr>
+        </table>
+    </body>
+</html>

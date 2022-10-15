@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Box Model 
+        </title>
+        
+        <style>
+
+        </style>
+
+    </head>
+    <body>
+        <h1>
+            CSS Box Model 
+        </h1>
+        <hr>
+        <p>
+            All HTML elements can be considered as boxes. 
+        </p>
+        <hr>
+        <br>
+        <br>
+
+        <h2>
+            The CSS Box Model 
+        </h2>
+
+        <br>
+        
+        <p>
+            In CSS, the term "Box Mode" is used when talking about design and layout. 
+            <br>
+            The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:- 
+            <br>
+            <div style="border-style:dashed;width:80%;height:500px;text-align:center;font-size:30px;border-color:#d3d3d3;background-color:#f1f1f1;margin:auto;">
+                Margin 
+                <div style="border-style:solid;width:80%;height:400px;text-align:center;font-size:30px;border-color:green;background-color:green;margin:auto;">
+                    Border 
+                    <div style="border-style:solid;width:80%;height:300px;text-align:center;font-size:30px;border-color:green;background-color:#f1f1f1;margin:auto;">
+                        Padding 
+                        <div style="border-style:dashed;width:80%;height:80px;text-align:center;font-size:30px;border-color:#d3d3d3;background-color:white;margin:auto;padding:50px 0 0 0;">
+                        Content
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            Explanation of the different parts:- 
+            <br>
+            <ul>
+                <li><b>Content</b> - The content of the box, where text and images appear</li>
+                <li><b>Padding</b> - Clears an area around the content. The padding is transparent</li>
+                <li><b>Border</b> - A border that goes around the padding and content</li>
+                <li><b>Margin</b> - Clears an area outside the border. The margin is transparent</li>
+            </ul>
+
+            <br>
+
+            The box model allows us to add a border around elements, and to define space between elements. 
+            <br>
+            Example:- 
+            <br>
+            Demonstration of box model:- 
+            <br>
+            <div style="background-color:lightgrey;width:300px;border:15px solid green;padding:50px;margin:20px;">
+                This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            </div>
+        </p>
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Width and Height of an Element 
+        </h2>
+
+        <br>
+
+        <p>
+            In order to set the width and height of an element correctly in all browsers, you need to know how the box model works. 
+            <br>
+            <p style="background-color:rgba(255,255,0,0.3);border:1px solid black;padding:20px;">
+            <strong>Important:- </strong>When you set the width and height properties of an element with CSS, you just set the width and height of the <b>content area</b>. To calculate the full size of an element, you must also add padding, borders and margins. 
+            </p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            This &lt;div&gt; element will have a total width of 350px:- 
+            <br>
+            <img src="Image7.jpg" width="350" height="263" alt="Klematis">
+            <div style="width:320px;padding:10px;border:5px solid gray;margin:0;">
+                The picture above is 350px wide. The total width of this element is also 350px. 
+            </div>
+
+            <br>
+            <br>
+            Here is the calculation:- 
+            <br>
+            <div style="border:1px solid green;border-left:5px solid green;padding:10px;width:70%;">
+            320px (width)
+            <br>
+            + 20px (left + right padding)
+            <br>
+            + 10px (left + right border)
+            <br>
+            + 0px (left + right margin)
+            <br>
+            <b>= 350px</b>
+            </div>
+
+            <br>
+            <br>
+
+            The total width of an element should be calculated like this:- 
+            <br>
+            Total element width = width + left padding + right padding + left border + right border + left margin + right margin 
+            <br>
+            The total height of an element should be calculated like this:- 
+            <br>
+            Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin 
+        </p>
+
+    </body>
+</html>
