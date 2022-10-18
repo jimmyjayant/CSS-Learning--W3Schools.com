@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Fonts 
+        </title>
+        <style>
+            table {
+                width:70%;
+                border:1px solid #f1f1f1;
+                border-collapse:collapse;
+            }
+            tr {
+                height:60px;
+            }
+            tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            th {
+                text-align:left;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>
+            CSS Fonts 
+        </h1>
+
+        <hr>
+
+        <br>
+
+        <p>
+            Choosing the right font for your website is important! 
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+        
+        <h2>
+            Font Selection is Important 
+        </h2>
+
+        <br>
+
+        <p>
+            Choosing the right font has a huge impact on how the readers experience a website. 
+            <br>
+            The right font can create a strong identity for your brand. 
+            <br>
+            Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font. 
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Generic Font Families 
+        </h2>
+
+        <br>
+
+        <p>
+            In CSS there are five generic font families:- 
+            <br>
+            <ol>
+                <li><b>Serif</b> fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance. </li>
+                <li><b>Sans-serif</b> fonts have clean lines (no small strokes attached). They create a modern and minimalistic look. </li>
+                <li><b>Monospace</b> fonts - here all the letters have the same fixed width. They create a mechanical look. </li>
+                <li><b>Cursive</b> fonts imitate human handwriting. </li>
+                <li><b>Fantasy</b> fonts are decorative/playful fonts. </li>
+            </ol>
+
+            <br>
+
+            All the different font names belong to one of the generic font families. 
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Difference Between Serif and Sans-serif Fonts 
+        </h2>
+
+        <br>
+
+        <p>
+            <img src="Image9.gif" alt="Fonts Image">
+
+            <br>
+            <br>
+
+            <p style="background-color:rgba(255,255,0,0.3);padding:20px;">
+            <strong>Note:- </strong>On computer screens, sans-serif fonts are considered easier to read than serif fonts. 
+            </p>
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Some Font Examples 
+        </h2>
+
+        <br>
+
+        <table>
+         <tr>
+            <th>Generic Font Family</th>
+            <th>Examples of Font Names</th>
+         </tr>
+         <tr>
+            <td style="vertical-align:top;">Serif</td>
+            <td><span style="font-family:'times new roman';font-size:20px;">Times New Roman</span><br><span style="font-family:georgia;font-size:20px;">Georgia</span><br><span style="font-family:garamond;font-size:20px;">Garamond</span></td>
+         </tr>
+         <tr>
+            <td style="vertical-align:top;">Sans-serif</td>
+            <td><span style="font-family:arial;font-size:20px;">Arial</span><br><span style="font-family:verdana;font-size:20px;">Verdana</span><br><span style="font-family:helvetica;font-size:20px;">Helvetica</span></td>
+         </tr>
+         <tr>
+            <td style="vertical-align:top;">Monospace</td>
+            <td><span style="font-family:'courier new';font-size:20px;">Courier New</span><br><span style="font-family:'lucida console';font-size:20px;">Lucida Console</span><br><span style="font-family:monaco;font-size:20px;">Monaco</span></td>
+         </tr>
+         <tr>
+            <td style="vertical-align:top;">Cursive</td>
+            <td><span style="font-family:'brush script mt';font-size:20px;">Brush Script M7</span><br><span style="font-family:'lucida handwriting';font-size:20px;">Lucida Handwriting</span></td>
+         </tr>
+         <tr>
+            <td style="vertical-align:top;">Fantasy</td>
+            <td><span style="font-family:copperplate;font-size:20px;">Copperplate</span><br><span style="font-family:papyrus;font-size:20px;">Papyrus</span></td>
+         </tr>
+        </table>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            The CSS font-family Property 
+        </h2>
+
+        <br>
+
+        <p>
+            In CSS, we use the <span style="background-color:#f1f1f1;color:red;">font-family</span> property to specify the font of a text. 
+            <br>
+            <br>
+            <p style="background-color:rgba(255,255,0,0.3);padding:20px;">
+            <strong>Note:- </strong>If the font name is more than one word, it must be in quotation marks, like: "Times New Roman". 
+            </p>
+
+            <br>
+            <br>
+
+            <strong>Tip:- </strong>The <span style="background-color:#f1f1f1;color:red;">font-family</span> property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/operating systems. Start with the font you want, and end with a generic family (to let the browser pick a similar font in the generic family, if no other fonts are available). The font names should be separated with comma. 
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Specify some different fonts for three paragraphs. 
+            <br>
+            <p style="font-family:'times new roman',times,serif;">
+            This is a paragraph, shown in the Times New Roman font. 
+            </p>
+
+            <p style="font-family:arial, helvetica, sans-serif;">
+            This is a paragraph, shown in the Arial font. 
+            </p>
+
+            <p style="font-family:'lucida console', 'courier new', monospace;">
+            This is a paragraph, shown in the Lucida Console font. 
+            </p>
+        </p>
+
+
+
+    </body>
+</html>
