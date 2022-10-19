@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Font Size 
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>
+            CSS Font Size 
+        </h1>
+
+        <hr>
+
+        <br>
+        
+        <h2>
+            Font Size 
+        </h2>
+
+        <br>
+
+        <p>
+            The <span style="background-color:#f1f1f1;color:red;">font-size</span> property sets the size of the text. 
+            <br>
+            Being able to manage the text size is important in web design. However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs. 
+            <br>
+            Always use the proper HTML tags, like &lt;h1&gt; - &lt;h6&gt; for headings and &lt;p&gt; for paragraphs. 
+            <br>
+            The font-size value can be an absolute, or relative size. 
+            <br>
+            Absolute size:- 
+            <br>
+            <ul>
+                <li>Sets the text to a specified size.</li>
+                <li>Does not allow a user to change the text size in all browsers (bad for accessibility reasons)</li>
+                <li>Absolute size is useful when the physical size of the output is known</li>
+            </ul>
+
+            <br>
+
+            Relative size:- 
+            <br>
+            <ul>
+                <li>Sets the size relative to surrounding elements</li>
+                <li>Allows a user to change the text size in browsers</li>
+            </ul>
+
+            <br>
+            <br>
+
+            <p style="background-color:rgba(255,255,0,0.3);padding:20px;">
+            <strong>Note:- </strong>If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px = 1em). 
+            </p>
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Set Font Size With Pixels 
+        </h2>
+
+        <br>
+
+        <p>
+           Setting the text size with pixels gives you full control over the text size. 
+           <br>
+           Example:- 
+           <br>
+           <h1 style="font-size:40px;">This is heading 1</h1>
+           <h2 style="font-size:30px;">This is heading 2</h2>
+           <p style="font-size:14px;">This is a paragraph.</p>
+
+           <br>
+
+
+           <strong>Tip:- </strong>If you use pixels, you can still use the zoom tool to resize the entire page. 
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Set Font Size With Em 
+        </h2>
+
+        <br>
+
+        <p>
+            To allow users to resize the text (in the browser menu), many developers use em instead of pixels. 
+            <br>
+            1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px. 
+            <br>
+            The size can be calculated from pixels to em using this formula:- <em>pixels/16 = em</em>
+            <br>
+            Example:- 
+            <br>
+            <h1 style="font-size:2.5em;">
+            This is heading 1 
+            </h1>
+
+            <h2 style="font-size:1.875em;">
+            This is heading 2 
+            </h2>
+
+            <p style="font-size:0.875em;">
+            This is a paragraph. 
+            </p>
+
+            <p style="font-size:0.875em;">
+            Specifying the font-size in em allows all major browsers to resize the text. Unfortunately, there is still a problem with older versions of IE. When resizing the text, it becomes larger/smaller than it should. 
+            </p>
+
+            <br>
+            <br>
+
+            In the example above, the text size in em is the same as the previous example in pixels. However, with the em size, it is possible to adjust the text size in all browsers. 
+            <br>
+            Unfortunately, there is still a problem with older versions of Internet Explorer. The text becomes larger than it should when made larger, and smaller than it should when made smaller. 
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Use a Combination of Percent and Em 
+        </h2>
+
+        <br>
+
+        <p>
+            The solution that works in all browsers, is to set a default font-size in percent for the &lt;body&gt; element. 
+            <br>
+            Example:- 
+            <br>
+            <h1 style="font-size:100%;">This is heading 1</h1>
+            <h2 style="font-size:2.5em;">This is heading 2</h2>
+            <p style="font-size:1.875em;">This is a paragraph</p>
+            <p style="font-size:0.875em;">Specifying the font-size in percent and em displays the same size in all major browsers, and allows all browsers to resize the text! </p>
+
+            <br>
+
+            Our code now works great! It shows the same text size in all browsers, and allows all browsers to zoom or resize the text! 
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h2>
+            Responsive Font Size 
+        </h2>
+
+        <br>
+
+        <p>
+            The text size can be set with a <span style="background-color:#f1f1f1;color:red;">vw</span> unit, which means the "viewport width". 
+            <br>
+            That way the text size will follow the size of the browser window. 
+            <br>
+            Example:- 
+            <br>
+            <h1 style="font-size:10vw;">Responsive Text</h1>
+            <p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+            <p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width. </p>
+            <p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm. </p>
+
+            <br>
+            <br>
+
+            <p style="background-color:rgba(255,255,0,0.3);padding:20px;">
+            Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm. 
+            </p>
+
+
+        </p>
+
+
+    </body>
+</html>
