@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Responsive Table 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            #table1 {
+                border-collapse:collapse;
+                width:100%;
+            }
+
+            #table1 th, #table1 td {
+                text-align:left;
+                padding:8px;
+            }
+
+            #table1 tr:nth-child(even) {
+                background-color:#f2f2f2;
+            }
+
+            #table2 {
+                border-collapse:collapse;
+                width:100%;
+            }
+
+            #table2 th, #table2 td {
+                text-align:left;
+                padding:8px;
+            }
+
+            #table2 tr:nth-child(even) {
+                background-color:#f2f2f2;
+            }
+
+            #table3 {
+                border:1px solid #f1f1f1;
+                border-collapse:collapse;
+                width:80%;
+            }
+            #table3 th {
+                text-align:left;
+            }
+            #table3 tr {
+                height:40px;
+            }
+            #table3 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Responsive Table 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Responsive Table 
+        </h2>
+
+        <br>
+
+        <p>
+           A responsive table will display a horizontal scroll bar if the screen is too small to display the full content. 
+           <br>
+           Add a container element (like &lt;div&gt;) with <span class="edit">overflow-x:auto</span> around the &lt;table&gt; element to make it responsive. 
+           <br>
+           Example:- 
+           <br>
+           <div style="overflow-x:auto;">
+
+           <table id="table1">
+            <caption>Responsive Table</caption>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+            </tr>
+           </table>
+           </div>
+
+           <br>
+           <br>
+
+           <div>
+
+            <table id="table2">
+             <caption>Non-Responsive Table</caption>
+             <tr>
+                 <th>First Name</th>
+                 <th>Last Name</th>
+                 <th>Points</th>
+                 <th>Points</th>
+                 <th>Points</th>
+                 <th>Points</th>
+                 <th>Points</th>
+                 <th>Points</th>
+                 <th>Points</th>
+                 <th>Points</th>
+                 <th>Points</th>
+                 <th>Points</th>
+             </tr>
+             <tr>
+                 <td>Jill</td>
+                 <td>Smith</td>
+                 <td>50</td>
+                 <td>50</td>
+                 <td>50</td>
+                 <td>50</td>
+                 <td>50</td>
+                 <td>50</td>
+                 <td>50</td>
+                 <td>50</td>
+                 <td>50</td>
+                 <td>50</td>
+             </tr>
+             <tr>
+                 <td>Eve</td>
+                 <td>Jackson</td>
+                 <td>94</td>
+                 <td>94</td>
+                 <td>94</td>
+                 <td>94</td>
+                 <td>94</td>
+                 <td>94</td>
+                 <td>94</td>
+                 <td>94</td>
+                 <td>94</td>
+                 <td>94</td>
+             </tr>
+             <tr>
+                 <td>Adam</td>
+                 <td>Johnson</td>
+                 <td>67</td>
+                 <td>67</td>
+                 <td>67</td>
+                 <td>67</td>
+                 <td>67</td>
+                 <td>67</td>
+                 <td>67</td>
+                 <td>67</td>
+                 <td>67</td>
+                 <td>67</td>
+             </tr>
+            </table>
+            </div>
+
+            <br>
+            <br>
+
+            <p style="background-color:rgba(255,255,0,0.3);padding:20px;">
+            <strong>Note:- </strong>In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set). 
+            </p>
+        </p>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            CSS Table Properties 
+        </h2>
+
+        <br>
+
+        <table id="table3">
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>Sets all the border properties in one declaration</td>
+            </tr>
+            <tr>
+                <td>border-collapse</td>
+                <td>Specifies whether or not table borders should be collapsed</td>
+            </tr>
+            <tr>
+                <td>border-spacing</td>
+                <td>Specifies the distance between the borders of adjacent cells</td>
+            </tr>
+            <tr>
+                <td>caption-side</td>
+                <td>Specifies the placement of a table caption</td>
+            </tr>
+            <tr>
+                <td>empty-cells</td>
+                <td>Specifies whether or not to display borders and background on empty cells in a table</td>
+            </tr>
+            <tr>
+                <td>table-layout</td>
+                <td>Sets the layout algorithm to be used for a table</td>
+            </tr>
+        </table>
+    </body>
+</html>

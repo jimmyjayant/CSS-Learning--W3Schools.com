@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Table Size 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+
+        #table1 {
+            width:100%;
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+
+        #table1 th {
+            height:70px;
+        }
+
+        #table1 th, td {
+            border:1px solid black;
+        }
+
+        #table2 {
+            width:50%;
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+
+        #table2 th, td {
+            border:1px solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Table Size 
+        </h1>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            Table Width and Height 
+        </h2>
+
+        <br>
+
+        <p>
+            The width and height of a table are defined by the <span class="edit">width</span> and <span class="edit">height</span> properties. 
+            <br>
+            The example below sets the width of the table to 100%, and the height of the &lt;th&gt; elements to 70px. 
+            <br>
+            Example:- 
+            <br>
+            <table id="table1">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            To create a table that should only span half the page, use <span class="edit">width:50%</span>. 
+            <br>
+            Example:- 
+            <br>
+            <table id="table2">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+            </table>
+        </p>
+    </body>
+</html>

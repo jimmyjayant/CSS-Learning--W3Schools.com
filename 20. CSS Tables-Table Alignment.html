@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Table Alignment 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+
+        #table1 {
+            border:1px solid;
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        #table1 th, #table1 td {
+            border:1px solid;
+            text-align:center;
+        }
+
+        #table2 {
+            border:1px solid;
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        #table2 th, #table2 td {
+            border:1px solid;
+            text-align:left;
+        }
+
+        #table3 {
+            border:1px solid;
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        #table3 td, #table3 th {
+            border:1px solid;
+        }
+
+        #table3 td {
+            height:50px;
+            vertical-align:bottom;
+        }
+        </style>
+    </head>
+
+    <body>
+        <h1>
+            CSS Table Alignment 
+        </h1>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            Horizontal Alignment 
+        </h2>
+
+        <br>
+
+        <p>
+          The <span class="edit">text-align</span> property sets the horizontal alignment (like left, right, or center) of the content in &lt;th&gt; or &lt;td&gt;. 
+          <br>
+          By default, the content of &lt;th&gt; elements are center-aligned and the content of &lt;td&gt; elements are left-aligned. 
+          <br>
+          To center-align the content of &lt;td&gt; elements as well, use <span class="edit">text-align:center</span>. 
+          <br>
+          Example:- 
+          <br>
+          <table id="table1">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>$150</td>
+            </tr>
+            <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>$300</td>
+            </tr>
+          </table>
+
+          <br>
+          <br>
+
+          To left-align the content, force the alignment of &lt;th&gt; elements to be left-aligned, with the <span class="edit">text-align:left</span> property. 
+          <br>
+          Example:- 
+          <br>
+          <table id="table2">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>$150</td>
+            </tr>
+            <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>$300</td>
+            </tr>
+          </table>
+
+        </p>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            Vertical Alignment 
+        </h2>
+
+        <br>
+
+        <p>
+            The <span class="edit">vertical-align</span> property sets the vertical alignment (like top, bottom, or middle) of the content in &lt;th&gt; or &lt;td&gt;. 
+            <br>
+            By default, the vertical alignment of the content in a table is middle (for both &lt;th&gt; and &lt;td&gt; elements). 
+            <br>
+            The following example sets the vertical alignment to bottom for &lt;td&gt; elements. 
+            <br>
+            Example:- 
+            <br>
+            <table id="table3">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr> 
+            </table>
+        </p>
+    </body>
+</html>

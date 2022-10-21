@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Table Style 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+
+        #table1 {
+            border:1px solid;
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        #table1 th, #table1 td {
+            border:1px solid;
+            text-align:left;
+            padding:15px;
+        }
+
+        #table2 {
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        #table2 th, #table2 td {
+            padding:8px;
+            text-align:left;
+            border-bottom:1px solid;
+        }
+
+        #table3 {
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        #table3 th, #table3 td {
+            padding:8px;
+            text-align:left;
+            border-bottom:1px solid #ddd;
+        }
+
+        #table3 tr:hover {
+            background-color:coral;
+        }
+
+        #table4 {
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        #table4 th, #table4 td {
+            text-align:left;
+            padding:8px;
+        }
+
+        #table4 tr:nth-child(even) {
+            background-color:#f2f2f2;
+        }
+
+        #table5 {
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        #table5 th, #table5 td {
+            text-align:left;
+            padding:8px;
+        }
+
+        #table5 tr:nth-child(even) {
+            background-color:#f2f2f2;
+        }
+
+        #table5 th {
+            background-color:#04AA6D;
+            color:white;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Table Style 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Table Padding 
+        </h2>
+
+        <br>
+
+        <p>
+            To control the space between the border and the content in a table, use the <span class="edit">padding</span> property on &lt;td&gt; and &lt;th&gt; elements. 
+            <br>
+            Example:- 
+            <br>
+            <table id="table1">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+              </table>
+        </p>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            Horizontal Dividers 
+        </h2>
+
+        <br>
+
+        <p>
+            Add the <span class="edit">border-bottom</span> property to &lt;th&gt; and &lt;td&gt; for horizontal dividers. 
+            <br>
+            Example:- 
+            <br>
+            <table id="table2">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+              </table>
+        </p>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            Hoverable Table 
+        </h2>
+
+        <br>
+
+        <p>
+            Use the <span class="edit">:hover</span> selector on &lt;tr&gt; to highlight table rows on mouse over. 
+            <br>
+            Example:- 
+            <br>
+            <table id="table3">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+              </table>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <br>
+
+        <h2>
+            Striped Tables 
+        </h2>
+
+        <br>
+
+        <p>
+            For zebra-striped tables, use the <span class="edit">nth-child()</span> selector and add a <span class="edit">background-color</span> to all even (or odd) table rows. 
+            <br>
+            Example:- 
+            <br>
+            <table id="table4">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>Cleveland</td>
+                    <td>Brown</td>
+                    <td>$250</td>
+                </tr>
+              </table>
+        </p>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            Table Color 
+        </h2>
+
+        <br>
+
+        <p>
+            The example below specifies the background color and text color of &lt;th&gt; elements. 
+            <br>
+            Example:- 
+            <br>
+            <table id="table5">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>Cleveland</td>
+                    <td>Brown</td>
+                    <td>$250</td>
+                </tr>
+              </table>
+        </p>
+
+    </body>
+</html>
