@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Max-width 
+        </title>
+        <style>
+         .edit {
+            background-color:#f1f1f1;
+            color:red;
+         }
+         .div1 {
+            border:2px solid green;
+            width:500px;
+            margin:auto;
+         }
+         .div2 {
+            border:2px solid green;
+            max-width:500px;
+            margin:auto;
+         }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Layout - width and max-width 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Using width, max-width and margin:auto; 
+        </h2>
+
+        <br>
+
+        <p>
+            As mentioned in the previous chapter; a block-level element always takes up the full width available (stretches out to the left and right as far as it can). 
+            <br>
+            Setting the <span class="edit">width</span> of a block-level element will prevent it from stretching out to the edges of its container. Then, you can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins:- 
+            <br>
+            <div class="div1">
+                This &lt;div&gt; element has a width of 500px, and margin set to auto. 
+            </div>
+
+            <br>
+
+            <strong>Note:- </strong>The problem with the <span class="edit">&lt;div&gt;</span> above occurs when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar to the page.
+            <br>
+            Using <span class="edit">max-width</span> instead, in this situation, will improve the browser's handling of small windows. This is important when making a site usable on small devices:- 
+            <br>
+            <div class="div2">
+                This &lt;div&gt; element has a max-width of 500px, and margin set to auto. 
+            </div>
+
+            <br>
+
+            <strong>Tip:- </strong>Resize the browser window to less than 500px wide, to see the difference between the two divs! 
+            <br>
+            As you can see that the div with width property set to 500px is handled by browser by adding a horizontal scrollbar. But the div with max-width property set to 500px remains in that width. If the content is too large in width then it will span vertically and still maintains the max-width. 
+
+        </p>
+    </body>
+</html>

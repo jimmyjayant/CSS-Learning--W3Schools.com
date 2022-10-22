@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Position 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .div1 {
+            position:static;
+            border:2px solid green;
+        }
+        .div2 {
+            position:relative;
+            border:2px solid green;
+            left:30px;
+        }
+        .div3 {
+            position:fixed;
+            bottom:0;
+            right:0;
+            width:300px;
+            border:2px solid green;
+            background-color:lightgreen;
+            padding:20px;
+        }
+        .div4 {
+            position:relative;
+            width:400px;
+            height:200px;
+            border:3px solid green;
+        }
+        .div5 {
+            position:absolute;
+            top:80px;
+            right:0;
+            width:200px;
+            height:100px;
+            border:3px solid green;
+        }
+        .div6 {
+            position: -webkit-sticky;
+            position:sticky;
+            top:0;
+            padding:5px;
+            background-color:#cae8ca;
+            border:2px solid #4caf50;
+        }
+        #img1 {
+            opacity:0.3;
+            width:100%;
+            height:auto;
+        }
+
+        .button {
+            background-color:green;
+            color:white;
+            font-weight:bold;
+            border-radius:5px;
+            width:200px;
+        }
+
+        .container {
+            position:relative;
+        }
+
+        #div7 {
+            position:absolute;
+            font-size:30px;
+            display:none;
+            top:8px;
+            left:16px;
+        }
+        #div8 {
+            position:absolute;
+            font-size:30px;
+            display:none;
+            top:8px;
+            right:16px;
+        }
+        #div9 {
+            position:absolute;
+            font-size:30px;
+            display:none;
+            bottom:8px;
+            left:16px;
+        }
+        #div10 {
+            position:absolute;
+            font-size:30px;
+            display:none;
+            bottom:8px;
+            right:16px;
+        }
+        #div11 {
+            position:absolute;
+            font-size:30px;
+            display:none;
+            top:50%;
+            text-align:center;
+            width:100%;
+        }
+
+        table {
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+            width:70%;
+        }
+        tr {
+            height:40px;
+        }
+        tr:nth-child(even) {
+            background-color:#f1f1f1;
+        }
+        th {
+            text-align:left;
+        }
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Layout - The position Property 
+        </h1>
+
+        <hr>
+
+        <p>
+            The <span class="edit">position</span> property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky). 
+        </p>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            The position Property 
+        </h2>
+
+        <br>
+
+        <p>
+            The <span class="edit">position</span> property specifies the type of positioning method used for an element. 
+            <br>
+            There are five different position values:- 
+            <br>
+            <ul>
+                <li><span class="edit">static</span></li>
+                <li><span class="edit">relative</span></li>
+                <li><span class="edit">fixed</span></li>
+                <li><span class="edit">absolute</span></li>
+                <li><span class="edit">sticky</span></li>
+            </ul>
+
+            <br>
+
+            Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the <span class="edit">position</span> property is set first. They also work differently depending on the position value. 
+        </p>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            position:static; 
+        </h2>
+
+        <br>
+
+        <p>
+            HTML elements are positioned static by default. 
+            <br>
+            Static positioned elements are not affected by the top, bottom, left, and right properties. 
+            <br>
+            An element with <span class="edit">position: static;</span> is not positioned in any special way; it is always positioned according to the normal flow of the page. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div1">
+                This &lt;div&gt; element has position: static; 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            position:relative; 
+        </h2>
+
+        <br>
+
+        <p>
+            An element with <span class="edit">position: relative;</span> is positioned relative to its normal position. 
+            <br>
+            Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted aways from its normal position. Other content will not be adjusted to fit into any gap left by the element. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div2">
+                This &lt;div&gt; element has position:relative; 
+            </div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            position:fixed; 
+        </h2>
+
+        <br>
+
+        <p>
+            An element with <span class="edit">position: fixed;</span> is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. 
+            <br>
+            A fixed element does not leave a gap in the page where it would normally have been located. 
+            <br>
+            Notice the fixed element in the lower-right corner of the page. 
+            <br>
+            Example:- 
+            <div class="div3">
+                This &lt;div&gt; element has <span class="edit">position: fixed;</span>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            position:absolute; 
+        </h2>
+
+        <br>
+
+        <p>
+            An element with <span class="edit">position: absolute;</span> is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). 
+            <br>
+            However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling. 
+            <br>
+            <strong>Note:- </strong>Absolute positioned elements are removed from the normal flow, and can overlap elements. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div4">
+                This div element has position: relative; 
+                <div class="div5">
+                This div element has position: absolute; 
+                </div>
+            </div>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            position: sticky; 
+        </h2>
+
+        <br>
+
+        <p>
+            An element with <span class="edit">position: sticky;</span> is positioned based on the user's scroll position. 
+            <br>
+            A sticky element toggles between <span class="edit">relative</span> and <span class="edit">fixed</span>, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). 
+            <br>
+            In this example, the sticky element sticks to the top of the page (<span class="edit">top: 0</span>), when you reach its scroll position. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div6">
+                I am sticky! 
+            </div>
+
+            <br>
+            <br>
+
+            <p style="background-color:yellow;padding:20px;">
+            <strong>Note:- </strong>Internet Explorer does not support sticky positioning. Safari requires a -webkit- prefix. You must also specify at least one of <span class="edit">top</span>, <span class="edit">right</span>, <span class="edit">bottom</span> or <span class="edit">left</span> for sticky positioning to work. 
+            </p>
+        </p>
+
+        <hr>
+        
+        <h2>
+            Positioning Text In an Image 
+        </h2>
+
+        <br>
+
+        <p>
+            How to position text over an image. 
+            <br>
+            Example:- 
+            <br>
+            <div class="container">
+            <img src="Image13.jpg" width="1000" height="300" alt="Cinque Terre" id="img1">
+            <div id="div7">Top Left</div>
+            <div id="div8">Top Right</div>
+            <div id="div9">Bottom Left</div>
+            <div id="div10">Bottom Right</div>
+            <div id="div11">Centered</div>
+
+            </div>
+            <br>
+            <button type="button" onclick="topleft()" class="button">Top Left</button>
+            <button type="button" onclick="topright()" class="button">Top Right</button>
+            <button type="button" onclick="bottomleft()" class="button">Bottom Left</button>
+            <button type="button" onclick="bottomright()" class="button">Bottom Right</button>
+            <button type="button" onclick="centered()" class="button">Centered</button>
+        </p>
+
+        <hr>
+
+        <br>
+
+        <h2>
+            All CSS Positioning Properties 
+        </h2>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>bottom</td>
+                <td>Sets the bottom margin edge for a positioned box</td>
+            </tr>
+            <tr>
+                <td>clip</td>
+                <td>Clips an absolutely positioned element</td>
+            </tr>
+            <tr>
+                <td>left</td>
+                <td>Sets the left margin edge for a positioned box</td>
+            </tr>
+            <tr>
+                <td>position</td>
+                <td>Specifies the type of positioning for an element</td>
+            </tr>
+            <tr>
+                <td>right</td>
+                <td>Sets the right margin edge for a positioned box</td>
+            </tr>
+            <tr>
+                <td>top</td>
+                <td>Sets the top margin edge for a positioned box</td>
+            </tr>
+        </table>
+
+        <script>
+           function topleft()
+           {
+            document.getElementById('div7').style.display = 'block';
+            document.getElementById('div8').style.display = 'none';
+            document.getElementById('div9').style.display = 'none';
+            document.getElementById('div10').style.display = 'none';
+            document.getElementById('div11').style.display = 'none';
+           }
+
+           function topright()
+           {
+            document.getElementById('div7').style.display = 'none';
+            document.getElementById('div8').style.display = 'block';
+            document.getElementById('div9').style.display = 'none';
+            document.getElementById('div10').style.display = 'none';
+            document.getElementById('div11').style.display = 'none';
+           }
+
+           function bottomleft()
+           {
+            document.getElementById('div7').style.display = 'none';
+            document.getElementById('div8').style.display = 'none';
+            document.getElementById('div9').style.display = 'block';
+            document.getElementById('div10').style.display = 'none';
+            document.getElementById('div11').style.display = 'none';
+           }
+
+           function bottomright()
+           {
+            document.getElementById('div7').style.display = 'none';
+            document.getElementById('div8').style.display = 'none';
+            document.getElementById('div9').style.display = 'none';
+            document.getElementById('div10').style.display = 'block';
+            document.getElementById('div11').style.display = 'none';
+           }
+
+           function centered()
+           {
+            document.getElementById('div7').style.display = 'none';
+            document.getElementById('div8').style.display = 'none';
+            document.getElementById('div9').style.display = 'none';
+            document.getElementById('div10').style.display = 'none';
+            document.getElementById('div11').style.display = 'block';
+           }
+
+        </script>
+    </body>
+</html>
