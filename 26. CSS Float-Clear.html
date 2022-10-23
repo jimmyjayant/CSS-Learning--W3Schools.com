@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Clear 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .div1 {
+            float:left;
+            padding:10px;
+            border:3px solid green;
+        }
+        .div2 {
+            padding:10px;
+            border:3px solid red;
+        }
+        .div3 {
+            float:left;
+            padding:10px;
+            border:3px solid green;
+        }
+        .div4 {
+            padding:10px;
+            border:3px solid red;
+            clear:left;
+        }
+        .img1 {
+            float:right;
+        }
+        .div5 {
+            border:3px solid green;
+            padding:5px;
+        }
+        .div6 {
+            border:3px solid green;
+            padding:5px;
+            overflow:auto;
+        }
+        .img2 {
+            float:right;
+        }
+
+        .img3 {
+            float:right;
+        }
+
+        .div7 {
+            border:3px solid green;
+            padding:5px;
+        }
+        .div8 {
+            border:3px solid green;
+            padding:5px;
+        }
+        .div8::after {
+            content:"";
+            clear:both;
+            display:table;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Layout - clear and clearfix 
+        </h1>
+
+        <hr>
+
+        <h2>
+            The clear Property 
+        </h2>
+
+        <p>
+            When we use the <span class="edit">float</span> property, and we want the next element below (not on right or left), we will have to use the <span class="edit">clear</span> property. 
+            <br>
+            The <span class="edit">clear</span> property specifies what should happen with the element that is next to a floating element. 
+            <br>
+            The <span class="edit">clear</span> property can have one of the following values:- 
+            <br>
+            <ul>
+              <li><span class="edit">none</span> - The element is not pushed below left or right floated elements. This is default</li>
+              <li><span class="edit">left</span> - The element is pushed below left floated elements</li>
+              <li><span class="edit">right</span> - The element is pushed below right floated elements</li>
+              <li><span class="edit">both</span> - The element is pushed below both left or right floated elements</li>
+              <li><span class="edit">inherit</span> - The element inherits the clear value from its parent</li>
+            </ul> 
+
+            <br>
+
+            When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear below it on the web page.  
+            <br>
+            Example:- 
+            <br>
+            This example clears the float to the left. Here, it means that the &lt;div2&gt; element is pushed below the left floated &lt;div1&gt; element. 
+            <br>
+            <h3>
+                Without clear 
+            </h3>
+            <div class="div1">div1</div>
+            <div class="div2">div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1. </div>
+
+            <br>
+            <br>
+
+            <h3>
+                With clear 
+            </h3>
+            <div class="div3">div3</div>
+            <div class="div4">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The clearfix Hack 
+        </h2>
+
+        <p>
+            If a floated element is taller than the containing element, it will "overflow" outside of its container. We can then add a clearfix hack to solve this problem. 
+            <br>
+            Example:- 
+            <br>
+            <h3>
+                Without Clearfix 
+            </h3>
+
+            <p>
+                This image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container:- 
+            </p>
+
+            <div class="div5">
+                <img src="Image14.jpg" class="img1" alt="Pineapple" width="170" height="170">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...... 
+            </div>
+
+            <br>
+            <br>
+
+            <h3>
+                With Clearfix 
+            </h3>
+
+            <p>
+                We can fix this by adding a clearfix class with overflow: auto; to the containing element:- 
+            </p>
+
+            <div class="div6">
+                <img src="Image14.jpg" class="img2" alt="Pineapple" width="170" height="170">
+                Lorem ipsum dolor sit, consectetur adipiscing elit. Phasellus imperdiet........ 
+            </div>
+
+            <br>
+            <br>
+
+            The <span class="edit">overflow: auto</span> clearfix works well as long as you are able to keep control of your margins and padding (else you might see scrollbars). The <b>new, modern clearfix hack</b> however, is safer to use, and the following code is used for most webpages. 
+            <br>
+            Example:- 
+            <br>
+            <h3>
+                Without Clearfix 
+            </h3>
+
+            <p>
+                This image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container. 
+            </p>
+            
+            <div class="div7">
+                <img src="Image14.jpg" alt="Pineapple" class="img3" width="170" height="170">
+                Lorem ipsum dolor sit, consectetur adipiscing elit. Phasellus imperdiet........ 
+            </div>
+
+            <br>
+            <br>
+
+            <h3 style="clear:right;">
+                With New Modern Clearfix 
+            </h3>
+
+            <p>
+                Add the clearfix hack to the containing element, to fix this problem. 
+            </p>
+
+            <div class="div8">
+                <img src="Image14.jpg" alt="Pineapple" class="img3" width="170" height="170">
+                Lorem ipsum dolor sit, consectetur adipiscing elit. Phasellus imperdiet........ 
+            </div>
+
+        </p>
+    </body>
+</html>

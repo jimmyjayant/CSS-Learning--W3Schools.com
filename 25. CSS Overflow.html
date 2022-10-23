@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Overflow 
+        </title>
+        <style>
+         .edit {
+            background-color:#f1f1f1;
+            color:red;
+         }
+         #overflowTest {
+            background-color:#4CAF50;
+            color:white;
+            padding:15px;
+            width:50%;
+            height:100px;
+            overflow:scroll;
+            border:1px solid #ccc;
+         }
+         .pedit {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+         }
+         #div1 {
+            background-color:coral;
+            width:200px;
+            height:65px;
+            border:1px solid;
+            overflow:visible;
+         }
+         #div2 {
+            background-color:coral;
+            border:1px solid;
+            width:200px;
+            height:65px;
+            overflow:hidden;
+         }
+         #div3 {
+            background-color:coral;
+            border:1px solid;
+            width:200px;
+            height:65px;
+            overflow:scroll;
+         }
+         #div4 {
+            background-color:coral;
+            border:1px solid;
+            width:200px;
+            height:65px;
+            overflow:auto;
+         }
+         #div5 {
+            background-color:coral;
+            border:1px solid;
+            width:200px;
+            height:65px;
+            overflow-x:hidden; /*Hide horizontal scrollbars*/
+            overflow-y:scroll; /*Add vertical scrollbars*/
+         }
+         table {
+            width:60%;
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+         }
+         tr {
+            height:40px;
+         }
+         tr:nth-child(even) {
+            background-color:#f1f1f1;
+         }
+         th {
+            text-align:left;
+         }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Layout - Overflow 
+        </h1>
+
+        <hr>
+
+        <p>
+            The CSS <span class="edit">overflow</span> property controls what happens to content that is too big to fit into an area. 
+            <br>
+            Example:- 
+            <br>
+            <div id="overflowTest">
+                This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Overflow 
+        </h2>
+
+        <br>
+
+        <p>
+            The <span class="edit">overflow</span> property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area. 
+            <br>
+            The <span class="edit">overflow</span> property has the following values:- 
+            <br>
+            <ul>
+                <li><span class="edit">visible</span> - Default. The overflow is not clipped. The content renders outside the element's box</li>
+                <li><span class="edit">hidden</span> - The overflow is clipped, and the rest of the content will be invisible</li>
+                <li><span class="edit">scroll</span> - The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
+                <li><span class="edit">auto</span> - Similar to <span class="edit">scroll</span>, but it adds scrollbars only when necessary</li>
+            </ul>
+
+            <br>
+            
+            <p class="pedit">
+                <strong>Note:- </strong>The <span class="edit">overflow</span> property only works for block elements with a specified height. 
+                <br>
+                <strong>Note:- </strong>In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set). 
+            </p>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            overflow: visible 
+        </h2>
+
+        <br>
+
+        <p>
+            By default, the overflow is <span class="edit">visible</span>, meaning that it is not clipped and it renders outside the element's box. 
+            <br>
+            Example:- 
+            <br>
+            <div id="div1">
+                You can see the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box. 
+            </div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            overflow: hidden 
+        </h2>
+
+        <br>
+
+        <p>
+            With the <span class="edit">hidden</span> value, the overflow is clipped, and the rest of the content is hidden. 
+            <br>
+            Example:- 
+            <br>
+            <div id="div2">
+                You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            overflow: scroll 
+        </h2>
+
+        <br>
+
+        <p>
+            Setting the value to <span class="edit">scroll</span>, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it). 
+            <br>
+            Example:- 
+            <br>
+            <div id="div3">
+                You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            overflow: auto 
+        </h2>
+
+        <br>
+
+        <p>
+            The <span class="edit">auto</span> value is similar to <span class="edit">scroll</span>, but it adds scrollbars only when necessary. 
+            <br>
+            Example:- 
+            <br>
+            <div id="div4">
+                You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            overflow-x and overflow-y 
+        </h2>
+
+        <br>
+
+        <p>
+            The <span class="edit">overflow-x</span> and <span class="edit">overflow-y</span> properties specifies whether to change the overflow of content just horizontally or vertically (or both). 
+            <br>
+            <span class="edit">overflow-x</span> specifies what to do with the left/right edges of the content. 
+            <br>
+            <span class="edit">overflow-y</span> specifies what to do with the top/bottom edges of the content.  
+            <br>
+            Example:- 
+            <br>
+            <div id="div5">
+                You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            All CSS Overflow Properties 
+        </h2>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>overflow</td>
+                <td>Specifies what happens if content overflows an element's box</td>
+            </tr>
+            <tr>
+                <td>overflow-wrap</td>
+                <td>Specifies whether or not the browser can break lines with long words, if they overflow its container</td>
+            </tr>
+            <tr>
+                <td>overflow-x</td>
+                <td>Specifies what to do with the left/right edges of the content if it overflows the element's content area</td>
+            </tr>
+            <tr>
+                <td>overflow-y</td>
+                <td>Specifies what to do with the top/bottom edges of the content if it overflows the element's content area</td>
+            </tr>
+        </table>
+
+    </body>
+
+</html>

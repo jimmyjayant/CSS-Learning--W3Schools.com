@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Inline-block 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+
+        span.a {
+            display:inline;
+            width:100px;
+            height:100px;
+            padding:5px;
+            border:1px solid blue;
+            background-color:yellow;
+        }
+
+        span.b {
+            display:inline-block;
+            width:100px;
+            height:100px;
+            padding:5px;
+            border:1px solid blue;
+            background-color:yellow;
+        }
+
+        span.c {
+            display:block;
+            width:100px;
+            height:100px;
+            padding:5px;
+            border:1px solid blue;
+            background-color:yellow;
+        }
+
+        .nav {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            background-color:yellow;
+            text-align:center;
+        }
+
+        .nav li {
+            display:inline-block;
+            font-size:20px;
+            padding:20px;
+            
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Layout - display: inline-block 
+        </h1>
+
+        <hr>
+
+        <h2>
+            The display: inline-block Value 
+        </h2>
+
+        <p>
+            Compared to <span class="edit">display:inline</span>, the major difference is that <span class="edit">display: inline-block</span> allows to set a width and height on the element. 
+            <br>
+            Also, with <span class="edit">display: inline-block</span>, the top and bottom margins/paddings are respected, but with <span class="edit">display: inline</span> they are not. 
+            <br>
+            Compared to <span class="edit">display: block</span>, the major difference is that <span class="edit">display: inline-block</span> does not add a line-break after the element, so the element can sit next to other elements. 
+            <br>
+            The following example shows the different behavior of <span class="edit">display: inline</span>, <span class="edit">display: inline-block</span> and <span class="edit">display: block</span>. 
+            <br>
+            <h3>
+                display: inline 
+            </h3>
+
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. 
+            </div>
+
+            <h3>
+                display: inline-block 
+            </h3>
+
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. 
+            </div>
+
+            <h3>
+                display: block 
+            </h3>
+
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Using inline-block to Create Navigation Links 
+        </h2>
+
+        <p>
+            One common use for <span class="edit">display: inline-block</span> is to display list items horizontally instead of vertically. The following example creates horizontal navigation links. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                By default, list items are displayed vertically. In this example we use display: inline-block to display them horizontally (side by side).  
+            </p>
+            <p>
+                Note: If you resize the browser window, the links will automatically break when it becomes too crowded. 
+            </p>
+
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#clients">Our Clients</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+
+        </p>
+    </body>
+</html>
