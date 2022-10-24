@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>
+        CSS Combinators 
+    </title>
+    <style>
+    .div1 p {
+       background-color:yellow;
+    }
+    .div2 > p {
+        background-color:yellow;
+    }
+    .div3 + p {
+        background-color:aqua;
+    }
+    .div4 ~ p {
+        background-color:lightblue;
+    }
+    table {
+        width:100%;
+        border:1px solid #f1f1f1;
+        border-collapse:collapse;
+    }
+    tr {
+        height:40px;
+    }
+    tr:nth-child(even) {
+        background-color:#f1f1f1;
+    }
+    th {
+        text-align:left;
+    }
+    </style>
+   </head>
+   <body>
+    <h1>
+        CSS Combinators 
+    </h1>
+
+    <hr>
+
+    <h2>
+        CSS Combinators 
+    </h2>
+
+    <p>
+        <p style="background-color:rgba(255,255,0,0.3);padding:20px;">
+        A combinator is something that explains the relationship between the selectors. 
+        </p>
+
+        <br>
+        <br>
+
+        A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator. 
+        <br>
+        There are four different combinators in CSS:- 
+        <br>
+        <ul>
+            <li>descendant selector (space)</li>
+            <li>child selector (>)</li>
+            <li>adjacent sibling selector (+)</li>
+            <li>general sibling selector (~)</li>
+        </ul>
+    </p>
+
+    <hr>
+
+    <h2>
+        Descendant Selector 
+    </h2>
+
+    <p>
+        The descendant selector matches all elements that are descendants of a specified element. 
+        <br>
+        The following example selects all &lt;p&gt; elements inside &lt;div&gt; elements. 
+        <br>
+        Example:- 
+        <br>
+        <div class="div1">
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <section>
+                <p>
+                    Paragraph 3 in the div. (inside a section element) 
+                </p>
+            </section>
+        </div>
+
+        <p>Paragraph 4 Not in the div.</p>
+        <p>Paragraph 5 Not in the div.</p>
+    </p>
+
+    <hr>
+
+    <h2>
+        Child Selector (>) 
+    </h2>
+
+    <p>
+        The child selector selects all elements that are the children of a specified element. 
+        <br>
+        The following example selects all &lt;p&gt; elements that are children of a &lt;div&gt; element. 
+        <br>
+        Example:- 
+        <br>
+        <div class="div2">
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <section>
+                <!--not child but descendant-->
+                <p>
+                    Paragraph 3 in the div (inside a section element).  
+                </p>
+            </section>
+            <p>
+                Paragraph 4 in the div. 
+            </p>
+        </div>
+
+        <p>Paragraph 5 Not in the div. </p>
+        <p>Paragraph 6 Not in the div. </p>
+    </p>
+
+    <hr>
+    <br>
+    <br>
+    <hr>
+
+    <h2>
+        Adjacent Sibling Selector (+) 
+    </h2>
+
+    <p>
+        The adjacent sibling selector is used to select an element that is directly after another specific element. 
+        <br>
+        Sibling elements must have the same parent element, and "adjacent" means "immediately following". 
+        <br>
+        The following example selects the first &lt;p&gt; element that are placed immediately after &lt;div&gt; elements. 
+        <br>
+        Example:- 
+        <br>
+        <div class="div3">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        </div>
+
+        <p>Paragraph 3 After the div.</p>
+        <p>Paragraph 4 After the div.</p>
+
+        <div class="div3">
+            <p>Paragraph 5 in the div.</p>
+            <p>Paragraph 6 in the div.</p>
+        </div>
+
+        <p>Paragraph 7 After the div.</p>
+        <p>Paragraph 8 After the div.</p>
+    </p>
+
+    <hr>
+
+    <h2>
+        General Sibling Selector (~) 
+    </h2>
+
+    <p>
+        The general sibling selector selects all elements that are next siblings of a specified element. 
+        <br>
+        The following example selects all &lt;p&gt; elements that are next siblings of &lt;div&gt; elements. 
+        <br>
+        Example:- 
+        <br>
+        <p>Paragraph 1</p>
+        <div class="div4">
+        <p>Paragraph 2</p>
+        </div>
+
+        <p>Paragraph 3</p>
+        <code>Some code.</code>
+        <p>Paragraph 4.</p>
+    </p>
+
+    <hr>
+
+    <h2>
+        All CSS Combinator Selectors 
+    </h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Selector</th>
+            <th>Example</th>
+            <th>Example Description</th>
+        </tr>
+        <tr>
+            <td><i>element element</i></td>
+            <td>div p</td>
+            <td>Selects all &lt;p&gt; elements inside &lt;div&gt; elements</td>
+        </tr>
+        <tr>
+            <td><i>element>element</i></td>
+            <td>div > p</td>
+            <td>Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element</td>
+        </tr>
+        <tr>
+            <td><i>element+element</i></td>
+            <td>div + p</td>
+            <td>Selects the first &lt;p&gt; element that are placed immediately after &lt;div&gt; elements</td>
+        </tr>
+        <tr>
+            <td><i>element1~element2</i></td>
+            <td>p ~ ul</td>
+            <td>Selects every &lt;ul&gt; element that are preceded by a &lt;p&gt; element</td>
+        </tr>
+    </table>
+   </body>
+</html>

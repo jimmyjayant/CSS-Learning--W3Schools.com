@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Align 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .center {
+            margin:auto;
+            width:60%;
+            border:3px solid green;
+            padding:10px;
+        }
+        .center1 {
+            text-align:center;
+            border:3px solid green;
+        }
+        #img1 {
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .right {
+            position:absolute;
+            right:0;
+            width:300px;
+            border:3px solid green;
+            padding:10px;
+        }
+        .right1 {
+            float:right;
+            width:300px;
+            border:3px solid green;
+            padding:10px;
+        }
+        .right1::after {
+            content:"";
+            clear:both;
+            display:table;
+        }
+        .withoutclearfix {
+            border:3px solid green;
+            padding:5px;
+        }
+        #img2 {
+            float:right;
+        }
+
+        #img3 {
+            float:right;
+        }
+
+        .withclearfix {
+            border:3px solid green;
+            padding:5px;
+        }
+        .withclearfix::after {
+            content:"";
+            clear:both;
+            display:table;
+        }
+        .vcenter {
+            padding:70px 0;
+            border:3px solid green;
+        }
+        .vhcenter {
+            text-align:center;
+            padding:70px 0;
+            border:3px solid green;
+        }
+        .linecenter {
+            line-height:200px;
+            height:200px;
+            border:3px solid green;
+            text-align:center;
+        }
+        .linecenter p {
+            line-height:1.5;
+            display:inline-block;
+            vertical-align:middle;
+        }
+        .centertransform {
+            height:200px;
+            position:relative;
+            border:3px solid green;
+        }
+        .centertransform p {
+            margin:0;
+            position:absolute;
+            top:50%;
+            left:50%;
+            -ms-transform:translate(-50%,-50%);
+            transform:translate(-50%,-50%);
+        }
+        .flexboxcenter {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:200px;
+            border:3px solid green;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Layout - Horizontal & Vertical Align 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Center Align Elements 
+        </h2>
+
+        <p>
+            To horizontally center a block element (like &lt;div&gt;), use <span class="edit">margin:auto;</span>
+            <br>
+            Setting the width of the element will prevent it from stretching out to the edges of its container. 
+            <br>
+            The element will then take up the specified width, and the remaining space will be split equally between the two margins. 
+            <br>
+            Example:- 
+            <br>
+            <div class="center">
+                <p>
+                    Hello World! 
+                </p>
+            </div>
+
+            <br>
+
+            <strong>Note:- </strong>Center aligning has no effect if the <span class="edit">width</span> property is not set (or set to 100%). 
+        </p>
+
+        <hr>
+
+        <h2>
+            Center Align Text 
+        </h2>
+
+        <p>
+            To just center the text inside an element, use <span class="edit">text-align: center;</span>
+            <br>
+            Example:- 
+            <br>
+            <div class="center1">
+                <p>
+                    This text is centered. 
+                </p>
+            </div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Center an Image 
+        </h2>
+
+        <p>
+            To center an image, set left and right margin to <span class="edit">auto</span> and make it into a <span class="edit">block </span> element. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" alt="Paris" style="width:40%;" id="img1">
+        </p>
+
+        <hr>
+
+        <h2>
+            Left and Right Align - Using position 
+        </h2>
+
+        <p>
+            One method for aligning elements is to use <span class="edit">position: absolute;</span>
+            <br>
+            Example:- 
+            <br>
+            <div class="right">
+                <p>
+                    In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 
+                </p>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+
+
+            <strong>Note:- </strong>Absolute positioned elements are removed from the normal flow, and can overlap elements. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Left and Right Align - Using float 
+        </h2>
+
+        <p>
+            Another method for aligning elements is to use the <span class="edit">float</span> property. 
+            <br>
+            Example:- 
+            <br>
+            <div class="right1">
+                <p>
+                    In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 
+                </p>
+            </div>
+        </p>
+
+
+        <hr style="clear:both;">
+
+        <h2>
+            The clearfix Hack 
+        </h2>
+
+        <p>
+            <p style="background-color:rgba(255,255,0,0.3);padding:20px;">
+            <strong>Note:- </strong>If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. You can use the "clearfix hack" to fix this. 
+            </p>
+
+            <br>
+
+            Then we can add the clearfix hack to the containing element to fix this problem. 
+            <br>
+            Example:- 
+            <br>
+            <h3>
+                Without Clearfix 
+            </h3>
+
+            <p>
+                This image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container. 
+            </p>
+
+            <div class="withoutclearfix">
+                <img src="Image14.jpg" alt="Pineapple" width="170" height="170" id="img2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet..... 
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <h3>
+                With Clearfix 
+            </h3>
+
+            <p>
+                Add the clearfix hack to the containing element, to fix this problem. 
+            </p>
+
+            <div class="withclearfix">
+                <img src="Image14.jpg" alt="Pineapple" width="170" height="170" id="img3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet....... 
+            </div>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            Center Vertically - Using padding 
+        </h2>
+
+        <p>
+            There are many ways to center an element vertically in CSS. A simple solution is to use top and bottom <span class="edit">padding</span>. 
+            <br>
+            Example:- 
+            <br>
+            <div class="vcenter">
+                <p>
+                    I am vertically centered. 
+                </p>
+            </div>
+
+            <br>
+            <br>
+
+            To center both vertically and horizontally, use <span class="edit">padding</span> and <span class="edit">text-align: center</span>. 
+            <br>
+            Example:- 
+            <br>
+            <div class="vhcenter">
+                <p>
+                    I am vertically and horizontally centered. 
+                </p>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Center Vertically - Using line-height 
+        </h2>
+
+        <p>
+            Another trick is to use the <span class="edit">line-height</span> property with a value that is equal to the <span class="edit">height</span> property. 
+            <br>
+            Example:- 
+            <br>
+            <div class="linecenter">
+                <p>
+                    I am vertically and horizontally centered. 
+                </p>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Center Vertically - Using position & transform 
+        </h2>
+
+        <p>
+            If <span class="edit">padding</span> and <span class="edit">line-height</span> are not options, another solution is to use positioning and the <span class="edit">transform</span> property. 
+            <br>
+            Example:- 
+            <br>
+            <div class="centertransform">
+                <p>
+                    I am vertically and horizontally centered. 
+                </p>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Center Vertically - Using Flexbox 
+        </h2>
+
+        <p>
+            You can also use flexbox to center things. Just note that flexbox is not supported in IE10 and earlier versions. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                A container with both the justify-content and the align-items properties set to <i>center</i> will align the item(s) in the center (in both axis). 
+            </p>
+            <br>
+            <div class="flexboxcenter">
+                <p>
+                    I am vertically and horizontally centered. 
+                </p>
+            </div>
+        </p>
+    </body>
+</html>
