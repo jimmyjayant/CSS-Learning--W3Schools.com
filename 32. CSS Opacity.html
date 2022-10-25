@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Opacity 
+        </title>
+        <style>
+            * {
+                box-sizing:border-box;
+            }
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .div1 {
+            display:flex;
+            flex-wrap:wrap;
+        }
+        div.child1 {
+            margin:5px;
+        }
+        div.child2 {
+            margin:5px;
+
+        }
+        div.child3 {
+            margin:5px;
+        }
+        div.child1 img {
+            opacity:0.2;
+        }
+        div.child2 img {
+            opacity:0.5;
+        }
+        div.child3 img {
+            opacity:1;
+        }
+        div.child1 p {
+            width:90px;
+            margin:auto;
+        }
+        div.child2 p {
+            width:90px;
+            margin:auto;
+        }
+        div.child3 p {
+            width:90px;
+            margin:auto;
+        }
+        .div2::after {
+         content:"";
+         clear:both;
+         display:table;
+        }
+        .img1, .img2, .img3 {
+            float:left;
+            width:33.33%;
+            padding:5px;
+        }
+        .div2 img {
+            opacity:0.5;
+        }
+        .div2 img:hover {
+            opacity:1;
+        }
+        .div3::after {
+            content:"";
+            clear:both;
+            display:table;
+        }
+        .div3 img {
+            opacity:1;
+        }
+        .div3 img:hover {
+            opacity:0.5;
+        }
+        .div4::after {
+            content:"";
+            clear:both;
+            display:table;
+        }
+        .kid1, .kid2, .kid3, .kid4 {
+            float:left;
+            width:25%;
+            padding:5px;
+            height:150px;
+            background-color:#00ff00;
+            text-align:center;
+            line-height:150px;
+        }
+        .kid1 {
+            opacity:1;
+        }
+        .kid2 {
+            opacity:0.6;
+        }
+        .kid3 {
+            opacity:0.3;
+        }
+        .kid4 {
+            opacity:0.1;
+        }
+        .div5::after {
+            content:"";
+            clear:both;
+            display:table;
+        }
+        .childdiv1, .childdiv2, .childdiv3, .childdiv4 {
+            float:left;
+            width:25%;
+            height:150px;
+            background-color:#00ff00;
+            line-height:150px;
+            text-align:center;
+        }
+        .childdiv1 {
+            background-color:rgba(0,255,0,1);
+        }
+        .childdiv2 {
+            background-color:rgba(0,255,0,0.6);
+        }
+        .childdiv3 {
+            background-color:rgba(0,255,0,0.3);
+        }
+        .childdiv4 {
+            background-color:rgba(0,255,0,0.1);
+        }
+
+        .div6 {
+            background-image:url(Image19.jpg);
+            border:2px solid black;
+        }
+
+        .box {
+            margin:30px;
+            background-color:#ffffff;
+            border:1px solid black;
+            opacity:0.6;
+        }
+
+        .box p {
+            margin:5%;
+            font-weight:bold;
+            color:#000000;
+        }
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Opacity / Transparency 
+        </h1>
+
+        <hr>
+
+        <p>
+            The <span class="edit">opacity</span> property specifies the opacity/transparency of an element. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Transparent Image 
+        </h2>
+
+        <p>
+            The <span class="edit">opacity</span> property can take a value from 0.0 - 1.0. The lower the value, the more transparent. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div1">
+              <div class="child1">
+                <img src="Image15.jpg">
+                  <p>
+                     opacity 0.2
+                  </p>
+              </div>
+              <div class="child2">
+                <img src="Image15.jpg">
+                  <p>
+                     opacity 0.5
+                  </p>  
+              </div>
+              <div class="child3">
+                <img src="Image15.jpg">
+                  <p>
+                    opacity 1
+                    <br>
+                    (default)
+                  </p>
+              </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Transparent Hover Effect 
+        </h2>
+
+        <p>
+            The <span class="edit">opacity</span> property is often used together with the <span class="edit">:hover</span> selector to change the opacity on mouse-over. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div2">
+                <div class="img1">
+                    <img src="Image12.jpg">
+                </div>
+                <div class="img2">
+                    <img src="Image16.jpg">
+                </div>
+                <div class="img3">
+                    <img src="Image10.jpg">
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <p style="font-size:large;font-weight:bold;">Example Explained</p> 
+
+            <br>
+
+            The first CSS block is similar to the code in Example 1. In addition, we have added what should happen when a user hovers over one of the images. In this case we want the image to NOT be transparent when the user hovers over it. The CSS for this is <span class="edit">opacity:1;</span>. 
+
+            <br>
+
+            When the mouse pointer moves away from the image, the image will be transparent again. 
+            <br>
+            An example of reversed hover effect. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div3">
+                <div class="img1">
+                    <img src="Image12.jpg">
+                </div>
+                <div class="img2">
+                    <img src="Image16.jpg">
+                </div>
+                <div class="img3">
+                    <img src="Image10.jpg">
+                </div>
+            </div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Transparent Box 
+        </h2>
+
+        <p>
+            When using the <span class="edit">opacity</span> property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div4">
+                <div class="kid1">
+                    opacity 1
+                </div>
+                <div class="kid2">
+                    opacity 0.6
+                </div>
+                <div class="kid3">
+                    opacity 0.3
+                </div>
+                <div class="kid4">
+                    opacity 0.1
+                </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Transparency using RGBA 
+        </h2>
+
+        <p>
+            If you do not want to apply opacity to child elements, like in our example above, use <b>RGBA</b> color values. The following example sets the opacity for the background color and not the text. 
+            <br>
+            You can use RGB as a color value. In addition to RGB, you can use a RGB color value with an alpha channel (RGBA) - which specifies the opacity for a color. 
+            <br>
+            An RGBA color value is specified with: rgba (red, green, blue, <i>alpha</i>). The <i>alpha</i> parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque). 
+            <br>
+            Example:- 
+            <br>
+            <div class="div5">
+                <div class="childdiv1">
+                    100% opacity
+                </div>
+                <div class="childdiv2">
+                    60% opacity
+                </div>
+                <div class="childdiv3">
+                    30% opacity
+                </div>
+                <div class="childdiv4">
+                    10% opacity
+                </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Text in Transparent Box 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <div class="div6">
+                <div class="box">
+                    <p>
+                        This is some text that is placed in the transparent box. 
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <p style="font-size:large;font-weight:bold;">
+            Example explained 
+            </p>
+
+            <br>
+            
+            First, we create a &lt;div&gt; element (class="div6") with a background image, and a border. 
+            <br>
+            Then we create another &lt;div&gt; (class="box") inside the first &lt;div&gt;. 
+            <br>
+            The &lt;div class="box"&gt; have a background color, and a border - the div is transparent. 
+            <br>
+            Inside the transparent &lt;div&gt;, we add some text inside a &lt;p&gt; element. 
+
+        </p>
+
+
+    </body>
+</html>
