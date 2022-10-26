@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Navigation Bar 
+        </title>
+        <style>
+        table {
+            width:100%;
+            border-collapse:collapse;
+        }
+        
+        th {
+            text-align:left;
+            font-weight:normal;
+            font-size:20px;
+        }
+
+        /*Styling the vertical navigation bar "nav1"*/
+
+        ul.nav1 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            width:250px;
+            background-color:#f1f1f1;
+            overflow:hidden;
+        }
+
+        .nav1 a {
+            display:inline-block;
+            padding:18px;
+            margin:0;
+            width:250px;
+            font-size:20px;
+            text-decoration:none;
+        }
+
+        .active:link, .active:visited, .active:hover, .active:active {
+            color:white;
+            background-color:#27ae60;
+        }
+
+        .anchor1:link {
+            color:black;
+        }
+        .anchor1:visited {
+            color:black;
+        }
+        .anchor1:hover {
+            color:white;
+            background-color:rgba(0,0,0,0.7);
+        }
+
+        /*Styling the first horizontal navigation bar "nav2"*/
+
+        ul.nav2 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            width:800px;
+            background-color:rgba(0,0,0,0.7);
+            overflow:hidden;
+        }
+
+        .nav2 a {
+            text-decoration:none;
+            padding:15px;
+            margin:0;
+            font-size:20px;
+        }
+
+        .nav2 .active, .anchor2 {
+            float:left;
+        }
+
+        .nav2 .about {
+            float:right;
+        }
+
+        .anchor2:link, .anchor2:visited {
+            color:white;
+        }
+
+        .anchor2:hover, .anchor2:active, .about:hover, .about:active {
+           color:white;
+           background-color:black;
+        }
+
+        .about:link, .about:visited, .about:hover, .about:active {
+            color:white;
+        }
+
+        /*Styling the second horizontal navigation bar "nav3"*/
+
+        ul.nav3 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            width:800px;
+            background-color:#f1f1f1;
+            overflow:hidden;
+        }
+
+        .nav3 a {
+            text-decoration:none;
+            margin:0;
+            padding:15px;
+            font-size:20px;
+        }
+
+        .home, .news, .active1 {
+            float:left;
+        }
+
+        .about1 {
+            float:right;
+        }
+
+        .active1:link, .active1:visited, .active1:hover, .active1:active {
+            color:white;
+            background-color:#0984e3;
+        }
+
+        .home, .news, .about1 {
+            color:#636e72;
+
+        }
+        .home:hover, .news:hover, .about1:hover {
+            background-color:#b2bec3;
+        }
+
+        /*removing bullets and setting margin and padding to 0 of unordered list of class "simple"*/
+
+        .simple {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+        }
+
+        /*Styling the span elements*/
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Navigation Bar 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Demo: Navigation Bars 
+        </h2>
+
+        <p>
+            <table>
+                <tr>
+                    <th>Vertical</th>
+                    <th>Horizontal</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul class="nav1">
+                            <li><a href="#" class="active">Home</a></li>
+                            <li><a href="#" class="anchor1">News</a></li>
+                            <li><a href="#" class="anchor1">Contact</a></li>
+                            <li><a href="#" class="anchor1">About</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="nav2">
+                            <li><a href="#" class="active">Home</a></li>
+                            <li><a href="#" class="anchor2">News</a></li>
+                            <li><a href="#" class="anchor2">Contact</a></li>
+                            <li><a href="#" class="about">About</a></li>
+                        </ul>
+
+                        <br>
+
+                        <ul class="nav3">
+                            <li><a href="#" class="home">Home</a></li>
+                            <li><a href="#" class="news">News</a></li>
+                            <li><a href="#" class="active1">Contact</a></li>
+                            <li><a href="#" class="about1">About</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            Navigation Bars 
+        </h2>
+
+        <p>
+            Having easy-to-use navigation is important for any web site. 
+            <br>
+            With CSS you can transform boring HTML menus into good-looking navigation bars. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Navigation Bar = List of Links 
+        </h2>
+
+        <p>
+            A navigation bar needs standard HTML as a base. 
+            <br>
+            In our examples we will build the navigation bar from a standard HTML list. 
+            <br>
+            A navigation bar is basically a list of links, so using the &lt;ul&gt; and &lt;li&gt; elements makes perfect sense. 
+            <br>
+            Example:- 
+            <br>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <p>
+                <strong>Note:- </strong>We use href="#" for test links. In a real website this would be URLs. 
+            </p>
+
+            <br>
+            <br>
+
+            Now let's remove the bullets and the margins and padding from the list. 
+            <br>
+            Example:- 
+            <br>
+            <ul class="simple">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <br>
+            <br>
+
+            Example explained:- 
+            <br>
+            <ul>
+                <li><span class="edit">list-style-type: none;</span> - Removes the bullets. A navigation bar does not need list markers</li>
+                <li>Set <span class="edit">margin: 0;</span> and <span class="edit">padding: 0;</span> to remove browser default settings</li>
+            </ul>
+
+            <br>
+            <br>
+
+            The code in the example above is the standard code used in both vertical, and horizontal navigation bars, which you will learn more about in the next chapters. 
+
+        </p>
+    </body>
+</html>

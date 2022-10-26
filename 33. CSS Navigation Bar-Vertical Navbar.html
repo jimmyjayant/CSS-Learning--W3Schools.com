@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Vertical Navbar 
+        </title>
+        <style>
+        /*styling the span element*/
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+
+        /*Styling the unordered list of class="list1"*/
+        .list1 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+        }
+
+        .list1 li a {
+            display:block;
+            width:60px;
+            background-color:#dddddd;
+        }
+
+        /*Styling the unordered list of class="list2"*/
+        .list2 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            width:60px;
+        }
+
+        .list2 li a {
+            display:block;
+            background-color:#dddddd;
+        }
+
+        /*Styling the unordered list of class="list3"*/
+        .list3 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            width:200px;
+            background-color:#f1f1f1;
+        }
+
+        .list3 li a {
+            display:block;
+            color:#000;
+            padding:8px 16px;
+            text-decoration:none;
+        }
+
+        .list3 li a:hover {
+            background-color:#555;
+            color:white;
+        }
+
+        /*Styling unordered list of class="list4"*/
+        .list4 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            width:200px;
+            background-color:#f1f1f1;
+        }
+        .list4 li a {
+            display:block;
+            padding:8px 16px;
+            color:#000;
+            text-decoration:none;
+        }
+        .list4 .active {
+            background-color:green;
+            color:white;
+        }
+        .list4 li a:hover:not(.active) {
+            background-color:#555;
+            color:white;
+        }
+
+        /*Styling unordered list of class="list5"*/
+        .list5 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            background-color:#f1f1f1;
+            width:200px;
+            border:1px solid black;
+        }
+        .list5 li a {
+            display:block;
+            padding:8px 16px;
+            text-align:center;
+            color:#000;
+            text-decoration:none;
+            
+            
+        }
+        .list5 li {
+            border-bottom:1px solid black;
+        }
+        .list5 li:last-child {
+            border-bottom:none;
+        }
+        .list5 .active {
+            background-color:green;
+            color:white;
+        }
+
+        .list5 a:hover:not(.active) {
+            background-color:#555;
+            color:white;
+        }
+        
+
+
+        
+        
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Vertical Navigation Bar 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Vertical Navigation Bar 
+        </h2>
+
+        <p>
+            To build a vertical navigation bar, you can style the &lt;a&gt; elements inside the list, in addition to the code from the previous page. 
+            <br>
+            Example:- 
+            <br>
+            <ul class="list1">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <br>
+            <br>
+
+            A background color is added to the links to show the link area. 
+            <br>
+            Notice that the whole link area is clickable, not just the text. 
+
+            <br>
+            <br>
+
+            Example explained:- 
+            <br>
+            <ul>
+                <li><span class="edit">display: block;</span> - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width (and padding, margin, height, etc. if you want)</li>
+                <li><span class="edit">width: 60px;</span> - Block elements take up the full width available by default. We want to specify a 60 pixels width. </li>
+            </ul>
+
+            <br>
+            <br>
+
+            You can also set the width of &lt;ul&gt;, and remove the width of &lt;a&gt;, as they will take up the full width available when displayed as block elements. This will produce the same result as our previous example. 
+            <br>
+            Example:- 
+            <br>
+            <ul class="list2">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Vertical Navigation Bar Examples 
+        </h2>
+
+        <p>
+           Create a basic vertical navigation bar with a gray background color and change the background color of the links when the user moves the mouse over them. 
+           <br>
+           Example:- 
+           <br>
+           <ul class="list3">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+           </ul>
+
+        <br>
+        <br>
+
+        <h3>
+            Active/Current Navigation Link 
+        </h3>
+
+        <p>
+            Add an "active" class to the current link to let the user know which page he/she is on. 
+            <br>
+            Example:- 
+            <br>
+            <ul class="list4">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </p>
+
+        <br>
+        <br>
+
+        <h3>
+            Center Links & Add Borders 
+        </h3>
+
+        <p>
+            Add <span class="edit">text-align:center</span> to &lt;li&gt; or &lt;a&gt; to center the links. 
+            <br>
+            Add the <span class="edit">border</span> property to &lt;ul&gt; add a border around the navbar. If you also want borders inside the navbar, add a <span class="edit">border-bottom</span> to all &lt;li&gt; elements, except for the last one. 
+            <br>
+            Example:- 
+            <br>
+            <ul class="list5">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul> 
+        </p>
+
+        <br>
+        <br>
+
+        <h3>
+            Full-height Fixed Vertical Navbar 
+        </h3>
+
+        <p>
+            Create a full-height, "sticky" side navigation. 
+            <br>
+            Example:- 
+            <br>
+            <a href="33. CSS Navigation Bar-Vertical Navbar-Full Height Side Nav.html" target="_blank">Fixed Full Height Side Nav Example</a>
+            <br>
+            <strong>Note:- </strong>This example might not work property on mobile devices. 
+        </p>
+        </p>
+    </body>
+</html>

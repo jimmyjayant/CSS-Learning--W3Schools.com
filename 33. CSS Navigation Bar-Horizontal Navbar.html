@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            CSS Horizontal Navbar 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .list1 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+        }
+        .list1 li {
+            display:inline;
+        }
+
+        .list2 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            
+        }
+
+        .list2 li {
+            float:left;
+        }
+
+        .list2 li a {
+            display:block;
+            padding:8px;
+            background-color:#ddd;
+        }
+
+        .list3 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:#f1f1f1;
+        }
+        .list3 li {
+            float:left;
+        }
+        .list3 li a {
+            display:block;
+            padding:8px;
+        }
+        .list4 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:#555;
+        }
+        .list4 li {
+            float:left;
+        }
+
+        .list4 li a {
+            display:block;
+            padding:14px 16px;
+            color:white;
+            text-decoration:none;
+            text-align:center;
+        }
+        .list4 li a:hover {
+            background-color:#000;
+        }
+        .list5 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:#555;
+        }
+        .list5 li {
+            float:left;
+        }
+        .list5 li a {
+            display:block;
+            padding:14px 16px;
+            text-decoration:none;
+            color:white;
+            text-align:center;
+        }
+        .list5 li a:hover:not(.active) {
+            background-color:#111;
+        }
+        .list5 .active {
+            background-color:green;
+            color:white;
+        }
+        .list6 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:#333;
+        }
+        .list6 .active {
+            background-color:green;
+            color:white;
+            float:right;
+        }
+        .list6 li a:not(.active) {
+            float:left;
+        }
+        
+        .list6 li a {
+            display:block;
+            padding:14px 16px;
+            text-decoration:none;
+            text-align:center;
+            color:white;
+        }
+        .list6 li a:hover:not(.active) {
+            background-color:#000;
+        }
+
+        .list7 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:#333;
+        }
+        .list7 li {
+            float:left;
+            border-right:1px solid #ddd;
+        }
+        .list7 li a {
+            display:block;
+            padding:14px 16px;
+            text-decoration:none;
+            color:white;
+            text-align:center;
+        }
+        .list7 li a:hover:not(.active) {
+            background-color:#111;
+        }
+        .list7 .active {
+            background-color:green;
+        }
+        .list7 li:last-child {
+            border-right:none;
+        }
+        iframe {
+            border:none;
+            margin:30px;
+        }
+        .list8 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:#f1f1f1;
+            border:1px solid grey;
+        }
+        .list8 li {
+            float:left;
+        }
+        .list8 li a {
+            display:block;
+            padding:14px 16px;
+            text-decoration:none;
+            color:grey;
+            text-align:center;
+        }
+        .list8 li a:hover:not(.active) {
+            background-color:#999;
+            color:white;
+        }
+        .list8 .active {
+            background-color:green;
+            color:white;
+        }
+
+        .list9 {
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            overflow:hidden;
+            background-color:#555;
+            width:100%;
+        }
+        .list9 li {
+            float:left;
+        }
+        .list9 li a {
+            display:block;
+            padding:14px 16px;
+            text-decoration:none;
+            text-align:center;
+            color:white;
+        }
+        .list9 li a:hover:not(.active) {
+            background-color:#111;
+        }
+        .list9 .active {
+            background-color:green;
+        }
+        .responsive {
+            padding:0 16px;
+        }
+        /*Responsive web design*/
+
+        /*Breakpoints*/
+
+        @media screen and (max-width:600px) {
+            .list9 li, .list9 .right {
+                float:none;
+            }
+        }
+
+        .list10 {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            background-color:#333;
+            overflow:hidden;
+            
+        }
+        .list10 li {
+            float:left;
+        }
+        .list10 li > a {
+            display:inline-block;
+            padding:14px 16px;
+            text-decoration:none;
+            text-align:center;
+            color:white;
+        }
+        .list10 li > a:hover, .dropdown:hover > a {
+            background-color:red;
+        }
+        .dropdown-content {
+            display:none;
+            position:absolute;
+            min-width:160px;
+            background-color:#f9f9f9;
+        }
+        .dropdown-content > a {
+            display:block;
+            padding:14px 16px;
+            text-decoration:none;
+            text-align:left;
+            color:black;
+            
+        }
+        .dropdown:hover .dropdown-content {
+            display:block;
+        }
+        .dropdown-content a:hover {
+            background-color:#f1f1f1;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Horizontal Navigation Bar 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Horizontal Navigation Bar 
+        </h2>
+
+        <p>
+            There are two ways to create a horizontal navigation bar. Using <strong>inline</strong> or <strong>floating</strong> list items. 
+        </p>
+
+        <br>
+        <br>
+
+        <h3>
+            Inline List Items 
+        </h3>
+
+        <p>
+            One way to build a horizontal navigation bar is to specify the &lt;li&gt; elements as inline, in addition to the "standard" code from the previous page. 
+            <br>
+            Example:- 
+            <br>
+            <ul class="list1">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <br>
+            <br>
+
+            Example explained:- 
+            <br>
+            <ul>
+                <li><span class="edit">display: inline;</span> - By default, &lt;li&gt; elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line. </li>
+            </ul>
+
+            <br>
+            <br>
+
+            <h3>
+                Floating List Items 
+            </h3>
+
+            <p>
+                Another way of creating a horizontal navigation bar is to float the &lt;li&gt; elements, and specify a layout for the navigation links. 
+                <br>
+                Example:- 
+                <br>
+                <ul class="list2">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+
+                <br>
+                <br>
+
+                <strong>Note:- </strong>If a !DOCTYPE is not specified, floating items can produce unexpected results. 
+                <br>
+                A background color is added to the links to show the link area. The whole link area is clickable, not just the text. 
+                <br>
+                <strong>Note:- </strong>overflow:hidden; is added to the ul element to prevent li elements from going outside of the list. 
+
+                <br>
+                <br>
+
+                Example explained:- 
+                <br>
+                <ul>
+                    <li><span class="edit">float: left;</span> - Use float to get block elements to float next to each other</li>
+                    <li><span class="edit">display: block;</span> - Allows us to specify padding (and height, width, margins, etc. if you want)</li>
+                    <li><span class="edit">padding: 8px;</span> - Specify some padding between each &lt;a&gt; element, to make them look good</li>
+                    <li><span class="edit">background-color: #dddddd;</span> - Add a gray background-color to each &lt;a&gt; element</li>
+                </ul>
+
+                <br>
+
+                <strong>Tip:- </strong>Add the background-color to &lt;ul&gt; instead of each &lt;a&gt; element if you want a full-width background color. 
+                <br>
+                Example:- 
+                <br>
+                <ul class="list3">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </p>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            Horizontal Navigation Bar Examples 
+        </h2>
+
+        <p>
+            Create a basic horizontal navigation bar with a dark background color and change the background color of the links when the user moves the mouse over them. 
+            <br>
+            Example:- 
+            <br>
+            <ul class="list4">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <br>
+            <br>
+
+            <h3>
+                Active/Current Navigation Link 
+            </h3>
+
+            <p>
+                Add an "active" class to the current link to let the user know which page he/she is on. 
+                <br>
+                Example:- 
+                <br>
+                <ul class="list5">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </p>
+
+            <br>
+            <br>
+
+            <h3>
+                Right-Align Links 
+            </h3>
+
+            <p>
+                Right-align links by floating the list items to the right (<span class="edit">float:right;</span>). 
+                <br>
+                Example:- 
+                <br>
+                <ul class="list6">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" class="active">About</a></li>
+                </ul>
+            </p>
+
+            <br>
+            <br>
+
+            <h3>
+                Border Dividers 
+            </h3>
+
+            <p>
+                Add the <span class="edit">border-right</span> property to &lt;li&gt; to create link dividers. 
+                <br>
+                Example:- 
+                <br>
+                <ul class="list7">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li style="float:right;"><a href="#about">About</a></li>
+                </ul>
+            </p>
+
+            <br>
+            <br>
+
+            <h3>
+                Fixed Navigation Bar 
+            </h3>
+
+            <p>
+                Make the navigation bar stay at the top or the bottom of the page, even when the user scrolls the page. 
+                <br>
+                <iframe src="33. CSS Navigation Bar-Horizontal Navbar-Fixed Top Bar.html" width="40%" height="300px"></iframe>
+                <iframe src="33. CSS Navigation Bar-Horizontal Navbar-Fixed Bottom Bar.html" width="40%" height="300px"></iframe>
+                <br>
+                Example:- 
+                <br>
+                <strong>Fixed Top</strong>
+                <br>
+                <a href="33. CSS Navigation Bar-Horizontal Navbar-Fixed Top Bar.html" target="_blank">Fixed Top Navigation Bar Example</a>
+                <br>
+                <br>
+                <strong>Fixed Bottom</strong>
+                <br>
+                <a href="33. CSS Navigation Bar-Horizontal Navbar-Fixed Bottom Bar.html" target="_blank">Fixed Bottom Navigation Bar Example</a>
+
+                <br>
+                <br>
+
+                <p style="background-color:rgba(255,255,0,0.3);padding:20px;">
+                <strong>Note:- </strong>Fixed position might not work properly on mobile devices. 
+                </p>
+            </p>
+
+            <br>
+            <br>
+
+            <h3>
+                Gray Horizontal Navbar 
+            </h3>
+
+            <p>
+                An example of a gray horizontal navigation bar with a thin gray border. 
+                <br>
+                Example:- 
+                <br>
+                <ul class="list8">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </p>
+
+            <br>
+            <br>
+
+            <h3>
+                Sticky Navbar 
+            </h3>
+
+            <p>
+                Add <span class="edit">position: sticky;</span> to &lt;ul&gt; to create a sticky navbar. 
+                <br>
+                A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). 
+                <br>
+                <iframe src="33. CSS Navigation Bar-Horizontal Navbar-Sticky Navbar.html" width="80%" height="400px" style="border:1px solid #ddd;"></iframe>
+                <br>
+                Example:- 
+                <br>
+                <a href="33. CSS Navigation Bar-Horizontal Navbar-Sticky Navbar.html" target="_blank">Sticky Navbar Example</a>
+            </p>
+
+            <br>
+            <br>
+
+            <p style="background-color:rgba(255,255,0,0.3);padding:20px;">
+            <strong>Note:- </strong>Internet Explorer do not support sticky positioning. Safari requires a -webkit- prefix (see example above). You must also specify at least one of <span class="edit">top</span>, <span class="edit">right</span>, <span class="edit">bottom</span> or <span class="edit">left</span> for sticky positioning to work. 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            More Examples 
+        </h2>
+
+        <p>
+            <h3>
+                Responsive Topnav 
+            </h3>
+
+            <p>
+                How to use CSS media queries to create a responsive top navigation. 
+                <br>
+                Example:- 
+                <br>
+                <ul class="list9">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="right"><a href="#about">About</a></li>
+                </ul>
+
+                <div class="responsive">
+                    <h2>
+                        Responsive Topnav Example 
+                    </h2>
+
+                    <p>
+                        This example use media queries to stack the unordered list vertically when the screen size is 600px or less. 
+                    </p>
+                    <p>
+                        You will learn more about media queries and responsive web design later in our CSS Tutorial. 
+                    </p>
+                    <h4>
+                        Resize the browser window to see the effect. 
+                    </h4>
+
+                </div>
+
+            </p>
+
+            <br>
+            <br>
+
+            <h3>
+                Responsive Sidenav 
+            </h3>
+
+            <p>
+                How to use CSS media queries to create a responsive side navigation. 
+                <br>
+                Example:- 
+                <br>
+                <a href="33. CSS Navigation Bar-Horizontal Navbar-Responsive Sidebar.html" target="_blank">Responsive Sidebar Example</a>
+            </p>
+
+            <br>
+            <br>
+
+            <h3>
+                Dropdown Navbar 
+            </h3>
+
+            <p>
+                How to add a dropdown menu inside a navigation bar. 
+                <br>
+                Example:- 
+                <br>
+                <ul class="list10">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li class="dropdown">
+                        <a href="#dropdown">Dropdown</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                    </li>
+                </ul>
+
+                <br>
+                <br>
+
+                <h4>
+                    Dropdown Menu inside a Navigation Bar 
+                </h4>
+
+                Hover over the "Dropdown" link to see the dropdown menu. 
+            </p>
+        </p>
+    </body>
+</html>

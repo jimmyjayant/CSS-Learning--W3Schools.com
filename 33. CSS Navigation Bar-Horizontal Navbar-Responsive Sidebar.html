@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Responsive Sidebar 
+        </title>
+        <style>
+        body {
+            margin:0;
+        }
+        ul {
+            height:100%;
+            width:25%;
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            background-color:#f1f1f1;
+            position:fixed;
+            overflow:auto;
+
+        }
+        li a {
+            display:block;
+            padding:14px 16px;
+            text-decoration:none;
+            color:black;
+        }
+        .active {
+            background-color:green;
+            color:white;
+        }
+        a:hover:not(.active) {
+            background-color:#555;
+            color:white;
+        }
+        div {
+            margin-left:25%;
+            padding:1px 16px;
+            height:1000px;
+        }
+
+        /*Setting Breakpoints*/
+
+        @media screen and (max-width:900px) {
+            ul {
+                width:100%;
+                height:auto;
+                position:relative;
+            }
+
+            a {
+                float:left;
+                padding:15px;
+            }
+
+            div {
+                margin-left:0;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            a {
+                text-align:center;
+                float:none;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div>
+            <h2>
+                Responsive Sidenav Example 
+            </h2>
+
+            <p>
+                This example use media queries to transform the sidenav to a top navigation bar when the screen size is 900px or less. 
+            </p>
+            <p>
+                We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links. 
+            </p>
+            <p>
+                You will learn more about media queries and responsive web design later in our CSS Tutorial. 
+            </p>
+
+            <h4>
+                Resize the browser window to see the effect. 
+            </h4>
+
+        </div>
+    </body>
+</html>
