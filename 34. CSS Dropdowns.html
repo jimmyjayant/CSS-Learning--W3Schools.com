@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Dropdowns 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .div1 {
+            display:inline-block;
+            position:relative;
+        }
+        .div1 > span {
+            display:inline;
+            padding:0;
+            margin:0;
+        }
+        .div1 > span:hover {
+            color:red;
+        }
+        .div1 > span:hover + .div2 {
+          display:block;
+        }
+        .div2 {
+            display:none;
+            position:absolute;
+            background-color:#f1f1f1;
+            padding:8px;
+        }
+        .div3 {
+            display:inline-block;
+            color:white;
+            position:relative;
+            background-color:green;
+            margin:30px;
+        }
+        .div3 p {
+            display:inline-block;
+            padding:16px 18px;
+        }
+        .div4 {
+            display:none;
+            background-color:#f1f1f1;
+            position:absolute;
+            width:100%;
+        }
+        .div4 a {
+            display:block;
+            padding:5px;
+            text-decoration:none;
+            color:black;
+        }
+        .div4 a:hover {
+           background-color:#f9f9f9;
+        }
+        .div3:hover .div4 {
+            display:block;
+        }
+        .div5 {
+            display:inline-block;
+        }
+        .div7 {
+            display:none;
+            position:absolute;
+        }
+        .div5:hover .div7 {
+            display:block;
+        }
+        .div7 p {
+            display:block;
+            padding:4px;
+        }
+
+        .div8 {
+            position:relative;
+            display:inline-block;
+        }
+        .div9 {
+            display:none;
+            position:absolute;
+            background-color:#f9f9f9;
+            min-width:160px;
+            padding:12px 16px;
+            z-index:1;
+            box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .div8:hover .div9 {
+            display:block;
+        }
+        .div10 {
+            position:relative;
+            display:inline-block;
+            background-color:green;
+            color:white;
+            cursor:pointer;
+            font-size:16px;
+        }
+        .div10 span {
+            display:inline-block;
+            padding:15px 12px;
+        }
+        .div11 {
+            position:absolute;
+            display:none;
+            width:100%;
+            background-color:#f9f9f9;
+            color:black;
+        }
+        .div11 a {
+            display:block;
+            text-decoration:none;
+            color:black;
+            padding:12px 16px;
+        }
+        .div11 a:hover {
+            background-color:#f1f1f1;
+        }
+        .div10:hover .div11 {
+            display:block;
+        }
+        
+        /*Styling div12 and div13 for left float dropdown menu*/
+        .div12 {
+            display:inline-block;
+            position:relative;
+        }
+        .div12 p {
+            display:inline-block;
+            color:white;
+            background-color:green;
+            padding:12px 16px;
+            cursor:pointer;
+        }
+        .div13 {
+            display:none;
+            position:absolute;
+            padding:0;
+            margin:0;
+            background-color:#f9f9f9;
+            min-width:160px;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index:1;
+        }
+        .div13 a {
+            display:block;
+            text-decoration:none;
+            color:black;
+            padding:8px 12px;
+            margin:0;
+        }
+        .div13 a:hover {
+            background-color:#f1f1f1;
+        }
+        .div12:hover p {
+            background-color:lightgreen;
+        }
+        .div12:hover .div13 {
+            display:block;
+        }
+        
+        /*Styling div14 and div15 for right float dropdown menu*/
+        .div14 {
+            display:inline-block;
+            position:relative;
+        }
+        .div14 p {
+            display:inline-block;
+            color:white;
+            background-color:green;
+            padding:12px 16px;
+            cursor:pointer;
+        }
+        .div15 {
+            display:none;
+            position:absolute;
+            padding:0;
+            margin:0;
+            background-color:#f9f9f9;
+            min-width:160px;
+            right:0;
+            box-shadow:0px 0px 16px 8px rgba(0,0,0,0.2);
+            z-index:1;
+        }
+        .div15 a {
+            display:block;
+            text-decoration:none;
+            color:black;
+            padding:8px 12px;
+            margin:0;
+        }
+        .div15 a:hover {
+            background-color:#f1f1f1;
+        }
+        .div14:hover p {
+            background-color:lightgreen;
+        }
+        .div14:hover .div15 {
+            display:block;
+        }
+
+        /*Style the image as a hover button to show the dropdown image*/
+
+        .div16 {
+            display:inline-block;
+            position:relative;
+        }
+        .div16:hover .div17 {
+            display:block;
+        }
+        .div17 {
+            display:none;
+            position:absolute;
+            z-index:1;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+            background-color:#f9f9f9;
+            max-width:200px;
+        }
+        .div17 p {
+            text-align:center;
+            padding:4px 12px;
+            font-size:16px;
+        }
+
+        /*Style the horizontal navbar and the dropdown menu inside*/
+        .div18 ul {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            background-color:#333;
+        }
+        .div18 li {
+            display:inline;
+        }
+        .div18 li > a, .dropbtn {
+            display:inline-block;
+            color:white;
+            text-align:center;
+            padding:14px 16px;
+            text-decoration:none;
+        }
+        .div18 li > a:hover, .dropdown:hover .dropbtn {
+            background-color:red;
+        }
+        .div19 {
+            display:none;
+            position:absolute;
+            min-width:160px;
+            z-index:1;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+            background-color:#f9f9f9;
+        }
+        li.dropdown {
+            display:inline-block;
+        }
+        .div19 a {
+            display:block;
+            text-decoration:none;
+            color:black;
+            padding:8px 12px;
+            text-align:center;
+        }
+        .dropdown:hover .div19 {
+            display:block;
+        }
+        .div19 a:hover {
+            background-color:#f1f1f1;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Dropdowns 
+        </h1>
+
+        <hr>
+
+        <p>
+            Create a hoverable dropdown with CSS. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Demo: Dropdown Examples 
+        </h2>
+
+        <p>
+            Move the mouse over the examples below. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div1">
+                <span>Dropdown Text</span>
+                <div class="div2">
+                    <p>Hello World!</p>
+                </div>
+            </div>
+
+            <div class="div3">
+                <p>Dropdown Menu</p>
+                <div class="div4">
+                    <a href="#">Link1</a>
+                    <a href="#">Link2</a>
+                    <a href="#">Link3</a>
+                </div>
+            </div>
+
+            <div class="div5">
+                <p>Other: </p>
+                <div class="div6">
+                    <img src="Image10.jpg" width="150px" height="70px">
+                    <div class="div7">
+                        <img src="Image10.jpg" width="200px" height="70px">
+                        <p>Beautiful Cinque Terre</p>
+                    </div>
+                </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Basic Dropdown 
+        </h2>
+
+        <p>
+            Create a dropdown box that appears when the user moves the mouse over an element. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div8">
+                <span>Mouse over me</span>
+                <div class="div9">
+                    <p>Hello World!</p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <p style="font-size:16px;">Example Explained</p>
+            
+            <br>
+
+            <strong>HTML)</strong> Use any element to open the dropdown content, e.g. a &lt;span&gt;, or a &lt;button&gt; element. 
+            <br>
+            Use a container element (like &lt;div&gt;) to create a dropdown content and add whatever you want inside of it. 
+            <br>
+            Wrap a &lt;div&gt; element around the elements to position the dropdown content correctly with CSS. 
+            <br>
+            <br>
+
+            <strong>CSS)</strong> The <span class="edit">.div8</span> class uses <span class="edit">position:relative</span>, which is needed when we want the dropdown content to be placed right below the dropdown button (using <span class="edit">position:absolute</span>). 
+            <br>
+            The <span class="edit">.div9</span> class holds the actual dropdown content. It is hidden by default, and will be displayed on hover (see below). Note the <span class="edit">min-width</span> is set to 160px. Feel free to change this. <strong>Tip:- </strong>If you want the width of the dropdown content to be as wide as the dropdown button, set the <span class="edit">width</span> to 100% (and <span class="edit">overflow:auto</span> to enable scroll on small screens). 
+            <br>
+            Instead of using a border, we have used the CSS <span class="edit">box-shadow</span> property to make the dropdown menu look like a "card". 
+            <br>
+            The <span class="edit">:hover</span> selector is used to show the dropdown menu when the user moves the mouse over the dropdown button. 
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Dropdown Menu 
+        </h2>
+
+        <p>
+            Create a dropdown menu that allows the user to choose an option from a list. 
+            <br>
+            Example:- 
+            <br>
+            This example is similar to the previous one, except that we add links inside the dropdown box and style them to fit a styled dropdown button. 
+            <br>
+            <div class="div10">
+                <span>Dropdown Menu</span>
+                <div class="div11">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Right-aligned Dropdown Content 
+        </h2>
+
+        <p>
+            If you want the dropdown menu to go from right to left, instead of left to right, add <span class="edit">right: 0;</span>
+            <br>
+            Example:- 
+            <br>
+            <div class="div12" style="float:left;">
+                <p>Left</p>
+                <div class="div13">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+
+            <div class="div14" style="float:right;">
+                <p>Right</p>
+                <div class="div15">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </p>
+
+        <hr style="clear:both;">
+
+        <h2>
+            More Examples 
+        </h2>
+
+        <p>
+            <h3>
+                Dropdown Image 
+            </h3>
+
+            <p>
+                How to add an image and other content inside the dropdown box. 
+                <br>
+                Example:- 
+                <br>
+                Move the mouse over the image below to open the dropdown content. 
+                <br>
+                <div class="div16">
+                    <img src="Image10.jpg" width="150px" height="70px">
+                    <div class="div17">
+                        <img src="Image10.jpg" width="200" height="150">
+                        <p>Beautiful Cinque Terre</p>
+                    </div>
+                </div>
+            </p>
+
+            <br>
+            <br>
+
+            <h3>
+                Dropdown Navbar 
+            </h3>
+
+            <p>
+                How to add a dropdown menu inside a navigation bar. 
+                <br>
+                Example:- 
+                <br>
+                <div class="div18">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">News</a></li>
+                        <li class="dropdown"><a href="#" class="dropbtn">Dropdown</a>
+                        <div class="div19">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <br>
+                <br>
+
+                <h3>
+                    Dropdown Menu inside a Navigation Bar 
+                </h3>
+
+                <p>
+                    Hover over the "Dropdown" link to see the dropdown menu 
+                </p>
+            </p>
+
+
+        </p>
+
+
+
+
+    </body>
+</html>
