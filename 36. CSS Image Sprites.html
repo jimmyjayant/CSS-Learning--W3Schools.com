@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Image Sprites 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .edi1 {
+            background-color:yellow;
+            color:red;
+        }
+        .pback {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+        }
+        #img1 {
+            width:46px;
+            height:44px;
+            background:url('Image19.gif') 0 0;
+        }
+
+        #img2 {
+            width:43px;
+            height:44px;
+            background:url('Image19.gif') -91px 0;
+        }
+
+        #navlist {
+            position:relative;
+        }
+
+        #navlist li {
+            margin:0;
+            padding:0;
+            list-style:none;
+            position:absolute;
+            top:0;
+        }
+
+        #navlist li, #navlist a {
+            height:44px;
+            display:block;
+        }
+
+        #li1 {
+            left:0px;
+            width:46px;
+            background: url('Image19.gif') 0 0;
+        }
+
+        #li2 {
+            left:63px;
+            width:43px;
+            background:url('Image19.gif') -47px 0;
+        }
+
+        #li3 {
+            left:129px;
+            width:43px;
+            background:url('Image19.gif') -91px 0;
+        }
+
+        .afterabsolute {
+            height:50px;  
+        }
+
+        #li1 a:hover {
+            background:url('Image20.gif') 0 -45px;
+        }
+
+        #li2 a:hover {
+            background:url('Image20.gif') -47px -45px;
+        }
+
+        #li3 a:hover {
+            background:url('Image20.gif') -91px -45px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Image Sprites 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Image Sprites 
+        </h2>
+
+        <p>
+            An image sprite is a collection of images put into a single image. 
+            <br>
+            A web page with many images can take a long time to load and generates multiple server requests. 
+            <br>
+            Using image sprites will reduce the number of server requests and save bandwidth. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Image Sprites - Simple Example 
+        </h2>
+
+        <p>
+            Instead of using three separate images, we use this single image ('Image19.gif'):-
+            <br>
+            <img src="Image19.gif">
+            <br>
+            With CSS, we can show just the part of the image we need. 
+            <br>
+            In the following example the CSS specifies which part of the "Image19.gif" image to show. 
+            <br>
+            Example:- 
+            <br>
+            <img id="img1" width="1" height="1">
+            <img id="img2" width="1" height="1">
+
+            <br>
+            <br>
+
+            <strong>Example explained:- </strong>
+            <br>
+            <ul>
+                <li><span class="edit">&lt;img id="img1" src="Image19.gif"&gt;</span> - Only defines a small transparent image because the src attribute cannot be empty. The displayed image will be the background image we specify in CSS.<span class="edi1">But we did not include the src attribute which is not recommended. Because the image will have no placeholder in that location. But specifying src attribute with non-existing image will place a non-transparent image placeholder in that location which will interfere with background image. </span> </li>
+                <li><span class="edit">width:46px;height:44px;</span> - Defines the portion of the image we want to use</li>
+                <li><span class="edit">background:url('Image19.gif') 0 0;</span> - Defines the background image and its position (left 0px, top 0px)</li>
+            </ul>
+
+            <br>
+
+            This is the easiest way to use image sprites, now we want to expand it by using links and hover effects. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Image Sprites - Create a Navigation List 
+        </h2>
+
+        <p>
+            We want to use the sprite image ("Image19.gif") to create a navigation list. 
+            <br>
+            We will use a HTML list, because it can be a link and also supports a background image. 
+            <br>
+            Example:- 
+            <br>
+            <ul id="navlist">
+                <li id="li1"><a href="https://www.google.com/" title="google.com" target="_blank"></a></li>
+                <li id="li2"><a href="https://www.youtube.com/" title="youtube.com" target="_blank"></a></li>
+                <li id="li3"><a href="https://www.w3schools.com/" title="w3schools.com" target="_blank"></a></li>
+            </ul>
+
+            <br>
+
+            <div class="afterabsolute"></div>
+
+            <strong>Example explained:- </strong>
+            <br>
+            <ul>
+                <li>#navlist {position:relative;} - position is set to relative to allow absolute positioning inside it</li>
+                <li>#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin and padding are set to 0, list-style is removed, and all list items are absolute positioned</li>
+                <li>#navlist li, #navlist a {height:44px;display:block;} - the height of all the images is 44px</li>
+            </ul>
+
+            <br>
+            <br>
+
+            Now start to position and style for each specific part:- 
+            <br>
+            <ul>
+                <li>#li1 {left:0px;width:46px;} - Positioned all the way to the left, and the width of the image is 46px</li>
+                <li>#li1 {background:url('Image19.gif') 0 0;} - Defines the background image and its position (left 0px, top 0px)</li>
+                <li>#li2 {left:63px;width:43px;} - Positioned 63px to the right (#li1 width 46px + some extra space between items), and the width is 43px</li>
+                <li>#li2 {background:url('Image19.gif') -47px 0;} - Defines the background image 47px to the right (#li1 width 46px + 1px line divider)</li>
+                <li>#li3 {left:129px;width:43px;} - Positioned 129px to the right (start of #li2 is 63px + #li2 width 43px + extra space), and the width is 43px</li>
+                <li>#li3 {background:url('Image19.gif') -91px 0;} - Defines the background image 91px to the right (#li1 width 46px + 1px line divider + #li3 width 43px + 1px line divider)</li>
+            </ul>
+        </p>
+
+        <hr style="margin-bottom:30px;">
+
+        <br>
+
+        <hr style="margin-top:20px;">
+
+        <h2>
+            Image Sprites - Hover Effect 
+        </h2>
+
+        <p>
+            Now we want to add a hover effect to our navigation list. 
+            <br>
+            <p class="pback">
+                <strong>Note:- </strong>The <span class="edit">:hover</span> selector can be used on all elements, not only on links. 
+            </p>
+
+            <br>
+
+            Our new image ("Image20.gif") contains three navigation images and three images to use for hover effects:- 
+            <br>
+            <img src="Image20.gif">
+            <br>
+            Because this is one single image, and not six separate files, there will be <b>no loading delay</b> when a user hovers over the image. 
+            <br>
+            We only add three lines of code to add the hover effect. 
+            <br>
+            Example:- 
+            <br>
+            <ul id="navlist">
+                <li id="li1"><a href="https://www.google.com/" title="google.com" target="_blank"></a></li>
+                <li id="li2"><a href="https://www.youtube.com/" title="youtube.com" target="_blank"></a></li>
+                <li id="li3"><a href="https://www.w3schools.com/" title="w3schools.com" target="_blank"></a></li>
+            </ul>
+
+            <div class="afterabsolute"></div>
+
+            <br>
+
+            <strong>Example explained:- </strong>
+            <ul>
+                <li>#li1 a:hover {background:url('Image20.gif') 0 -45px;} - For all three hover images we specify the same background position, only 45px further down</li>
+            </ul>
+        </p>
+
+    </body>
+</html>
