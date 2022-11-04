@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS !important 
+        </title>
+        <style>
+            body {
+                font-family:arial;
+            }
+          .edit {
+            background-color:#f1f1f1;
+            color:red;
+          }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS The !important Rule 
+        </h1>
+
+        <hr>
+
+        <h2>
+            What is !important? 
+        </h2>
+
+        <p>
+           The <span class="edit">!important</span> rule in CSS is used to add more importance to a property/value than normal. 
+           <br>
+           In fact, if you use the <span class="edit">!important</span> rule, it will override ALL previous styling rules for that specific property on that element! 
+           <br>
+           Let us look at an example:- 
+           <br>
+           <a href="43. CSS !important-Example 1.html" target="_blank">Example 1</a>
+
+           <br>
+
+           Example Explained:- 
+           <br>
+           In the example above, all three paragraphs will get a red background color, even though the ID selector and the class selector have a higher specificity. The <span class="edit">!important</span> rule overrides the <span class="edit">background-color</span> property in both cases. 
+
+        </p>
+
+        <hr>
+
+        <h2>
+            Important About !important 
+        </h2>
+
+        <p>
+            The only way to override an <span class="edit">!important</span> rule is to include another <span class="edit">!important</span> rule on a declaration with the same (or higher) specificity in the source code - and here the problem starts! This makes the CSS code confusing and the debugging will be hard, especially if you have a large style sheet! 
+            <br>
+            Here we have created a simple example. It is not very clear, when you look at the CSS source code, which color is considered most important. 
+            <br>
+            Example:- 
+            <br>
+            <a href="43. CSS !important-Example 2.html" target="_blank">Example 2</a>
+
+            <br>
+
+            <strong>Tip:- </strong>It is good to know about the <span class="edit">!important</span> rule. You might see it in some CSS source code. However, do not use it unless you absolutely have to. 
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Maybe One or Two Fair Uses of !important 
+        </h2>
+
+        <p>
+           One way to use <span class="edit">!important</span> is if you have to override a style that cannot be overridden in any other way. This could be if you are working on a Content Management System (CMS) and cannot edit the CSS code. Then you can set some custom styles to override some of the CMS styles. 
+           <br>
+           Another way to use <span class="edit">!important</span> is: Assume you want a special look for all buttons on a page. Here, buttons are styled with a gray background color, white text, and some padding and border. 
+           <br>
+           Example:- 
+           <br>
+           <a href="43. CSS !important-Example 3.html" target="_blank">Example 3</a>
+
+           <br>
+           <br>
+
+           The look of a button can sometimes change if we put it inside another element with higher specificity, and the properties get in conflict. Here is an example of this:- 
+           <br>
+           Example:- 
+           <br>
+           <a href="43. CSS !important-Example 4.html" target="_blank">Example 4</a>
+
+           <br>
+           <br>
+
+           To "force" all buttons to have the same look, no matter what, we can add the <span class="edit">!important</span> rule to the properties of the button, like this. 
+           <br>
+           Example:- 
+           <br>
+           <a href="43. CSS !important-Example 5.html" target="_blank">Example 5</a>
+
+        </p>
+
+
+    </body>
+</html>

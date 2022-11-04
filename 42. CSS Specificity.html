@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Specificity 
+        </title>
+        <style>
+            body {
+                font-family:Arial;
+            }
+          .edit {
+            background-color:#f1f1f1;
+            color:red;
+          }
+          .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+          }
+          .example {
+            background-color:#ddd;
+            font-size:20px;
+            padding:15px;
+            border-radius:5px;
+          }
+          .code {
+            background-color:#333;
+            color:white;
+            padding:10px;
+            font-size:16px;
+            margin:5px;
+            line-height:1.5;
+          }
+          .tryit {
+            color:white;
+            font-weight:bold;
+            font-size:16px;
+            background-color:green;
+            border:none;
+            border-radius:5px;
+            padding:8px 16px;
+            cursor:pointer;
+          }
+          .arrow {
+            font-size:12px;
+          }
+          table {
+            width:100%;
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+          }
+          tr {
+            height:40px;
+          }
+          tr:nth-child(even) {
+            background-color:#f1f1f1;
+          }
+          th {
+            text-align:left;
+          }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Specificity 
+        </h1>
+
+        <hr>
+
+        <h2>
+            What is Specificity? 
+        </h2>
+
+        <p>
+           If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element. 
+           <br>
+           Think of specificity as a score/rank that determines which style declaration is ultimately applied to an element. 
+           <br>
+           Look at the following examples. 
+           <br>
+           Example 1:- 
+           <br>
+           In this example, we have used the "p" element as selector, and specified a red color for this element. The text will be red. 
+           <br>
+           <a href="42. CSS Specificity-Example 1.html" target="_blank">Example 1</a>
+
+           <br>
+           <br>
+           Now look at example 2. 
+           <br>
+           Example 2:- 
+           <br>
+           In this example, we have added a class selector (named "test"), and specified a green color for this class. The text will now be green (even though we have specified a red color for the element selector "p"). This is because the class selector is given higher priority. 
+           <br>
+           <a href="42. CSS Specificity-Example 2.html" target="_blank">Example 2</a>
+
+           <br>
+           <br>
+           Now look at example 3. 
+           <br>
+           Example 3:- 
+           <br>
+           In this example, we have added the id selector (named "demo"). The text will now be blue, because the id selector is given higher priority. 
+           <br>
+           <a href="42. CSS Specificity-Example 3.html" target="_blank">Example 3</a>
+
+           <br>
+           <br>
+           Now look at example 4.
+           <br>
+           Example 4:- 
+           <br>
+           In this example, we have added an inline style for the "p" element. The text will now be pink, because the inline style is given the highest priority. 
+           <br>
+           <a href="42. CSS Specificity-Example 4.html" target="_blank">Example 4</a>
+           
+        </p>
+
+        <hr>
+
+        <h2>
+            Specificity Hierarchy 
+        </h2>
+
+        <p>
+            Every CSS selector has its place in the specificity hierarchy. 
+            <br>
+            There are four categories which define the specificity level of a selector:- 
+            <br>
+            <ul>
+                <li><b>Inline styles</b> - Example: &lt;h1 style="color: pink;"&gt; </li>
+                <li><b>IDs</b> - Example: #navbar</li>
+                <li><b>Classes, pseudo-classes, attribute selectors</b> - Example: .test, :hover, [href]</li>
+                <li><b>Elements and pseudo-elements</b> - Example: h1, ::before</li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            How to Calculate Specificity? 
+        </h2>
+
+        <p>
+            Memorize how to calculate specificity! 
+            <br>
+            Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element. 
+            <br>
+            <br>
+            <p class="edit1">
+             <strong>Note: </strong>Inline Style gets a specificity value of 1000, and is always given the highest priority! 
+             <br>
+             <br>
+             <strong>Note 2: </strong>There is one exception to this rule: if you use the <span class="edit">!important</span> rule, it will even override inline styles! 
+            </p>
+
+            <br>
+            <br>
+
+            The table below shows some examples on how to calculate specificity values:- 
+            <br>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Specificity Value</th>
+                    <th>Calculation</th>
+                </tr>
+                <tr>
+                    <td>p</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>p.test</td>
+                    <td>11</td>
+                    <td>1 + 10</td>
+                </tr>
+                <tr>
+                    <td>p#demo</td>
+                    <td>101</td>
+                    <td>1 + 100</td>
+                </tr>
+                <tr>
+                    <td>&lt;p style="color:pink;"&gt;</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>#demo</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>.test</td>
+                    <td>10</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>p.test1.test2</td>
+                    <td>21</td>
+                    <td>1 + 10 + 10</td>
+                </tr>
+                <tr>
+                    <td>#navbar p#demo</td>
+                    <td>201</td>
+                    <td>100 + 1 + 100</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>0</td>
+                    <td>0 (the universal selector is ignored)</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <b>The selector with the highest specificity value will win and take effect!</b>
+            <br>
+            Consider these three code fragments:- 
+            <br>
+            <div class="example">
+              Example 
+                <div class="code">
+                  A: h1 
+                  <br>
+                  B: h1#content 
+                  <br>
+                  C: <span style="color:green;">&lt;</span><span style="color:darkorange;">h1</span> <span style="color:violet;">id</span><span style="color:green;">="content"</span> <span style="color:violet;">style</span><span style="color:green;">="color:pink;"&gt;</span>Heading<span style="color:green;">&lt;</span><span style="color:darkorange;">/h1</span><span style="color:green;">&gt;</span>
+                </div>
+            </div>
+            
+            <br>
+
+            The specificity of A is 1 (one element selector) 
+            <br>
+            The specificity of B is 101 (one ID reference + one element selector) 
+            <br>
+            The specificity of C is 1000 (inline styling) 
+            <br>
+            <br>
+            Since the third rule (C) has the highest specificity value (1000), this style declaration will be applied. 
+             
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            More Specificity Rules Examples 
+        </h2>
+
+        <p>
+            <b>Equal specificity:the latest rule wins</b> - If the same rule is written twice into the external style sheet, then the latest rule wins. 
+            <br>
+            <div class="example">
+                Example 
+                <div class="code">
+                    h1 {background-color:yellow;}
+                    <br>
+                    h1 {background-color:red;}
+                </div>
+                <a href="42. CSS Specificity-Equal Specificity.html" target="_blank">
+                    <button type="button" value="Try it Yourself" class="tryit">
+                        Try it Yourself <span class="arrow">>></span>
+                    </button>
+                </a>
+            </div>
+
+            <br>
+
+            <hr>
+
+            <b>ID selectors have a higher specificity than attribute selectors</b> - Look at the following three code lines:- 
+            <br>
+            <br>
+            <div class="example">
+                Example 
+                <div class="code">
+                    div#a {background-color:green;}
+                    <br>
+                    #a {background-color:yellow;}
+                    <br>
+                    div[id=a] {background-color:blue;}
+                </div>
+                <a href="42. CSS Specificity-ID Specificity.html" target="_blank">
+                    <button type="button" value="Try it Yourself" class="tryit">
+                        Try it Yourself <span class="arrow">>></span>
+                    </button>
+                </a>
+            </div>
+
+            <br>
+
+            The first rule is more specific than the other two, and will therefore be applied. 
+
+            <br>
+
+            <hr>
+
+            <br>
+
+            <b>Contextual selectors are more specific than a single element selector</b> - The embedded style sheet is closer to the element to be styled. So in the following situation 
+            <br>
+            <br>
+            <div class="example">
+                Example 
+                <div class="code">
+                    From external CSS file: 
+                    <br>
+                    #content h1 {background-color: red;}
+                    <br>
+                    <br>
+                    In HTML file: 
+                    <br>
+                    &lt;style&gt; 
+                    <br>
+                    #content h1 {background-color: yellow;}
+                    <br>
+                    &lt;/style&gt; 
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            The latter rule will be applied. 
+
+            <br>
+            <br>
+
+            <hr>
+
+            <br>
+
+            <b>A class selector beats any number of element selectors</b> - a class selector such as .intro beats h1, p, div, etc. 
+            <br>
+            <br>
+            <div class="example">
+                Example 
+                <div class="code">
+                    .intro {background-color:yellow;}
+                    <br>
+                    h1 {background-color:red;}
+                </div>
+                <a href="42. CSS Specificity-Class Specificity.html" target="_blank">
+                    <button type="button" value="Try it Yourself" class="tryit">
+                        Try it Yourself <span class="arrow">>></span>
+                    </button>
+                </a>
+            </div>
+            <br>
+
+            <hr>
+
+            <br>
+
+            <b>The universal selector (*) and inherited values have a specificity of 0</b> - The universal selector (*) and inherited values are ignored! 
+        </p>
+
+        
+
+        
+
+
+    </body>
+</html>

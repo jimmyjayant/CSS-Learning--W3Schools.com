@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Math Functions 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .mydiv1 {
+                background-color:#333;
+                color:white;
+                border-style:inset;
+                border-color:#333;
+                padding:5px;
+            }
+            table {
+                border:1px solid #f1f1f1;
+                width:50%;
+                border-collapse:collapse;
+            }
+            tr {
+                height:40px;
+                
+            }
+            tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            th {
+                text-align:left;
+                padding:10px;
+            }
+            td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Math Functions 
+        </h1>
+
+        <hr>
+
+        <p>
+            The CSS math functions allow mathematical expressions to be used as property values. Here, we will explain the <span class="edit">calc()</span>, <span class="edit">max()</span> and <span class="edit">min()</span> functions. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The calc() Function 
+        </h2>
+
+        <p>
+            The <span class="edit">calc()</span> function performs a calculation to be used as the property value. 
+
+            <br>
+
+            <h3>
+                CSS Syntax 
+            </h3>
+
+            <div class="mydiv1">
+                calc(<i>expression</i>)
+            </div>
+
+            <br>
+
+            <table>
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><i>expression</i></td>
+                    <td>
+                        Required. A mathematical expression. The result will be used as the value. 
+                        <br>
+                        The following operators can be used:- + - * / 
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            Let us look at an example. 
+            <br>
+            Example:- 
+            <br>
+            Use calc() to calculate the width of a &lt;div&gt; element:- 
+            <br>
+            <a href="44. CSS Math Functions-Calculate Div Width.html" target="_blank">Calculate Div Width Example</a>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            The max() Function 
+        </h2>
+
+        <p>
+            The <span class="edit">max()</span> function uses the largest value, from a comma-separated list of values, as the property value. 
+            <br>
+            <h3>
+                CSS Syntax 
+            </h3>
+
+            <div class="mydiv1">
+                max(<i>value1</i>, <i>value2</i>,........) 
+            </div>
+
+            <br>
+
+            <table>
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><i>value1</i>, <i>value2</i>, ...... </td>
+                    <td>
+                        Required. A list of comma-separated values - where the largest value is chosen  
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            Let us look at an example. 
+            <br>
+            Example:- 
+            <br>
+            Use max() to set the width of #div1 to whichever value is largest, 50% or 300px. 
+            <br>
+            <a href="44. CSS Math Functions-max() function.html" target="_blank">max() Function Example</a>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The min() Function 
+        </h2>
+
+        <p>
+            The <span class="edit">min()</span> function uses the smallest value, from a comma-separated list of values, as the property value. 
+            <br>
+            <h3>
+                CSS Syntax 
+            </h3>
+
+            <div class="mydiv1">
+                min(<i>value1</i>, <i>value2</i>,........) 
+            </div>
+
+            <br>
+
+            <table>
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><i>value1</i>, <i>value2</i>, ...... </td>
+                    <td>
+                        Required. A list of comma-separated values - where the smallest value is chosen  
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            Let us look at an example:- 
+            <br>
+            Example:- 
+            <br>
+            Use min() to set the width of #div1 to whichever value is smallest, 50% or 300px. 
+            <br>
+            <a href="44. CSS Math Functions-min() function.html" target="_blank">min() Function Example</a>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            All CSS Math Functions 
+        </h2>
+
+        <table>
+            <tr>
+                <th>Function</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>calc()</td>
+                <td>Allows you to perform calculations to determine CSS property values</td>
+            </tr>
+            <tr>
+                <td>max()</td>
+                <td>Uses the largest value, from a comma-separated list of values, as the property value</td>
+            </tr>
+            <tr>
+                <td>min()</td>
+                <td>Uses the smallest value, from a comma-separated list of values, as the property value</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
