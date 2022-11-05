@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Rounded Corners 
+        </title>
+        <style>
+          .edit {
+            background-color:#f1f1f1;
+            color:red;
+          }
+          .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+          }
+          .div1 {
+            border:2px solid green;
+            border-radius:10px;
+            padding:30px 20px;
+          }
+          .div1 h2 {
+            margin-top:0;
+          }
+          .div2 {
+            background-color:#27ae60;
+            color:white;
+            border-radius:20px;
+            width:150px;
+            height:100px;
+            padding:20px;
+            font-size:20px;
+            margin:10px;
+          }
+          .div3 {
+            border:2px solid #27ae60;
+            border-radius:20px;
+            padding:20px;
+            width:150px;
+            height:100px;
+            font-size:20px;
+            margin:10px;
+          }
+          .div4 {
+            background-image:url('Image28.gif');
+            border-radius:20px;
+            padding:20px;
+            width:150px;
+            height:100px;
+            font-size:20px;
+            margin:10px;
+          }
+          .div5 {
+            background-color:#27ae60;
+            width:150px;
+            height:100px;
+            margin:10px;
+            border-radius:15px 50px 30px 5px;
+            padding:20px;
+          }
+          .div6 {
+            background-color:#27ae60;
+            width:150px;
+            height:100px;
+            margin:10px;
+            border-radius:15px 50px 30px;
+            padding:20px;
+          }
+          .div7 {
+            background-color:#27ae60;
+            width:150px;
+            height:100px;
+            margin:10px;
+            border-radius:15px 50px;
+            padding:20px;
+          }
+          .div8 {
+            background-color:#27ae60;
+            width:150px;
+            height:100px;
+            margin:10px;
+            border-radius:15px;
+            padding:20px;
+          }
+          .div9 {
+            background-color:#4cd137;
+            width:150px;
+            height:100px;
+            margin:10px;
+            border-radius:50px/15px;
+            padding:20px;
+          }
+          .div10 {
+            background-color:#4cd137;
+            width:150px;
+            height:100px;
+            margin:10px;
+            border-radius:15px/50px;
+            padding:20px;
+          }
+          .div11 {
+            background-color:#4cd137;
+            width:150px;
+            height:100px;
+            margin:10px;
+            border-radius:50%;
+            padding:20px;
+          }
+
+          table {
+            width:60%;
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+          }
+          tr {
+            height:40px;
+          }
+          tr:nth-child(even) {
+            background-color:#f1f1f1;
+          }
+          th {
+            text-align:left;
+          }
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Rounded Corners 
+        </h1>
+
+        <hr>
+
+        <div class="div1">
+            <h2>
+                CSS Rounded Corners 
+            </h2>
+            With the CSS <span class="edit">border-radius</span> property, you can give any element "rounded corners". 
+        </div>
+
+        <hr>
+
+        <h2>
+            CSS border-radius Property 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">border-radius</span> property defines the radius of an element's corners. 
+            <br>
+            <strong>Tip:- </strong>This property allows you to add rounded corners to elements! 
+            <br>
+            Here are three examples:- 
+            <br>
+            <ol>
+                <li>
+                    Rounded corners for an element with a specified background color: 
+                <div class="div2">
+                    Rounded corners! 
+                </div>
+                </li>
+                <li>
+                    Rounded corners for an element with a border: 
+                <div class="div3">
+                    Rounded corners! 
+                </div>
+                </li>
+                <li>
+                    Rounded corners for an element with a background image: 
+                <div class="div4">
+                    Rounded corners! 
+                </div>
+                </li>
+            </ol>
+
+            <br>
+
+            <p class="edit1">
+                <strong>Tip:- </strong>The <span class="edit">border-radius</span> property is actually a shorthand property for the <span class="edit">border-top-left-radius</span>, <span class="edit">border-top-right-radius</span>, <span class="edit">border-bottom-right-radius</span> and <span class="edit">border-bottom-left-radius</span> properties. 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            CSS border-radius - Specify Each Corner 
+        </h2>
+
+        <p>
+            The <span class="edit">border-radius</span> property can have from one to four values. Here are the rules:- 
+            <br>
+            <strong>Four values - border-radius: 15px 50px 30px 5px;</strong> (first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner): 
+            <br>
+            <div class="div5">
+            </div>
+
+            <br>
+            <br>
+
+            <strong>Three values - border-radius: 15px 50px 30px;</strong> (first value applies to top-left corner, second value applies to top-right and bottom-left corners, and third value applies to bottom-right corner): 
+            <br>
+            <div class="div6">
+            </div>
+
+            <br>
+            <br>
+
+            <strong>Two values - border-radius: 15px 50px;</strong> (first value applies to top-left and bottom-right corners, and the second value applies to top-right and bottom-left corners): 
+            <br>
+            <div class="div7">
+            </div>
+
+            <br>
+            <br>
+
+            <strong>One value - border-radius: 15px;</strong> (the value applies to all four corners, which are rounded equally): 
+            <br>
+            <div class="div8">
+            </div>
+
+            <br>
+            <br>
+
+            You could also create elliptical corners:- 
+            <br>
+            Example:- 
+            <br>
+            <p>
+              Elliptical border - border-radius: 50px / 15px (where 50px = horizontal radius, and 15px = vertical radius):- 
+            </p>
+            <br>
+            <div class="div9">
+            </div>
+
+            <br>
+            <br>
+
+            <p>
+              Elliptical border - border-radius: 15px / 50px:- 
+            </p>
+            <br>
+            <div class="div10">
+            </div>
+
+            <br>
+            <br>
+
+            <p>
+              Ellipse border - border-radius: 50%:- 
+            </p>
+            <br>
+            <div class="div11">
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+          CSS Rounded Corners Properties 
+        </h2>
+
+        <table>
+          <tr>
+            <th>Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>border-radius</td>
+            <td>A shorthand property for setting all the four border-*-*-radius properties</td>
+          </tr>
+          <tr>
+            <td>border-top-left-radius</td>
+            <td>Defines the shape of the border of the top-left corner</td>
+          </tr>
+          <tr>
+            <td>border-top-right-radius</td>
+            <td>Defines the shape of the border of the top-right corner</td>
+          </tr>
+          <tr>
+            <td>border-bottom-right-radius</td>
+            <td>Defines the shape of the border of the bottom-right corner</td>
+          </tr>
+          <tr>
+            <td>border-bottom-left-radius</td>
+            <td>Defines the shape of the border of the bottom-left corner</td>
+          </tr>
+        </table>
+    </body>
+</html>
