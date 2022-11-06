@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Color Keywords 
+        </title>
+        <style>
+         .edit {
+            background-color:#f1f1f1;
+            color:red;
+         }
+         .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+         }
+         .transparentexample {
+            background-image:url('Image28.gif');
+            height:250px;
+            padding:20px;
+         }
+         .division1 {
+            background-color:lightgreen;
+            border:2px solid black;
+            padding:15px;
+            width:70%;
+            margin:20px auto;
+         }
+         .division2 {
+            background-color:transparent;
+            border:2px solid black;
+            padding:15px;
+            width:70%;
+            margin:20px auto;
+         }
+         .currentcolorexample1 div {
+            color:blue;
+            border:10px solid currentcolor;
+            padding:15px;
+         }
+         .currentcolorexample2 {
+            color:purple;
+         }
+         .currentcolorexample2 div {
+            background-color:currentcolor;
+            padding:15px;
+         }
+         .currentcolorexample2 div p {
+            color:white;
+         }
+         .currentcolorexample3 {
+            color:green;
+         }
+         .currentcolorexample3 div {
+            box-shadow:0px 0px 15px currentcolor;
+            border:5px solid currentcolor;
+            padding:15px;
+            margin:10px;
+         }
+         .inheritexample1 {
+            border:2px solid red;
+            margin:20px 0;
+         }
+         .inheritexample1 span {
+            border:inherit;
+         }
+         .inheritexample2 {
+            border:2px dotted blue;
+         }
+         .inheritexample2 span {
+            border:inherit;
+         }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Color Keywords 
+        </h1>
+
+        <hr>
+
+        <p>
+            This page will explain the <span class="edit">transparent</span>, <span class="edit">currentcolor</span>, and <span class="edit">inherit</span> keywords. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The transparent Keyword 
+        </h2>
+
+        <p>
+            The <span class="edit">transparent</span> keyword is used to make a color transparent. This is often used to make a transparent background color for an element. 
+            <br>
+            Example:- 
+            <br>
+            Here, the background color of the &lt;div&gt; element will be fully transparent, and the background image will show through. 
+            <br>
+            <div class="transparentexample">
+                <div class="division1">
+                    This div has a light green background. 
+                </div>
+                <div class="division2">
+                    This div has a transparent background. 
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <strong>Note:- </strong>The <span class="edit">transparent</span> keyword is equivalent to rgba(0,0,0,0). RGBA color values are an extension of RGB color values with an alpha channel - which specifies opacity for a color. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The currentcolor Keyword 
+        </h2>
+
+        <p>
+            The <span class="edit">currentcolor</span> keyword is like a variable that holds the current value of the color property of an element. 
+            <br>
+            This keyword can be useful if you want a specific color to be consistent in an element or a page. 
+            <br>
+            Example:- 
+            <br>
+            In this example, the border color of the &lt;div&gt; element will be blue, because the text color of the &lt;div&gt; element is blue. 
+            <br>
+            <div class="currentcolorexample1">
+                <div>
+                    This div element has a blue text color and a blue border. 
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            Example:- 
+            <br>
+            In this example, the &lt;div&gt;'s background color is set to the current color value of the container div element. 
+            <br>
+            <div class="currentcolorexample2">
+            This is some text in the container div part......... 
+            <div>
+                <p>
+                This div's background color is set to the current color value of the container div element. 
+                </p>
+            </div>
+            Never use background-color and color property with same value. It will contrast with one another. 
+            </div>
+
+            <br>
+            <br>
+
+            Example:- 
+            <br>
+            In this example, the &lt;div&gt;'s border color and shadow color is set to the current color value of the container div element. 
+            <br>
+            <div class="currentcolorexample3">
+                This is some text in the div part....... 
+                <div>
+                    <p>
+                        This div's border and shadow color is set to the current color value of the container div element. 
+                    </p>
+                </div>
+            </div>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            The inherit Keyword 
+        </h2>
+
+        <p>
+            The <span class="edit">inherit</span> keyword specifies that a property should inherit its value from its parent element. 
+            <br>
+            The <span class="edit">inherit</span> keyword can be used for any CSS property, and on any HTML element. 
+            <br>
+            Example:- 
+            <br>
+            In this example, the &lt;span&gt;'s border settings will be inherited from the parent element. 
+            <br>
+            <div class="inheritexample1">
+                Here, the  
+                <span>
+                       span element's 
+                </span>
+                border settings will be inherited from the parent element. 
+            </div>
+            <div class="inheritexample2">
+                Here, the 
+                <span>
+                    span element's 
+                </span>
+                border settings will also be inherited from the parent element. 
+            </div>
+
+        </p>
+
+    </body>
+</html>
