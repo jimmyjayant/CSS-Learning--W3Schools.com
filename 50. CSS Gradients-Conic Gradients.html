@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Conic Gradients 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+           .box {
+            border:1px solid #f1f1f1;
+            padding:15px;
+           }
+           .conicgrad1 {
+            height:200px;
+            width:200px;
+            background-color:red;
+            background-image:conic-gradient(red,yellow,green);
+           }
+           .conicgradfivecolors {
+            height:200px;
+            width:200px;
+            background-color:red;
+            background-image:conic-gradient(red,yellow,green, blue, black);
+           }
+           .conicgraddegree {
+            height:200px;
+            width:200px;
+            background-color:red;
+            background-image:conic-gradient(red 45deg, yellow 90deg, green 210deg);
+           }
+           .piechart {
+            height:200px;
+            width:200px;
+            border-radius:50%;
+            background-color:red;
+            background-image:conic-gradient(red, yellow, green, blue, black);
+           }
+           .piechart1 {
+            height:200px;
+            width:200px;
+            border-radius:50%;
+            background-color:red;
+            background-image:conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+           }
+           .conicfromangle {
+            height:200px;
+            width:200px;
+            border-radius:50%;
+            background-color:red;
+            background-image:conic-gradient(from 90deg, red, yellow, green);
+           }
+           .conicgradwithpos {
+            height:200px;
+            width:200px;
+            border-radius:50%;
+            background-color:red;
+            background-image:conic-gradient(at 60% 45%, red, yellow, green);
+           }
+           .repeatingconic {
+            height:200px;
+            width:200px;
+            border-radius:50%;
+            background-color:red;
+            background-image:repeating-conic-gradient(red 10%, yellow 20%);
+           }
+           .repeatingconic1 {
+            height:200px;
+            width:200px;
+            border-radius:50%;
+            background-color:red;
+            background-image:repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+           }
+           table {
+            width:70%;
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+           }
+           tr {
+            height:40px;
+           }
+           tr:nth-child(even) {
+            background-color:#f1f1f1;
+           }
+           th {
+            text-align:left;
+           }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Conic Gradients 
+        </h1>
+
+        <hr>
+
+        <h2>
+            CSS Conic Gradients 
+        </h2>
+
+        <p>
+            A conic gradient is a gradient with color transitions rotated around a center point. 
+            <br>
+            To create a conic gradient you must define at least two colors. 
+            <br>
+            <b>Syntax:- </b>
+            <br>
+            <p class="box">
+                background-image: conic-gradient([from <i>angle</i>] [at <i>position,</i>] <i>color</i>[<i>degree</i>], <i>color</i>[<i>degree</i>], ....); 
+            </p>
+            <br>
+            By default, <i>angle</i> is 0deg and <i>position</i> is center. 
+            <br>
+            If no <i>degree</i> is specified, the colors will be spread equally around the center point. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Conic Gradient: Three Colors 
+        </h2>
+
+        <p>
+            The following example shows a conic gradient with three colors. 
+            <br>
+            Example:- 
+            <br>
+            A conic gradient with three colors. 
+            <br>
+            <div class="conicgrad1"></div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Conic Gradient: Five Colors 
+        </h2>
+
+        <p>
+            The following example shows a conic gradient with five colors. 
+            <br>
+            Example:- 
+            <br>
+            A conic gradient with five colors. 
+            <br>
+            <div class="conicgradfivecolors"></div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Conic Gradient: Three Colors and Degrees 
+        </h2>
+
+        <p>
+            The following example shows a conic gradient with three colors and a degree for each color. 
+            <br>
+            Example:- 
+            <br>
+            <div class="conicgraddegree"></div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Create Pie Charts 
+        </h2>
+
+        <p>
+            Just add <span class="edit">border-radius: 50%</span> to make the conic gradient look like a pie. 
+            <br>
+            Example:- 
+            <br>
+            <div class="piechart"></div>
+
+            <br>
+            <br>
+
+            Here is another pie chart with defined degrees for all the colors. 
+            <br>
+            Example:- 
+            <br>
+            <div class="piechart1"></div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Conic Gradient With Specified From Angle 
+        </h2>
+
+        <p>
+           The [from <i>angle</i>] specifies an angle that the entire conic gradient is rotated by. 
+           <br>
+           The following example shows a conic gradient with a from angle of 90deg. 
+           <br>
+           Example:- 
+           <br>
+           <div class="conicfromangle"></div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Conic Gradient With Specified Center Position 
+        </h2>
+
+        <p>
+           The [at <i>position</i>] specifies the center of the conic gradient. 
+           <br>
+           The following example shows a conic gradient with a center position of 60% 45%. 
+           <br>
+           Example:- 
+           <br>
+           <div class="conicgradwithpos"></div> 
+        </p>
+
+        <hr>
+
+        <h2>
+            Repeating a Conic Gradient 
+        </h2>
+
+        <p>
+            The <span class="edit">repeating-conic-gradient()</span> function is used to repeat conic gradients. 
+            <br>
+            Example:- 
+            <br>
+            <div class="repeatingconic"></div>
+            
+            <br>
+            <br>
+
+            Here is a repeating conic gradient with defined color-starts and color-stops. 
+            <br>
+            Example:- 
+            <br>
+            <div class="repeatingconic1"></div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Gradient Functions 
+        </h2>
+
+        <p>
+            The following table lists the CSS gradient functions:- 
+            <br>
+            <table>
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>conic-gradient()</td>
+                    <td>Creates a conic gradient. Define at least two colors (around a center point)</td>
+                </tr>
+                <tr>
+                    <td>linear-gradient()</td>
+                    <td>Creates a linear gradient. Define at least two colors (top to bottom)</td>
+                </tr>
+                <tr>
+                    <td>radial-gradient()</td>
+                    <td>Creates a radial gradient. Define at least two colors (center to edges)</td>
+                </tr>
+                <tr>
+                    <td>repeating-conic-gradient()</td>
+                    <td>Repeats a conic gradient</td>
+                </tr>
+                <tr>
+                    <td>repeating-linear-gradient()</td>
+                    <td>Repeats a linear gradient</td>
+                </tr>
+                <tr>
+                    <td>repeating-radial-gradient()</td>
+                    <td>Repeats a radial gradient</td>
+                </tr>
+            </table>
+        </p>
+
+    </body>
+</html>

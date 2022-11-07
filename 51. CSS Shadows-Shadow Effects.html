@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Shadows Effects 
+        </title>
+        <style>
+          .edit {
+            background-color:#f1f1f1;
+            color:red;
+          }
+          .textshadow1 {
+            text-shadow:2px 2px;
+          }
+          .textshadow2 {
+            text-shadow:2px 2px red;
+          }
+          .textshadowblur {
+            text-shadow:2px 2px 5px red;
+          }
+          .textshadow3 {
+            color:white;
+            text-shadow:2px 2px 4px black;
+          }
+          .textshadow4 {
+            text-shadow:0 0 3px red;
+          }
+          .mulshadow1 {
+            text-shadow: 0 0 3px red, 0 0 5px blue;
+          }
+          .mulshadow2 {
+            color:white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+          }
+          .mulshadow3 {
+            color:coral;
+            text-shadow:-1px 0 black, 0px 1px black, 1px 0 black, 0 -1px black;
+          }
+        </style>
+    </head>
+    <body>
+      <h1>
+        CSS Shadow Effects 
+      </h1>
+
+      <hr>
+
+      <h2>
+        CSS Shadow Effects 
+      </h2>
+
+      <p>
+        With CSS you can add shadow to text and to elements. 
+        <br>
+        In these chapters you will learn about the following properties:- 
+        <br>
+        <ul>
+          <li><span class="edit">text-shadow</span></li>
+          <li><span class="box-shadow">box-shadow</span></li>
+        </ul>
+      </p>
+
+      <hr>
+
+      <h2>
+        CSS Text Shadow 
+      </h2>
+
+      <p>
+        The CSS <span class="edit">text-shadow</span> property applies shadow to text. 
+        <br>
+        In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px). 
+        <br>
+        Example:- 
+        <br>
+        <h2 class="textshadow1">
+          Text-shadow effect! 
+        </h2>
+
+        <br>
+        <br>
+
+        Next, add a color to the shadow. 
+        <br>
+        Example:- 
+        <br>
+        <h2 class="textshadow2">
+          Text shadow effect! 
+        </h2>
+
+        <br>
+        <br>
+
+        Then, add a blur effect to the shadow. 
+        <br>
+        Example:- 
+        <br>
+        <h2 class="textshadowblur">
+          Text-shadow effect! 
+        </h2>
+
+        <br>
+        <br>
+
+        The following example shows a white text with black shadow. 
+        <br>
+        Example:- 
+        <br>
+        <h2 class="textshadow3">
+          Text shadow effect! 
+        </h2>
+
+        <br>
+        <br>
+
+        The following example shows a red neon glow shadow. 
+        <br>
+        Example:- 
+        <br>
+        <h2 class="textshadow4">
+          Text shadow with red neon glow!  
+        </h2>
+      </p>
+
+      <hr>
+      <br>
+      <br>
+      <hr>
+
+      <h2>
+        Multiple Shadows 
+      </h2>
+
+      <p>
+        To add more than one shadow to the text, you can add a comma-separated list of shadows. 
+        <br>
+        The following example shows a red and blue neon glow shadow. 
+        <br>
+        Example:- 
+        <br>
+        <h2 class="mulshadow1">
+          Text-shadow with red and blue neon glow! 
+        </h2>
+
+        <br>
+        <br>
+
+        The following example shows a white text with black, blue, and darkblue shadow. 
+        <br>
+        Example:- 
+        <br>
+        <h2 class="mulshadow2">
+          Text-shadow effect! 
+        </h2>
+
+        <br>
+        <br>
+
+        You can also use the text-shadow property to create a plain border around some text (without shadows). 
+        <br>
+        Example:- 
+        <br>
+        <h2 class="mulshadow3">
+          Border around text! 
+        </h2>
+      </p>
+
+
+    </body>
+</html>

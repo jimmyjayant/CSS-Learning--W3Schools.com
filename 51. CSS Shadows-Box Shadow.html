@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Box Shadow 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .boxshadow1 {
+                width:300px;
+                height:100px;
+                padding:15px;
+                background-color:coral;
+                box-shadow:10px 10px;
+            }
+            .boxshadow2 {
+                width:300px;
+                height:100px;
+                padding:15px;
+                background-color:coral;
+                box-shadow:10px 10px lightblue;
+            }
+            .blurshadow {
+                width:300px;
+                height:100px;
+                padding:15px;
+                background-color:coral;
+                box-shadow:10px 10px 5px lightblue;
+            }
+            .spreadshadow {
+                width:300px;
+                height:100px;
+                padding:15px;
+                background-color:coral;
+                box-shadow:10px 10px 5px 12px lightblue;
+            }
+            .insetpara {
+                width:300px;
+                height:100px;
+                padding:15px;
+                background-color:coral;
+                box-shadow:10px 10px 5px lightblue inset;
+            }
+            .mulshadow1 {
+                width:500px;
+                height:200px;
+                padding:15px;
+                margin:40px 10px;
+                box-shadow:5px 5px blue, 10px 10px red, 15px 15px green;
+                border:1px solid;
+            }
+            .mulshadow2 {
+                width:500px;
+                height:200px;
+                padding:15px;
+                margin:40px 10px;
+                border:1px solid;
+                box-shadow:5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+            }
+            .card1 {
+                width:250px;
+                box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                text-align:center;
+            }
+            .header1 {
+                background-color:green;
+                color:white;
+                padding:10px;
+                font-size:40px;
+            }
+            .container1 {
+                padding:10px;
+            }
+
+            .card2 {
+                width:250px;
+                box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                text-align:center;
+            }
+
+            .container2 {
+                padding:10px;
+            }
+
+            table {
+                width:50%;
+                border:1px solid #f1f1f1;
+                border-collapse:collapse;
+            }
+            tr {
+                height:40px;
+            }
+            tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            th {
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Box Shadow 
+        </h1>
+
+        <hr>
+
+        <h2>
+            CSS box-shadow Property 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">box-shadow</span> property is used to apply one or more shadows to an element. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Specify a Horizontal and a Vertical Shadow 
+        </h2>
+
+        <p>
+            In its simplest use, you only specify a horizontal and a vertical shadow. The default color of the shadow is the current text-color. 
+            <br>
+            Example:- 
+            <br>
+            <div class="boxshadow1">
+                This is a div element with a box-shadow. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Specify a Color for the Shadow 
+        </h2>
+
+        <p>
+            The <span class="edit">color</span> parameter defines the color of the shadow. 
+            <br>
+            Example:- 
+            <br>
+            <div class="boxshadow2">
+                A &lt;div&gt; element with a lightblue box-shadow. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Add a Blur Effect to the Shadow 
+        </h2>
+
+        <p>
+            The <span class="edit">blur</span> parameter defines the blur radius. The higher the number, the more blurred the shadow will be. 
+            <br>
+            Example:- 
+            <br>
+            <div class="blurshadow">
+                A div element with a 5px blurred, lightblue box-shadow. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Set the Spread Radius of the Shadow 
+        </h2>
+
+        <p>
+            The <span class="edit">spread</span> parameter defines the spread radius. A positive value increases the size of the shadow, a negative value decreases the size of the shadow. 
+            <br>
+            Example:- 
+            <br>
+            <div class="spreadshadow">
+                A &lt;div&gt; element with a blurred, lightblue box-shadow, with a spread radius of 12px 
+            </div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Set the inset Parameter 
+        </h2>
+
+        <p>
+            The <span class="edit">inset</span> parameter changes the shadow from an outer shadow (outset) to an inner shadow. 
+            <br>
+            Example:- 
+            <br>
+            <div class="insetpara">
+                A &lt;div&gt; element with a blurred, lightblue, inset box-shadow 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Add Multiple Shadows 
+        </h2>
+
+        <p>
+            An element can also have multiple shadows. 
+            <br>
+            Example:- 
+            <br>
+            <div class="mulshadow1">
+                <h3>
+                    Multiple Shadows 
+                </h3>
+                <p>
+                    box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green; 
+                </p>
+            </div>
+
+            <div class="mulshadow2">
+                <h3>
+                    Multiple Shadows with blur effect 
+                </h3>
+                <p>
+                    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green; 
+                </p>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Cards 
+        </h2>
+
+        <p>
+            You can also use the <span class="edit">box-shadow</span> property to create paper-like cards. 
+            <br>
+            Example:- 
+            <br>
+            Text Card:- 
+            <br>
+            <div class="card1">
+                <div class="header1">
+                    <h1>1</h1>
+                </div>
+            
+                <div class="container1">
+                    <p>November 11, 2022</p>
+                </div>
+           </div>
+
+           <br>
+           <br>
+           Image Card:- 
+           <br>
+           <div class="card2">
+            
+                <img src="Image31.jpg" alt="Norway" style="width:100%">
+            
+
+            <div class="container2">
+                <p>Hardanger, Norway</p>
+            </div>
+           </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Shadow Properties 
+        </h2>
+
+        <p>
+            The following table lists the CSS shadow properties:- 
+            <br>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>box-shadow</td>
+                    <td>Adds one or more shadows to an element</td>
+                </tr>
+                <tr>
+                    <td>text-shadow</td>
+                    <td>Adds one or more shadows to a text</td>
+                </tr>
+            </table>
+        </p>
+
+
+    </body>
+</html>
