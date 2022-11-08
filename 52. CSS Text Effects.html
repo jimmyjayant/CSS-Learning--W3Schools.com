@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Text Effects 
+        </title>
+        <style>
+          .edit {
+            background-color:#f1f1f1;
+            color:red;
+          }
+          .clip {
+            width:200px;
+            border:1px solid black;
+            overflow:hidden;
+            text-overflow:clip;
+            white-space:nowrap;
+          }
+          .ellipsis {
+            width:200px;
+            border:1px solid black;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+          }
+          .hover1 {
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            width:200px;
+            border:1px solid black;
+            overflow:hidden;
+          }
+          .hover2 {
+            text-overflow:clip;
+            white-space:nowrap;
+            width:200px;
+            border:1px solid black;
+            overflow:hidden;
+          }
+          .hover1:hover, .hover2:hover {
+            overflow:visible;
+          }
+          .wordwrap {
+            width:11em;
+            border:1px solid black;
+            word-wrap:break-word;
+          }
+          .hyphens {
+            width:140px;
+            border:1px solid black;
+            word-break:keep-all;
+          }
+          .character {
+            width:140px;
+            border:1px solid black;
+            word-break:break-all;
+          }
+          .normalwritingmode {
+            writing-mode:horizontal-tb;
+          }
+          .verticalwritingmode span {
+            writing-mode:vertical-rl;
+          }
+          .verticalwritingmode1 {
+            writing-mode:vertical-rl;
+          }
+          table {
+            width:70%;
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+          }
+          tr {
+            height:40px;
+          }
+          tr:nth-child(even) {
+            background-color:#f1f1f1;
+          }
+          th {
+            text-align:left;
+          }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Text Effects 
+        </h1>
+
+        <hr>
+
+        <h2>
+            CSS Text Overflow, Word Wrap, Line Breaking Rules, and Writing Modes 
+        </h2>
+
+        <p>
+            In this chapter you will learn about the following properties:- 
+            <br>
+            <ul>
+                <li><span class="edit">text-overflow</span></li>
+                <li><span class="edit">word-wrap</span></li>
+                <li><span class="edit">word-break</span></li>
+                <li><span class="edit">writing-mode</span></li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Text Overflow 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">text-overflow</span> property specifies how overflowed content that is not displayed should be signaled to the user. 
+            <br>
+            Example:- 
+            <br>
+            <h3>
+                text-overflow: clip:- 
+            </h3>
+            <p class="clip">
+                This is some long text that will not fit in the box. 
+            </p>
+
+            <br>
+
+            <h3>
+                text-overflow: ellipsis:- 
+            </h3>
+            <p class="ellipsis">
+                This is some long text that will not fit in the box. 
+            </p>
+
+            <br>
+            <br>
+
+            The following example shows how you can display the overflowed content when hovering over the element. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                Hover over the two divs below, to see the entire text. 
+            </p>
+            <div class="hover1">
+                This is some text that will not fit in the box. 
+            </div>
+            <br>
+            <div class="hover2">
+                This is some long text that will not fit in the box. 
+            </div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            CSS Word Wrapping 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">word-wrap</span> property allows long words to be able to be broken and wrap onto the next line. 
+            <br>
+            If a word is too long to fit within an area, it expands outside. 
+            <br>
+            The word-wrap property allows you to force the text to wrap - even if it means splitting it in the middle of a word. 
+            <br>
+            Example:- 
+            <br>
+            Allow long words to be able to be broken and wrap onto the next line. 
+            <br>
+            <p class="wordwrap">
+                This paragraph contains a very long word: thisisaveryveryveryveryveryveryveryveryverylongword. The long word will break and wrap to the next line. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Word Breaking 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">word-break</span> property specifies line breaking rules. 
+            <br>
+            Example:- 
+            <br>
+            <p class="hyphens">
+                This paragraph contains some text. This line will-break-at-hyphens. 
+            </p>
+            <p class="character">
+                This paragraph contains some text. The lines will break at any character. 
+            </p>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Writing Mode 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">writing-mode</span> property specifies whether lines of text are laid out horizontally or vertically. 
+            <br>
+            The following example shows some different writing modes. 
+            <br>
+            Example:- 
+            <br>
+            <p class="normalwritingmode">
+                Some text with default writing-mode. 
+            </p>
+            <p class="verticalwritingmode">
+                Some text with span element with a <span>vertical-rl</span> writing-mode. 
+            </p>
+            <p class="verticalwritingmode1">
+                Some text with writing-mode: vertical-rl. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Text Effect Properties 
+        </h2>
+
+        <p>
+            The following table lists the CSS text effect properties:- 
+            <br>
+
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>text-justify</td>
+                    <td>Specifies how justified text should be aligned and spaced</td>
+                </tr>
+                <tr>
+                    <td>text-overflow</td>
+                    <td>Specifies how overflowed content that is not displayed should be signaled to the user</td>
+                </tr>
+                <tr>
+                    <td>word-break</td>
+                    <td>Specifies line breaking rules for non-CJK scripts</td>
+                </tr>
+                <tr>
+                    <td>word-wrap</td>
+                    <td>Allows long words to be able to be broken and wrap onto the next line</td>
+                </tr>
+                <tr>
+                    <td>writing-mode</td>
+                    <td>Specifies whether lines of text are laid out horizontally or vertically</td>
+                </tr>
+            </table>
+        </p>
+
+        
+    </body>
+</html>

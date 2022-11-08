@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS 2D Transforms 
+        </title>
+        <style>
+          .edit {
+            background-color:#f1f1f1;
+            color:red;
+          }
+          .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+          }
+          .table1 {
+            width: 80%;
+            border:1px solid #ddd;
+            border-collapse:collapse;
+          }
+          .table1 tr {
+            height:40px;
+            border:1px solid #ddd;
+          }
+          .table1 tr:nth-child(even) {
+            background-color:#f1f1f1;
+          }
+          .table1 th {
+            text-align:center;
+            border:1px solid #ddd;
+          }
+          .table1 th:first-child {
+            text-align:left;
+          }
+          .table1 td:first-child {
+            text-align:left;
+          }
+          .table1 td {
+            text-align:center;
+            border:1px solid #ddd;
+          }
+          .translatemethod1 {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:translate(50px,100px);
+          }
+          .original1 {
+            width:300px;
+            height:100px;
+            background-color:rgba(255,255,0,0.3);
+            border:1px solid black;
+          }
+          .hr {
+            margin-top:150px;
+          }
+          .rotate1 {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+          }
+          .rotate20deg {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:rotate(20deg);
+          }
+          .rotateminus20deg {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:rotate(-20deg);
+          }
+          .scale1 {
+            margin:150px;
+            width:200px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:scale(2,3);
+          }
+          .scale2 {
+            margin:150px;
+            width:200px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:scale(0.5,0.5);
+          }
+          .scaleX2 {
+            margin:150px;
+            width:200px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:scaleX(2);
+          }
+          .scaleXhalf {
+            margin:150px;
+            width:200px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:scaleX(0.5);
+          }
+          .scaleY3 {
+            margin:150px;
+            width:200px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:scaleY(3);
+          }
+          .scaleYhalf {
+            margin:150px;
+            width:200px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:scaleY(0.5);
+          }
+          .beforeskewx20 {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+          }
+          .skewx20 {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:skewX(20deg);
+          }
+          .beforeskewy20 {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+          }
+          .skewy20 {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:skewY(20deg);
+          }
+          .beforeskew {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+          }
+          .skew2010 {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:skew(20deg,10deg);
+          }
+          .beforematrix {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            border:1px solid black;
+            margin:150px;
+          }
+          .aftermatrix1 {
+            width:300px;
+            height:100px;
+            margin:150px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:matrix(1, -0.3, 0, 1, 0, 0);
+          }
+          .aftermatrix2 {
+            width:300px;
+            height:100px;
+            margin:150px;
+            background-color:yellow;
+            border:1px solid black;
+            transform:matrix(1, 0, 0.5, 1, 150, 0);
+          }
+          .table2 {
+            width: 100%;
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+          }
+          .table2 th {
+            text-align:left;
+          }
+          .table2 tr:nth-child(even) {
+            background-color:#f1f1f1;
+          }
+          .table2 tr {
+            height:40px;
+          }
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS 2D Transforms 
+        </h1>
+
+        <hr>
+
+        <h2>
+            CSS 2D Transforms 
+        </h2>
+
+        <p>
+            CSS Transforms allow you to move, rotate, scale, and skew elements. 
+            <br>
+            In this chapter, you will learn about the following CSS property:- 
+            <br>
+            <ul>
+                <li><span class="edit">transform</span></li>
+            </ul>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The numbers in the table specify the first browser version that fully supports the property. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th><img src="Image23.svg.png" height="35" width="35"></th>
+                    <th><img src="Image24.png" height="35" width="35"></th>
+                    <th><img src="Image25.png" height="35" width="35"></th>
+                    <th><img src="Image26.png" height="35" width="35"></th>
+                    <th><img src="Image27.png" height="35" width="35"></th>
+                </tr>
+                <tr>
+                    <td>transform</td>
+                    <td>36.0</td>
+                    <td>10.0</td>
+                    <td>16.0</td>
+                    <td>9.0</td>
+                    <td>23.0</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS 2D Transforms Methods 
+        </h2>
+
+        <p>
+            With the CSS <span class="edit">transform</span> property you can use the following 2D transformation methods:- 
+            <br>
+            <ul>
+                <li><span class="edit">translate()</span></li>
+                <li><span class="edit">rotate()</span></li>
+                <li><span class="edit">scaleX()</span></li>
+                <li><span class="edit">scaleY()</span></li>
+                <li><span class="edit">scale()</span></li>
+                <li><span class="edit">skewX()</span></li>
+                <li><span class="edit">skewY()</span></li>
+                <li><span class="edit">skew()</span></li>
+                <li><span class="edit">matrix()</span></li>
+            </ul>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <strong>Tip:- </strong>You will learn about 3D transformations in the next chapter. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The translate() Method 
+        </h2>
+
+        <p>
+           The <span class="edit">translate()</span> method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis). 
+           <br>
+           The following example moves the &lt;div&gt; element 50 pixels to the right, and 100 pixels down from its current position. 
+           <br>
+           Example:- 
+           <br>
+           <div class="original1">
+            This div element is in its original position. 
+            <div class="translatemethod1">This div element is moved 50 pixels to the right, and 100 pixels down from its current position. </div>
+           </div>
+        </p>
+
+        <hr class="hr">
+
+        <h2>
+            The rotate() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">rotate()</span> method rotates an element clockwise or counter-clockwise according to a given degree. 
+            <br>
+            The following example rotates the &lt;div&gt; element clockwise with 20 degrees. 
+            <br>
+            Example:- 
+            <br>
+            <div class="rotate1">
+                This is a normal div element. 
+            </div>
+            <div class="rotate20deg">
+                This div element is rotated clockwise 20 degrees. 
+            </div>
+            
+            <hr class="hr">
+            <br>
+            <br>
+            Using negative values will rotate the element counter-clockwise. 
+            <br>
+            The following example rotates the &lt;div&gt; element counter-clockwise with 20 degrees. 
+            <br>
+            Example:- 
+            <br>
+            <div class="rotate1">
+                This is a normal div element. 
+            </div>
+            <div class="rotateminus20deg">
+                This div element is rotated counter-clockwise with 20 degrees. 
+            </div>
+        </p>
+
+        <hr class="hr">
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The scale() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">scale()</span> method increases or decreases the size of an element (according to the parameters given for the width and the height). 
+            <br>
+            The following example increases the &lt;div&gt; element to be two times of its original width, and three times of its original height. 
+            <br>
+            Example:- 
+            <br>
+            <div class="scale1">
+                This div element is two times of its original width, and three times of its original height. 
+            </div>
+
+            <br>
+            The following example decreases the &lt;div&gt; element to be half of its original width and height. 
+            <br>
+            Example:- 
+            <br>
+            <div class="scale2">
+                This div element is decreased to be half of its original width and height. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The scaleX() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">scaleX()</span> method increases or decreases the width of an element. 
+            <br>
+            The following example increases the &lt;div&gt; element to be two times of its original width. 
+            <br>
+            Example:- 
+            <br>
+            <div class="scaleX2">
+                This div element is two times of its original width. 
+            </div>
+
+            <br>
+            <br>
+
+            The following example decreases the &lt;div&gt; element to be half of its original width. 
+            <br>
+            Example:- 
+            <br>
+            <div class="scaleXhalf">
+                This div element is half of its original width. 
+            </div>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            The scaleY() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">scaleY()</span> method increases or decreases the height of an element. 
+            <br>
+            The following example increases the &lt;div&gt; element to be three times of its original height. 
+            <br>
+            Example:- 
+            <br>
+            <div class="scaleY3">
+                This div element is three times its original height. 
+            </div>
+
+            <br>
+
+            The following example decreases the &lt;div&gt; element to be half of its original height. 
+            <br>
+            Example:- 
+            <br>
+            <div class="scaleYhalf">
+                This div element is half of its original height. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The skewX() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">skewX()</span> method skews an element along the X-axis by the given angle. 
+            <br>
+            The following example skews the &lt;div&gt; element 20 degrees along the X-axis. 
+            <br>
+            Example:- 
+            <br>
+            <div class="beforeskewx20">
+                This is a normal div element. 
+            </div>
+            <div class="skewx20">
+                This div element is skewed 20 degrees along the X-axis. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The skewY() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">skewY()</span> method skews an element along the Y-axis by the given angle. 
+            <br>
+            The following example skews the &lt;div&gt; element 20 degrees along the Y-axis. 
+            <br>
+            Example:- 
+            <br>
+            <div class="beforeskewy20">
+                This is a normal div element. 
+            </div>
+            <div class="skewy20">
+                This div element is skewed 20 degrees along the Y-axis. 
+            </div>
+
+        </p>
+
+        <hr class="hr">
+
+        <h2>
+            The skew() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">skew()</span> method skews an element along the X and Y-axis by the given angles. 
+            <br>
+            The following example skews the &lt;div&gt; element 20 degrees along the X-axis, and 10 degrees along the Y-axis. 
+            <br>
+            Example:- 
+            <br>
+            <div class="beforeskew">
+                This is a normal div element. 
+            </div>
+            <div class="skew2010">
+                This div element is skewed 20 degrees along the X-axis, and 10 degrees along the Y-axis. 
+            </div>
+        </p>
+
+        <hr class="hr">
+
+        <h2>
+          The matrix() Method 
+        </h2>
+
+        <p>
+          The <span class="edit">matrix()</span> method combines all the 2D transform methods into one. 
+          <br>
+          The matrix() method take six parameters, containing mathematic functions, which allows you to rotate, scale, move (translate), and skew elements. 
+          <br>
+          The parameters are as follow:- matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) 
+          <br>
+          Example:- 
+          <br>
+          <div class="beforematrix">
+            This is a normal div element. 
+          </div>
+          
+          <div class="aftermatrix1">
+            Using the matrix() method. 
+          </div>
+
+          <div class="aftermatrix2">
+            Another use of the matrix() method. 
+          </div>
+        </p>
+
+        <hr>
+        
+        <h2>
+          CSS Transform Properties 
+        </h2>
+
+        <p>
+          The following table lists all the 2D transform properties:- 
+          <br>
+          <table class="table2">
+            <tr>
+              <th>Property</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>transform</td>
+              <td>Applies a 2D or 3D transformation to an element</td>
+            </tr>
+            <tr>
+              <td>transform-origin</td>
+              <td>Allows you to change the position on transformed elements</td>
+            </tr>
+          </table>
+        </p>
+
+        <br>
+
+        <h2>
+          CSS 2D Transform Methods 
+        </h2>
+
+        <table class="table2">
+          <tr>
+            <th>Function</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>matrix(n,n,n,n,n,n)</td>
+            <td>Defines a 2D transformation, using a matrix of six values</td>
+          </tr>
+          <tr>
+            <td>translate(x,y)</td>
+            <td>Defines a 2D translation, moving the element along the X- and the Y-axis</td>
+          </tr>
+          <tr>
+            <td>translateX(n)</td>
+            <td>Defines a 2D translation, moving the element along the X-axis</td>
+          </tr>
+          <tr>
+            <td>translateY(n)</td>
+            <td>Defines a 2D translation, moving the element along the Y-axis</td>
+          </tr>
+          <tr>
+            <td>scale(x,y)</td>
+            <td>Defines a 2D scale transformation, changing the elements width and height</td>
+          </tr>
+          <tr>
+            <td>scaleX(n)</td>
+            <td>Defines a 2D scale transformation, changing the element's width</td>
+          </tr>
+          <tr>
+            <td>scaleY(n)</td>
+            <td>Defines a 2D scale transformation, changing the element's height</td>
+          </tr>
+          <tr>
+            <td>rotate(angle)</td>
+            <td>Defines a 2D rotation, the angle is specified in the parameter</td>
+          </tr>
+          <tr>
+            <td>skew(x-angle,y-angle)</td>
+            <td>Defines a 2D skew transformation along the X- and the Y-axis</td>
+          </tr>
+          <tr>
+            <td>skewX(angle)</td>
+            <td>Defines a 2D skew transformation along the X-axis</td>
+          </tr>
+          <tr>
+            <td>skewY(angle)</td>
+            <td>Defines a 2D skew transformation along the Y-axis</td>
+          </tr>
+        </table>
+
+
+
+
+    </body>
+</html>
