@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Transitions 
+        </title>
+        <style>
+         .edit {
+            background-color:#f1f1f1;
+            color:red;
+         }
+         .table1 {
+            width: 100%;
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+         }
+         .table1 tr {
+            height:40px;
+         }
+         .table1 tr:nth-child(even) {
+            background-color:#f1f1f1;
+         }
+         .table1 th:first-child {
+            text-align:left;
+         }
+         .table1 th {
+            text-align:center;
+            border:1px solid #ddd;
+            padding:5px;
+         }
+         .table1 td:first-child {
+            text-align:left;
+         }
+         .table1 td {
+            text-align:center;
+            border:1px solid #ddd;
+            padding:5px;
+         }
+         .widthtransition {
+            width:100px;
+            height:100px;
+            margin:10px;
+            background:red;
+            transition:width 2s;
+         }
+         .widthtransition:hover {
+            width:300px;
+         }
+         .widthheighttransition {
+            width:100px;
+            height:100px;
+            background-color:red;
+            transition:width 2s, height 4s;
+         }
+         .widthheighttransition:hover {
+            width:300px;
+            height:300px;
+         }
+         .linear {
+            transition-timing-function:linear; 
+         }
+         .ease {
+            transition-timing-function:ease;
+         }
+         .ease-in {
+            transition-timing-function:ease-in;
+         }
+         .ease-out {
+            transition-timing-function:ease-out;
+         }
+         .ease-in-out {
+            transition-timing-function:ease-in-out;
+         }
+         .delay {
+            width:200px;
+            height:100px;
+            margin:10px;
+            background-color:red;
+            transition:width 2s;
+            transition-delay:1s;
+         }
+         .delay:hover {
+            width:500px;
+         }
+         .transitiontransformation {
+            width:100px;
+            height:100px;
+            background-color:red;
+            transition:width 2s, height 2s, background-color 2s, transform 2s;
+         }
+         .transitiontransformation:hover {
+            width:300px;
+            height:300px;
+            transform:rotate(180deg);
+            background-color:lightblue;
+         }
+         .longhand {
+            width:100px;
+            height:100px;
+            background-color:red;
+            transition-property:width;
+            transition-duration:2s;
+            transition-delay:1s;
+            transition-timing-function:linear;
+         }
+         .longhand:hover {
+            width:300px;
+         }
+         .shorthand {
+            width:100px;
+            height:100px;
+            background-color:red;
+            transition:width 2s linear 1s;
+         }
+         .shorthand:hover {
+            width:300px;
+         }
+         .table2 {
+            width:80%;
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+         }
+         .table2 th {
+            text-align:left;
+         }
+         .table2 tr {
+            height:40px;
+         }
+         .table2 tr:nth-child(even) {
+            background-color:#f1f1f1;
+         }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Transitions 
+        </h1>
+
+        <hr>
+
+        <h2>
+            CSS Transitions 
+        </h2>
+
+        <p>
+            CSS Transitions allows you to change property values smoothly, over a given duration. 
+            <br>
+            In this chapter, you will learn about the following properties:- 
+            <br>
+            <ul>
+                <li><span class="edit">transition</span></li>
+                <li><span class="edit">transition-delay</span></li>
+                <li><span class="edit">transition-duration</span></li>
+                <li><span class="edit">transition-property</span></li>
+                <li><span class="edit">transition-timing-function</span></li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support for Transitions 
+        </h2>
+
+        <p>
+            The numbers in the table specify the first browser version that fully supports the property. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th><img src="Image23.svg.png" height="35" width="35"></th>
+                    <th><img src="Image24.png" height="35" width="35"></th>
+                    <th><img src="Image25.png" height="35" width="35"></th>
+                    <th><img src="Image26.png" height="35" width="35"></th>
+                    <th><img src="Image27.png" height="35" width="35"></th>
+                </tr>
+                <tr>
+                    <td>transition</td>
+                    <td>26.0</td>
+                    <td>10.0</td>
+                    <td>16.0</td>
+                    <td>6.1</td>
+                    <td>12.1</td>
+                </tr>
+                <tr>
+                    <td>transition-delay</td>
+                    <td>26.0</td>
+                    <td>10.0</td>
+                    <td>16.0</td>
+                    <td>6.1</td>
+                    <td>12.1</td>
+                </tr>
+                <tr>
+                    <td>transition-duration</td>
+                    <td>26.0</td>
+                    <td>10.0</td>
+                    <td>16.0</td>
+                    <td>6.1</td>
+                    <td>12.1</td>
+                </tr>
+                <tr>
+                    <td>transition-property</td>
+                    <td>26.0</td>
+                    <td>10.0</td>
+                    <td>16.0</td>
+                    <td>6.1</td>
+                    <td>12.1</td>
+                </tr>
+                <tr>
+                    <td>transition-timing-function</td>
+                    <td>26.0</td>
+                    <td>10.0</td>
+                    <td>16.0</td>
+                    <td>6.1</td>
+                    <td>12.1</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            How to Use CSS Transitions? 
+        </h2>
+
+        <p>
+            To create a transition effect, you must specify two things:- 
+            <br>
+            <ul>
+                <li>the CSS property you want to add an effect to</li>
+                <li>the duration of the effect</li>
+            </ul>
+
+            <br>
+            
+            <strong>Note:- </strong>If the duration part is not specified, the transition will have no effect, because the default value is 0. 
+            <br>
+            The following example shows a 100px * 100px red &lt;div&gt; element. The &lt;div&gt; element has also specified a transition effect for the width property, with a duration of 2 seconds. 
+            <br>
+            Example:- 
+            <br>
+            <div class="widthtransition">
+                Hover over this div element to see a transition effect in its width. 
+            </div>
+
+            <br>
+            <br>
+
+            The transition effect will start when the specified CSS property (width) changes value. 
+            <br>
+            Now, let us specify a new value for the width property when a user mouses over the &lt;div&gt; element. 
+            <br>
+            Notice that when the cursor mouses out of the element, it will gradually change back to its original style. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Change Several Property Values 
+        </h2>
+
+        <p>
+            The following example adds a transition effect for both the width and height property, with a duration of 2 seconds for the width and 4 seconds for the height. 
+            <br>
+            Example:- 
+            <br>
+            <div class="widthheighttransition">
+                Hover over this div element to see the transition effect. 
+            </div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Specify the Speed Curve of the Transition 
+        </h2>
+
+        <p>
+            The <span class="edit">transition-timing-function</span> property specifies the speed curve of the transition effect. 
+            <br>
+            The transition-timing-function property can have the following values:- 
+            <br>
+            <ul>
+                <li><span class="edit">ease</span> - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+                <li><span class="edit">linear</span> - specifies a transition effect with the same speed from start to end</li>
+                <li><span class="edit">ease-in</span> - specifies a transition effect with a slow start</li>
+                <li><span class="edit">ease-out</span> - specifies a transition effect with a slow end</li>
+                <li><span class="edit">ease-in-out</span> - specifies a transition effect with a slow start and end</li>
+                <li><span class="edit">cubic-bezier(n,n,n,n)</span> - lets you define your own values in a cubic-bezier function</li>
+            </ul>
+
+            <br>
+
+            The following example shows some of the different speed curves that can be used. 
+            <br>
+            Example:- 
+            <br>
+            
+                <div class="linear widthtransition">
+                    linear 
+                </div>
+                <div class="ease widthtransition">
+                    ease 
+                </div>
+                <div class="ease-in widthtransition">
+                    ease-in  
+                </div>
+                <div class="ease-out widthtransition">
+                    ease-out  
+                </div>
+                <div class="ease-in-out widthtransition">
+                    ease-in-out 
+                </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Delay the Transition Effect 
+        </h2>
+
+        <p>
+            The <span class="edit">transition-delay</span> property specifies a delay (in seconds) for the transition effect. 
+            <br>
+            The following example has a 1 second delay before starting. 
+            <br>
+            Example:- 
+            <br>
+            <div class="delay">
+                Hover over this div element to see widh transition effect with a transition delay of 1 second. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Transition + Transformation 
+        </h2>
+
+        <p>
+            The following example adds a transition effect to the transformation. 
+            <br>
+            Example:- 
+            <br>
+            <div class="transitiontransformation">
+                Transition and Transformation 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            More Transition Examples 
+        </h2>
+
+        <p>
+            The CSS transition properties can be specified one by one, like this. 
+            <br>
+            Example:- 
+            <br>
+            <div class="longhand">
+            Transition Properties specified one by one 
+            </div>
+
+            <br>
+            <br>
+
+            or by using the shorthand property <span class="edit">transition</span>. 
+            <br>
+            Example:- 
+            <br>
+            <div class="shorthand">
+                Transition shorthand property 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Transition Properties 
+        </h2>
+
+        <p>
+            The following table lists all the CSS transition properties:- 
+            <br>
+            <table class="table2">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>transition</td>
+                    <td>A shorthand property for setting the four transition properties into a single property</td>
+                </tr>
+                <tr>
+                    <td>transition-property</td>
+                    <td>Specifies the name of the CSS property the transition effect is for</td>
+                </tr>
+                <tr>
+                    <td>transition-duration</td>
+                    <td>Specifies how many seconds or milliseconds a transition effect takes to complete</td>
+                </tr>
+                <tr>
+                    <td>transition-timing-function</td>
+                    <td>Specifies the speed curve of the transition effect</td>
+                </tr>
+                <tr>
+                    <td>transition-delay</td>
+                    <td>Specifies a delay (in seconds) for the transition effect</td>
+                </tr>
+            </table>
+        </p>
+    </body>
+</html>
