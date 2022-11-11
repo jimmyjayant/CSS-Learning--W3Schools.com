@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Style Images 
+        </title>
+        <style>
+           .edit {
+            background-color:#f1f1f1;
+            color:red;
+           }
+           .roundedimg {
+            border-radius:8px;
+           }
+           .circledimg {
+            border-radius:50%;
+           }
+           .thumbnailimg {
+            border:1px solid #ddd;
+            border-radius:4px;
+            padding:5px;
+           }
+           .linkimg:hover {
+            box-shadow:0 0 2px 1px rgba(0, 140, 186, 0.5);
+           }
+           .resimg {
+            width:100%;
+           }
+           .resimg1 {
+            max-width: 100%;
+            height:auto;
+           }
+           .centerimg {
+            width: 50%;
+            margin-left:auto;
+            margin-right:auto;
+            display:block;
+           }
+           .polaroid {
+            width:300px;
+            height:250px;
+            text-align:center;
+            margin:30px;
+            box-shadow: 0px 3px 2px 0px rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+           }
+           .polaroid img {
+            width:100%;
+            height:80%;
+           }
+           .container p {
+            padding:5px 0;
+           }
+           * {
+            box-sizing:border-box;
+           }
+           .opacitycontainer::after {
+            content:"";
+            clear:both;
+            display:table;
+           }
+           .opacity1, .opacity2, .opacity3 {
+            float:left;
+            padding:5px;
+            text-align:center;
+            width:33%;
+           }
+           .opacity1 img {
+            opacity:0.2;
+            width:100%;
+           }
+           .opacity2 img {
+            opacity:0.5;
+            width:100%;
+           }
+           .opacity3 img {
+            opacity:1;
+            width:100%;
+           }
+           .opacitycontainer p {
+            padding:5px 0;
+           }
+           .topleftcontainer {
+            position:relative;
+           }
+           .topleftcontainer img {
+            opacity:0.3;
+            width: 100%;
+            height:80%;
+           }
+           /*Applying filters to image*/
+           .blur {
+            filter:blur(4px);
+           }
+           .brightness {
+            filter:brightness(250%);
+           }
+           .contrast {
+            filter:contrast(180%);
+           }
+           .grayscale {
+            filter:grayscale(100%);
+           }
+           .huerotate {
+            filter:hue-rotate(180deg);
+           }
+           .invert {
+            filter:invert(100%);
+           }
+           .opacity {
+            filter:opacity(50%);
+           }
+           .saturate {
+            filter:saturate(7);
+           }
+           .sepia {
+            filter:sepia(100%);
+           }
+           .shadow {
+            filter:drop-shadow(8px 8px 10px green);
+           }
+
+           /*Image Hover Overlay*/
+           /*Fade in Text*/
+           .fadeintext {
+            position:relative;
+            width:499px;
+            height:498px;
+            background-image:url('Image32.png');
+           }
+           .overlay {
+            position:absolute;
+            height: 100%;
+            width:100%;
+            opacity:0;
+            transition:0.5s ease;
+            background-color:#0984e3;
+           }
+           .text1 {
+            color:white;
+            font-size:20px;
+            font-weight:bold;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+            -ms-transform:translate(-50%, -50%);
+           }
+           .fadeintext:hover .overlay {
+            opacity:1;
+           }
+
+           /*Fade in Box*/
+           .fadeinbox {
+            position:relative;
+            width:499px;
+            height:498px;
+           }
+           .fadeinbox img {
+            display:block;
+            transition:0.5s ease;
+            opacity:1;
+            width:100%;
+            height:auto;
+           }
+           .middle {
+            position:absolute;
+            top:50%;
+            left:50%;
+            opacity:0;
+            transition:0.5s ease;
+            transform:translate(-50%, -50%);
+           }
+           .text2 {
+            padding:16px 32px;
+            font-size:16px;
+            color:white;
+            font-weight:bold;
+            background-color:#2ecc71;
+           }
+           
+           .fadeinbox:hover img {
+            opacity:0.3;
+           }
+           .fadeinbox:hover .middle {
+            opacity:1;
+           }
+
+           /*Slide In From Top*/
+           .slideintop {
+            position:relative;
+            width:499px;
+            height:498px;
+           }
+           .slideintop img {
+            width:100%;
+            height:100%;
+            display:block;
+           }
+           .slide {
+            position:absolute;
+            width:100%;
+            height:0;
+            bottom:100%;
+            left:0;
+            right:0;
+            background-color:#0984e3;
+            transition:0.5s ease;
+            overflow:hidden;
+           }
+           .text3 {
+            position:absolute;
+            color:white;
+            font-weight:bold;
+            font-size:16px;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+           }
+           .slideintop:hover .slide {
+            height:100%;
+            bottom:0;
+           }
+           /*Slide In From Bottom*/
+           .slideinbottom {
+            position:relative;
+            width:499px;
+            height:498px;
+           }
+           .slideinbottom img {
+            width: 100%;
+            height:100%;
+            display:block;
+           }
+           .slide1 {
+            position:absolute;
+            overflow:hidden;
+            top: 100%;
+            height:0;
+            width:100%;
+            left:0;
+            right:0;
+            background-color:#0984e3;
+            transition:0.5s ease;
+           }
+           .text4 {
+            color:white;
+            font-size:16px;
+            font-weight:bold;
+            transform:translate(-50%,-50%);
+            top:50%;
+            left:50%;
+            position:absolute;
+           }
+           .slideinbottom:hover .slide1 {
+            height:100%;
+            top:0;
+           }
+
+           /*Slide In From Left*/
+           .slideinleft {
+            position:relative;
+            width:499px;
+            height:498px;
+           }
+           .slideinleft img {
+            width: 100%;
+            height: 100%;
+            display:block;
+           }
+           .slide2 {
+            position:absolute;
+            right:100%;
+            bottom:0;
+            top:0;
+            height:100%;
+            width:0;
+            overflow:hidden;
+            background-color:#0984e3;
+            transition:0.5s ease;
+           }
+           .text5 {
+            font-weight:bold;
+            font-size:16px;
+            color:white;
+            position:absolute;
+            white-space:nowrap;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            overflow:hidden;
+           }
+           .slideinleft:hover .slide2 {
+            right:0%;
+            width:100%;
+           }
+
+           /*Slide In From Right*/
+           .slideinright {
+            position:relative;
+            width:499px;
+            height:498px;
+           }
+           .slideinright img {
+            display:block;
+            width:100%;
+            height:100%;
+           }
+           .slide3 {
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:100%;
+            height:100%;
+            width:0;
+            overflow:hidden;
+            transition:0.5s ease;
+            background-color:#0984e3;
+           }
+           .text6 {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            color:white;
+            font-size:16px;
+            font-weight:bold;
+            white-space:nowrap;
+            overflow:hidden;
+           }
+           .slideinright:hover .slide3 {
+            width:100%;
+            left:0;
+           }
+
+           /*Flip an Image*/
+           .flip:hover {
+             transform:scaleX(-1);
+           }
+           
+           /*Responsive Images*/
+           .image1, .image2, .image3, .image4 {
+            float:left;
+            width:24%;
+            border:1px solid #ddd;
+            margin:5px;
+            box-sizing:border-box;
+            text-align:center;
+           }
+           .image1 img {
+            width:100%;
+            height:80%;
+           }
+           .image2 img {
+            width: 100%;
+            height:80%;
+           }
+           .image3 img {
+            width: 100%;
+            height:80%;
+           }
+           .image4 img {
+            width:100%;
+            height:80%;
+           }
+           .image1:hover, .image2:hover, .image3:hover, .image4:hover {
+            border:1px solid black;
+           }
+           .responsivecontainer::after {
+            content:"";
+            clear:both;
+            display:table;
+           }
+
+           @media only screen and (max-width:700px) {
+            .image1, .image2, .image3, .image4 {
+                width:49%;
+            }
+           }
+
+           @media only screen and (max-width:500px) {
+            .image1, .image2, .image3, .image4 {
+                width:100%;
+            }
+           }
+
+           /*Image Modal*/
+           #myImg {
+            border-radius:5px;
+            cursor:pointer;
+            transition:0.3s;
+           }
+
+           #myImg:hover {
+            opacity:0.7;
+           }
+
+           /*The Modal (background)*/
+           .modal {
+            display:none;
+            position:fixed;
+            z-index:1;
+            padding-top:100px;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            overflow:auto;
+            background-color:black;
+            background-color:rgba(0,0,0,0.9);
+           }
+
+           /*Modal Content (image)*/
+           .modal-content {
+            margin:auto;
+            display:block;
+            width:80%;
+            max-width:700px;
+           }
+
+           /*Caption of Modal Image*/
+           #caption {
+            margin:auto;
+            display:block;
+            width:80%;
+            max-width:700px;
+            text-align:center;
+            color:#ccc;
+            padding:10px 0;
+            height:150px;
+           }
+
+           /*Add Animation*/
+           .modal-content, #caption {
+            animation-name:zoom;
+            animation-duration:0.6s;
+           }
+
+           @keyframes zoom {
+            from {
+                transform:scale(0.1);
+            }
+            to {
+                transform:scale(1);
+            }
+           }
+
+           /*The Close Button*/
+           .close {
+            position:absolute;
+            top:15px;
+            right:35px;
+            color:#f1f1f1;
+            font-size:40px;
+            font-weight:bold;
+            transition:0.3s;
+           }
+
+           .close:hover, .close:focus {
+            color:red;
+            text-decoration:none;
+            cursor:pointer;
+           }
+
+           /*100% Image Width on Smaller Screens*/
+           @media only screen and (max-width:700px) {
+            .modal-content {
+                width:100%;
+            }
+           }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Styling Images 
+        </h1>
+
+        <hr>
+
+        <p>
+            Learn how to style images using CSS. 
+        </p>
+
+        <hr>
+
+        <h2>
+           Rounded Images 
+        </h2>
+
+        <p>
+            Use the <span class="edit">border-radius</span> property to create rounded images. 
+            <br>
+            Example:- 
+            <br>
+            <h3>
+                Rounded Image 
+            </h3>
+            <img src="Image17.jpg" alt="Paris" width="300" height="300" class="roundedimg">
+            <br>
+            <h3>
+                Circled Image 
+            </h3>
+            <img src="Image17.jpg" alt="Paris" width="300" height="300" class="circledimg">
+        </p>
+
+        <hr>
+
+        <h2>
+            Thumbnail Images 
+        </h2>
+
+        <p>
+            Use the <span class="edit">border</span> property to create thumbnail images. 
+            <br>
+            Example:- 
+            <br>
+            <h3>
+                Thumbnail Image  
+            </h3>
+            <img src="Image17.jpg" alt="Paris" width="150" height="100" class="thumbnailimg">
+
+            <br>
+            <br>
+
+            <h3>
+                Thumbnail Image as Link 
+            </h3>
+            <a href="Image17.jpg" target="_blank">
+               <img src="Image17.jpg" alt="Paris" width="150" height="100" class="thumbnailimg linkimg">
+            </a>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Responsive Images 
+        </h2>
+
+        <p>
+            Responsive images will automatically adjust to fit the size of the screen. 
+            <br>
+            Resize the browser window to see the effect. 
+            <br>
+            <img src="Image13.jpg" class="resimg">
+            If you want an image to scale down if it has to, but never scale up to be larger than its original size, add the following. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image13.jpg" class="resimg1">
+        </p>
+
+        <hr>
+
+        <h2>
+            Center an Image 
+        </h2>
+
+        <p>
+            To center an image, set left and right margin to <span class="edit">auto</span> and make it into a <span class="edit">block</span> element. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" alt="Paris" class="centerimg">
+        </p>
+
+        <hr>
+
+        <h2>
+            Polaroid Images/Cards 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <br>
+            <div class="polaroid">
+            <img src="Image13.jpg" alt="Cinque Terre">
+            <div class="container">
+                <p>Cinque Terre</p>
+            </div>
+            </div>
+
+            <div class="polaroid">
+                <img src="Image12.jpg" alt="Northern Lights">
+                <div class="container">
+                    <p>Northern Lights</p>
+                </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Transparent Image 
+        </h2>
+
+        <p>
+            The <span class="edit">opacity</span> property can take a value from 0.0 - 1.0. The lower value, the more transparent. 
+            <br>
+            Example:- 
+            <br>
+            <div class="opacitycontainer">
+                <div class="opacity1">
+                    <img src="Image11.jpg">
+                    <p>Opacity 0.2</p>
+                </div>
+                <div class="opacity2">
+                    <img src="Image11.jpg">
+                    <p>Opacity 0.5</p>
+                </div>
+                <div class="opacity3">
+                    <img src="Image11.jpg">
+                    <p>Opacity 1 <br>(default)</p>
+                </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Image Text 
+        </h2>
+
+        <p>
+            How to position text in an image. 
+            <br>
+            Example:- 
+            <br>
+            <div class="topleftcontainer">
+                <img src="Image13.jpg" alt="Cinque Terre" width="1000" height="300">
+                <div id="text"></div>
+            
+            <button type="button" value="Top Left" onclick="topleft()">Top Left</button>
+            <button type="button" value="Top Right" onclick="topright()">Top Right</button>
+            <button type="button" value="Bottom Left" onclick="bottomleft()">Bottom Left</button>
+            <button type="button" value="Bottom Right" onclick="bottomright()">Bottom Right</button>
+            <button type="button" value="Centered" onclick="centered()">Centered</button>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Image Filters 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">filter</span> property adds visual effects (like blur and saturation) to an element. 
+            <br>
+            <strong>Note:- </strong>The filter property is not supported in Internet Explorer or Edge 12. 
+            <br>
+            Example:- 
+            <br>
+            <h3>
+                Normal Image:- 
+            </h3> 
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300">
+
+            <br>
+            <br>
+            <h3>
+                Blur Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="blur">
+
+            <br>
+            <br>
+            <h3>
+                Bright Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="brightness">
+
+            <br>
+            <br>
+            <h3>
+                Contrast Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="contrast">
+
+            <br>
+            <br>
+            <h3>
+                Grayscale Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="grayscale">
+
+            <br>
+            <br>
+            <h3>
+                Huerotate Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="huerotate">
+
+            <br>
+            <br>
+            <h3>
+                Inverted Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="invert">
+
+            <br>
+            <br>
+            <h3>
+                Opaque Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="opacity">
+
+            <br>
+            <br>
+            <h3>
+                Saturated Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="saturate">
+
+            <br>
+            <br>
+            <h3>
+                Sepia Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="sepia">
+
+            <br>
+            <br>
+            <h3>
+                Shadow Image:- 
+            </h3>
+            <br>
+            <img src="Image14.jpg" alt="Pineapple" width="300" height="300" class="shadow">
+
+        </p>
+
+        <hr>
+
+        <h2>
+            Image Hover Overlay 
+        </h2>
+
+        <p>
+            Create an overlay effect on hover. 
+            <br>
+            Example:- 
+            <br>
+            Fade in text:- 
+            <br>
+            <div class="fadeintext">
+                
+                <div class="overlay">
+                    <div class="text1">Hello World</div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            Fade in a Box:- 
+            <br>
+            <div class="fadeinbox">
+                <img src="Image32.png">
+                <div class="middle">
+                    <div class="text2">John Doe</div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            Slide in Top:- 
+            <br>
+            <div class="slideintop">
+                <img src="Image32.png">
+                <div class="slide">
+                    <div class="text3">Hello World</div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            Slide in Bottom:- 
+            <br>
+            <div class="slideinbottom">
+                <img src="Image32.png">
+                <div class="slide1">
+                    <div class="text4">Hello World</div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            Slide in Left:- 
+            <br>
+            <div class="slideinleft">
+                <img src="Image32.png">
+                <div class="slide2">
+                    <div class="text5">Hello World</div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            Slide in Right:- 
+            <br>
+            <div class="slideinright">
+                <img src="Image32.png">
+                <div class="slide3">
+                    <div class="text6">Hello World</div>
+                </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Flip an Image 
+        </h2>
+
+        <p>
+            Move your mouse over the image. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" class="flip" alt="Paris" width="600" height="400">
+        </p>
+
+        <hr>
+
+        <h2>
+            Responsive Image Gallery 
+        </h2>
+
+        <p>
+            CSS can be used to create image galleries. This example use media queries to re-arrange the images on different screen sizes. Resize the browser window to see the effect. 
+            <br>
+            Example:- 
+            <br>
+            <div class="responsivecontainer">
+                <div class="image1">
+                    <img src="Image10.jpg">
+                    <p>Add a description of the image here</p>
+                </div>
+                <div class="image2">
+                    <img src="Image11.jpg">
+                    <p>Add a description of the image here</p>
+                </div>
+                <div class="image3">
+                    <img src="Image12.jpg">
+                    <p>Add a description of the image here</p>
+                </div>
+                <div class="image4">
+                    <img src="Image16.jpg">
+                    <p>Add a description of the image here</p>
+                </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Image Modal (Advanced) 
+        </h2>
+
+        <p>
+            This is an example to demonstrate how CSS and JavaScript can work together. 
+            <br>
+            First, use CSS to create a modal window (dialog box), and hide it by default. 
+            <br>
+            Then, use a JavaScript to show the modal window and to display the image inside the modal, when a user clicks on the image. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image12.jpg" alt="Northern Lights, Norway" width="300" height="200" id="myImg">
+
+            <!--The Modal-->
+            <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>  
+            </div>
+        </p>
+
+
+        <script>
+            function topleft() {
+                document.getElementById('text').innerHTML = "Top Left";
+                document.getElementById('text').style.fontWeight = "bold";
+                document.getElementById('text').style.position = "absolute";
+                document.getElementById('text').style.left = "16px";
+                document.getElementById('text').style.top = "8px";
+            }
+            function topright() {
+                document.getElementById('text').innerHTML = "Top Right";
+                document.getElementById('text').style.fontWeight = "bold";
+                document.getElementById('text').style.position = "absolute";
+                document.getElementById('text').style.right = "16px";
+                document.getElementById('text').style.top = "8px";
+            }
+            function bottomleft() {
+                document.getElementById('text').innerHTML = "Bottom Left";
+                document.getElementById('text').style.fontWeight = "bold";
+                document.getElementById('text').style.position = "absolute";
+                document.getElementById('text').style.left = "16px";
+                document.getElementById('text').style.bottom = "8px";
+            }
+            function bottomright() {
+                document.getElementById('text').innerHTML = "Bottom Right";
+                document.getElementById('text').style.fontWeight = "bold";
+                document.getElementById('text').style.position = "absolute";
+                document.getElementById('text').style.right = "16px";
+                document.getElementById('text').style.bottom = "8px";
+            }
+            function centered() {
+                document.getElementById('text').innerHTML = "Centered";
+                document.getElementById('text').style.fontWeight = "bold";
+                document.getElementById('text').style.position = "absolute";
+                document.getElementById('text').style.top = "50%";
+                document.getElementById('text').style.left = "50%";
+            }
+
+            //Get the modal
+            var modal = document.getElementById('myModal');
+
+            //Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById('myImg');
+            var modalImg = document.getElementById('img01');
+            var captionText = document.getElementById('caption');
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            //Get the span element that closes the modal
+            var span = document.getElementsByClassName('close')[0];
+
+            //When the user clicks on span (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        </script>
+    </body>
+</html>
