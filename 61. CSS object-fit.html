@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS The object-fit Property 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .cover {
+                width:200px;
+                height:300px;
+                object-fit:cover;
+            }
+            .contain {
+                width:200px;
+                height:300px;
+                object-fit:contain;
+            }
+            .fill {
+                width:200px;
+                height:300px;
+                object-fit:fill;
+            }
+            .none {
+                width:200px;
+                height:300px;
+                object-fit:none;
+            }
+            .scaledown {
+                width:200px;
+                height:300px;
+                object-fit:scale-down;
+            }
+            .imgcontainer1 {
+                width: 100%;
+                height:400px;
+            }
+            .imgcontainer1 img {
+                float:left;
+                width:50%;
+                height:100%;
+            }
+            .imgcontainer1::after {
+                content:"";
+                clear:both;
+                display:table;
+            }
+            .imgcontainer2 {
+                width:100%;
+                height:400px;
+            }
+            .imgcontainer2 img {
+                float:left;
+                width: 50%;
+                height:100%;
+                object-fit:cover;
+            }
+            .imgcontainer2::after {
+                content:"";
+                clear:both;
+                display:table;
+            }
+            table {
+                width: 100%;
+                border:1px solid #f1f1f1;
+                border-collapse:collapse;
+            }
+            tr {
+                height:40px;
+            }
+            tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            th {
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS The object-fit Property 
+        </h1>
+
+        <hr>
+
+        <p>
+            The CSS <span class="edit">object-fit</span> property is used to specify how an &lt;img&gt; or &lt;video&gt; should be resized to fit its container. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The CSS object-fit Property 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">object-fit</span> property is used to specify how an &lt;img&gt; or &lt;video&gt; should be resized to fit its container. 
+            <br>
+            This property tells the content to fill the container in a variety of ways; such as "preserve that aspect ratio" or "stretch up and take up as much space as possible". 
+            <br>
+            Look at the following image from Paris. This image is 400 pixels wide and 300 pixels high. 
+            <br>
+            <img src="Image17.jpg" alt="Paris">
+            <br>
+            However, if we style the image above to be half its width (200 pixels) and same height (300 pixels), it will look like this. 
+            <br>
+            <img src="Image17.jpg" alt="Paris" width="200" height="300">
+            <br>
+            <br>
+            We see that the image is being squished to fit the container of 200x300 pixels (its original aspect ratio is destroyed). 
+            <br>
+            Here is where the <span class="edit">object-fit</span> property comes in. The <span class="edit">object-fit</span> property can take one of the following values:- 
+            <br>
+            <ul>
+                <li><span class="edit">fill</span> - This is default. The image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit</li>
+                <li><span class="edit">contain</span> - The image keeps its aspect ratio, but is resized to fit within the given dimension</li>
+                <li><span class="edit">cover</span> - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit</li>
+                <li><span class="edit">none</span> - The image is not resized</li>
+                <li><span class="edit">scale-down</span> - The image is scaled down to the smallest version of <span class="edit">none</span> or <span class="edit">contain</span></li>
+            </ul> 
+        </p>
+
+        <hr>
+
+        <h2>
+            Using object-fit:cover; 
+        </h2>
+
+        <p>
+            If we use <span class="edit">object-fit:cover;</span> the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" class="cover" alt="Paris">
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Using object-fit:contain; 
+        </h2>
+
+        <p>
+            If we use <span class="edit">object-fit:contain;</span> the image keeps its aspect ratio, but is resized to fit within the given dimension. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" class="contain" alt="Paris">
+        </p>
+
+        <hr>
+
+        <h2>
+            Using object-fit:fill; 
+        </h2>
+
+        <p>
+            If we use <span class="edit">object-fit:fill;</span> the image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" alt="Paris" class="fill">
+        </p>
+
+        <hr>
+
+        <h2>
+            Using object-fit:none; 
+        </h2>
+
+        <p>
+            If we use <span class="edit">object-fit:none;</span> the image is not resized. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" alt="Paris" class="none">
+        </p>
+
+        <hr>
+
+        <h2>
+            Using object-fit:scale-down; 
+        </h2>
+
+        <p>
+            If we use <span class="edit">object-fit:scale-down;</span> the image is scaled down to the smallest version of <span class="edit">none</span> or <span class="edit">contain</span>. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" alt="Paris" class="scaledown">
+        </p>
+
+        <hr>
+
+        <h2>
+            Another Example 
+        </h2>
+
+        <p>
+            Here we have two images and we want them to fill the width of 50% of the browser window and 100% of the height. 
+            <br>
+            In the following example we do NOT use <span class="edit">object-fit</span>, so when we resize the browser window, the aspect ratio of the images will be destroyed. 
+            <br>
+            Example:- 
+            <br>
+            <div class="imgcontainer1">
+                <img src="Image31.jpg" alt="Norway">
+                <img src="Image17.jpg" alt="Paris">
+            </div>
+
+            <br>
+            <br>
+
+            In the next example, we use <span class="edit">object-fit:cover;</span>, so when we resize the browser window, the aspect ratio of the images is preserved. 
+            <br>
+            Example:- 
+            <br>
+            <div class="imgcontainer2">
+                <img src="Image31.jpg" alt="Norway">
+                <img src="Image17.jpg" alt="Paris">
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Object-* Properties 
+        </h2>
+
+        <p>
+            The following table lists the CSS object-* properties:- 
+            <br>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>object-fit</td>
+                    <td>Specifies how an &lt;img&gt; or &lt;video&gt; should be resized to fit its container</td>
+                </tr>
+                <tr>
+                    <td>object-position</td>
+                    <td>Specifies how an &lt;img&gt; or &lt;video&gt; should be positioned with x/y coordinates inside its "own content box"</td>
+                </tr>
+            </table>
+        </p>
+
+
+
+
+
+    </body>
+</html>

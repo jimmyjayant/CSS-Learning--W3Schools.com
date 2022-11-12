@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Image Reflection 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .reflected1 {
+                -webkit-box-reflect:right;
+            }
+            .table1 {
+                border:1px solid #ddd;
+                width: 100%;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th:first-child {
+                text-align:left;
+            }
+            .table1 th {
+                text-align:center;
+                border:1px solid #ddd;
+            }
+            .table1 td:first-child {
+                text-align:left;
+            }
+            .table1 td {
+                text-align:center;
+                border:1px solid #ddd;
+            }
+            .reflected2 {
+                -webkit-box-reflect:below;
+            }
+            .reflected3 {
+                -webkit-box-reflect:right;
+            }
+            .reflected4 {
+                -webkit-box-reflect:below 20px;
+            }
+            .reflected5 {
+                -webkit-box-reflect:below 0px linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.4));
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Image Reflection 
+        </h1>
+
+        <hr>
+
+        <p>
+            In this chapter you will learn how to reflect an image. 
+            <br>
+            <br>
+            <img src="Image6.png" class="reflected1">
+        </p>
+
+        <hr>
+        <h2>
+            CSS Image Reflections 
+        </h2>
+
+        <p>
+            The <span class="edit">box-reflect</span> property is used to create an image reflection. 
+            <br>
+            The value of the <span class="edit">box-reflect</span> property can be: <span class="edit">below</span>, <span class="edit">above</span>, <span class="edit">left</span>, or <span class="edit">right</span>. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The numbers in the table specify the first browser version that fully supports the property. 
+            <br>
+            Numbers followed by -webkit- specify the first version that worked with a prefix. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th><img src="Image23.svg.png" height="35" width="35" alt="Google Chrome"></th>
+                    <th><img src="Image24.png" height="35" width="35" alt="Microsoft Edge"></th>
+                    <th><img src="Image25.png" height="35" width="35" alt="Mozilla Firefox"></th>
+                    <th><img src="Image26.png" height="35" width="35" alt="Apple Safari"></th>
+                    <th><img src="Image27.png" height="35" width="35" alt="Opera"></th>
+                </tr>
+                <tr>
+                    <td>box-reflect</td>
+                    <td>4.0 -webkit-</td>
+                    <td>79.0 -webkit-</td>
+                    <td><span style="color:red">Not Supported</span></td>
+                    <td>4.0 -webkit-</td>
+                    <td>15.0 -webkit-</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Examples 
+        </h2>
+
+        <p>
+            Here we want the reflection below the image:- 
+            <br>
+            <img src="Image6.png" class="reflected2">
+            <br>
+            <br>
+            <div style="margin-top:400px"></div>
+            Here we want the reflection to the right of the image:- 
+            <br>
+            <img src="Image6.png" class="reflected3">
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Reflection Offset 
+        </h2>
+
+        <p>
+            To specify the gap between the image and the reflection, add the size of the gap to the <span class="edit">box-reflect</span> property. 
+            <br>
+            Example:- 
+            <br>
+            Here we want the reflection below the image, with a 20px offset. 
+            <br>
+            <img src="Image6.png" class="reflected4">
+            <div style="margin-top:400px"></div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Reflection With Gradient 
+        </h2>
+
+        <p>
+            We can also create a fade-out effect on the reflection. 
+            <br>
+            Example:- 
+            <br>
+            Create a fade-out effect on the reflection. 
+            <br>
+            <img src="Image6.png" class="reflected5">
+            <div style="margin-top:400px"></div>
+        </p>
+    </body>
+</html>
