@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Masking 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 td {
+                text-align:center;
+                border:1px solid #ddd;
+            }
+            .table1 th {
+                text-align:left;
+                border:1px solid #ddd;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .mask1 {
+                -webkit-mask-image: url('https://www.w3schools.com/css/w3logo.png');
+                mask-image: url('https://www.w3schools.com/css/w3logo.png');
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+            }
+            .mask2 {
+                -webkit-mask-image: url(Image33.png);
+                mask-image: url(Image33.png);
+            }
+            .mask3 {
+                -webkit-mask-image:linear-gradient(black, transparent);
+                mask-image:linear-gradient(black,transparent);
+            }
+            .mask4 p {
+                font-size:20px;
+                padding:20px;
+                color:white;
+            }
+            .mask4 {
+                max-width:600px;
+                height:350px;
+                overflow-y:scroll;
+                background:url('Image10.jpg') no-repeat;
+                -webkit-mask-image:linear-gradient(black,transparent);
+                mask-image:linear-gradient(black,transparent);
+            }
+            .mask5 {
+                -webkit-mask-image:radial-gradient(circle, black 50%, rgba(0,0,0,0.5) 50%);
+                mask-image:radial-gradient(circle, black 50%, rgba(0,0,0,0.5) 50%);
+            }
+            .mask6 {
+                -webkit-mask-image:radial-gradient(ellipse, black 50%, rgba(0,0,0,0.5) 50%);
+                mask-image:radial-gradient(ellipse, black 50%, rgba(0,0,0,0.5));
+            }
+            .table2 {
+                width: 70%;
+                border:1px solid #f1f1f1;
+                border-collapse:collapse;
+            }
+            .table2 tr {
+                height:40px;
+            }
+            .table2 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table2 th {
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Masking 
+        </h1>
+
+        <hr>
+
+        <p>
+            With CSS masking you create a mask layer to place over an element to partially or fully hide portions of the element. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The CSS mask-image Property 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">mask-image</span> property specifies a mask layer image. 
+            <br>
+            The mask layer image can be a PNG image, a SVG image, a CSS gradient, or an SVG &lt;mask&gt; element. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            <strong>Note:- </strong>Most browsers only have partial support for CSS masking. You will need to use the -webkit- prefix in addition to the standard property in most browsers. 
+            <br>
+            The numbers in the table below specify the first browser version that fully supports the property. Numbers followed by -webkit- specify the first version that worked with a prefix. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <td><img src="Image23.svg.png" alt="Google Chrome" height="35" width="35"></td>
+                    <td><img src="Image24.png" alt="Microsoft Edge" height="35" width="35"></td>
+                    <td><img src="Image25.png" alt="Mozilla Firefox" height="35" width="35"></td>
+                    <td><img src="Image26.png" alt="Apple Safari" height="35" width="35"></td>
+                    <td><img src="Image27.png" alt="Opera" height="35" width="35"></td>
+                </tr>
+                <tr>
+                    <th>mask-image</th>
+                    <td>4.0 -webkit-</td>
+                    <td>79.0 -webkit-</td>
+                    <td>53.0</td>
+                    <td>4.0 -webkit-</td>
+                    <td>15.0 -webkit-</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            Use an Image as the Mask Layer 
+        </h2>
+
+        <p>
+            To use a PNG or a SVG image as the mask layer, use a url() value to pass in the mask layer image. 
+            <br>
+            The mask image needs to have a transparent or semi-transparent area. Black indicates fully transparent. 
+            <br>
+            Here is the mask image (a PNG image) we will use:- 
+            <br>
+            <br>
+            <img src="Image33.png" alt="W3Schools.com Masking">
+            <br>
+            <br>
+            Here is an image from Cinque Terre, in Italy. 
+            <br>
+            <img src="Image10.jpg" alt="Cinque Terre, Italy">
+            <br>
+            <br>
+            Now, we apply the mask image (the PNG image above) as the mask layer for the image from Cinque Terre, Italy. 
+            <br>
+            Example:- 
+            <br>
+            <div class="mask1">
+                <img src="Image10.jpg" alt="Cinque Terre Italy" width="600" height="400">
+            </div>
+
+            <br>
+            <br>
+
+            <p style="font-size:20px;font-weight:bold;">Example Explained</p>
+
+            <br>
+
+            The <span class="edit">mask-image</span> property specifies the image to be used as a mask layer for an element. 
+            <br>
+            The <span class="edit">mask-repeat</span> property specifies if or how a mask image will be repeated. The <span class="edit">no-repeat</span> value indicates that the mask image will not be repeated (the mask image will only be shown once). 
+            <br>
+            <br>
+            <p style="font-size:20px;font-weight:bold;">Another Example</p>
+
+            <br>
+
+            If we omit the <span class="edit">mask-repeat</span> property, the mask image will be repeated all over the image from Cinque Terre, Italy. 
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <br>
+            <div class="mask2">
+                <img src="Image10.jpg" alt="Cinque Terre Italy" width="600" height="400">
+            </div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Use Gradients as the Mask Layer 
+        </h2>
+
+        <p>
+            CSS linear and radial gradients can also be used as mask images. 
+            <br>
+            <p style="font-size:20px;font-weight:bold;">Linear Gradient Examples</p>
+
+            <br>
+
+            Here, we use a linear-gradient as the mask layer for our image. This linear gradient goes from top (black) to bottom (transparent). 
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <div class="mask3">
+                <img src="Image10.jpg" alt="Cinque Terre Italy" width="600" height="400">
+            </div>
+
+            <br>
+            <br>
+
+            Here, we use a linear-gradient along with text masking as the mask layer for our image. 
+            <br>
+            Example:- 
+            <br>
+            <div class="mask4">
+                <p>
+                  The Cinque Terre is a coastal area within Liguria, in the northwest of Italy. It lies in the west of La Spezia Province, and comprises five villages:- Monterosso al Mare, Vernazza, Corniglia, Manarola, and Riomaggiore. 
+                </p>
+                <p>
+                    The Cinque Terre is a coastal area within Liguria, in the northwest of Italy. It lies in the west of La Spezia Province, and comprises five villages:- Monterosso al Mare, Vernazza, Corniglia, Manarola, and Riomaggiore. 
+                  </p>
+                  <p>
+                    The Cinque Terre is a coastal area within Liguria, in the northwest of Italy. It lies in the west of La Spezia Province, and comprises five villages:- Monterosso al Mare, Vernazza, Corniglia, Manarola, and Riomaggiore. 
+                  </p>
+            </div>
+
+            <br>
+            <br>
+
+            <p style="font-size:20px;font-weight:bold;">
+            Radial Gradient Examples 
+            </p>
+
+            <br>
+
+            Here, we use a radial-gradient (shaped as a circle) as the mask layer for our image. 
+            <br>
+            Example:- 
+            <br>
+            <div class="mask5">
+                <img src="Image10.jpg" alt="Cinque Terre Italy" width="600" height="400">
+            </div>
+
+            <br>
+            <br>
+
+            Here, we use a radial-gradient (shaped as an ellipse) as the mask layer for our image. 
+            <br>
+            Example:- 
+            <br>
+            <div class="mask6">
+                <img src="Image10.jpg" alt="Cinque Terre Italy" width="600" height="400">
+            </div>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            Use SVG as the Mask Layer 
+        </h2>
+
+        <p>
+            The SVG <span class="edit">&lt;mask&gt;</span> element can be used inside a SVG graphic to create masking effects. 
+            <br>
+            Here, we use the SVG <span class="edit">&lt;mask&gt;</span> element to create different mask layers for our image. 
+            <br>
+            Example:- 
+            <br>
+            A SVG Mask Layer (formed as a Triangle):- 
+            <br>
+
+            <svg width="600" height="400">
+                <mask id="svgmask1">
+                    <polygon fill="#ffffff" points="200 0, 400 400, 0 400"></polygon>
+                </mask>
+                <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Image10.jpg" mask="url(#svgmask1)"></image>
+            </svg>
+
+            <br>
+            <br>
+
+            Example:- 
+            <br>
+            A SVG Mask Layer (formed as a Star):-
+            <br>
+            
+            <svg width="600" height="400">
+                <mask id="svgmask2">
+                    <polygon fill="#ffffff" points="100,10 40,198 190,78 10,78 160,198"></polygon>
+                </mask>
+                <image xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="Image10.jpg" mask="url(#svgmask2)"></image>
+            </svg>
+
+            <br>
+            <br>
+
+            Example:- 
+            <br>
+            A SVG Mask Layer (formed as a Circle):- 
+            <br>
+
+            <svg width="600" height="400">
+                <mask id="svgmask3">
+                    <circle fill="#ffffff" cx="75" cy="75" r="75"></circle>
+                    <circle fill="#ffffff" cx="80" cy="260" r="75"></circle>
+                    <circle fill="#ffffff" cx="270" cy="160" r="75"></circle>
+                </mask>
+                <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Image10.jpg" mask="url(#svgmask3)"></image>
+            </svg>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Masking Properties 
+        </h2>
+
+        <p>
+            The following table lists all the CSS masking properties:- 
+            <br>
+            <table class="table2">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>mask-image</td>
+                    <td>Specifies an image to be used as a mask layer for an element</td>
+                </tr>
+                <tr>
+                    <td>mask-mode</td>
+                    <td>Specifies whether the mask layer image is treated as a luminance mask or as an alpha mask</td>
+                </tr>
+                <tr>
+                    <td>mask-origin</td>
+                    <td>Specifies the origin position (the mask position area) of a mask layer image</td>
+                </tr>
+                <tr>
+                    <td>mark-position</td>
+                    <td>Sets the starting position of a mask layer image (relative to the mask position area)</td>
+                </tr>
+                <tr>
+                    <td>mask-repeat</td>
+                    <td>Specifies how the mask layer image is repeated</td>
+                </tr>
+                <tr>
+                    <td>mask-size</td>
+                    <td>Specifies the size of a mask layer image</td>
+                </tr>
+            </table>
+        </p>
+    </body>
+</html>

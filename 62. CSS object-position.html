@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS The object-position Property 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .cover {
+                width:200px;
+                height:300px;
+                object-fit:cover;
+            }
+            .objpos1 {
+                width:200px;
+                height:300px;
+                object-fit:cover;
+                object-position:80% 100%;
+            }
+            .objpos2 {
+                width:200px;
+                height:300px;
+                object-fit:cover;
+                object-position:15% 100%;
+            }
+            table {
+                width: 60%;
+                border:1px solid #f1f1f1;
+                border-collapse:collapse;
+            }
+            tr {
+                height:40px;
+            }
+            th {
+                text-align:left;
+            }
+            tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS The object-position Property 
+        </h1>
+
+        <hr>
+
+        <p>
+            The CSS <span class="edit">object-position</span> property is used to specify how an &lt;img&gt; or &lt;video&gt; should be positioned within its container. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The Image 
+        </h2>
+
+        <p>
+            Look at the following image from Paris, which is 400x300 pixels. 
+            <br>
+            <img src="Image17.jpg" alt="Paris">
+            <br>
+            Next, we use <span class="edit">object-fit:cover;</span> to keep the aspect ratio and to fill the given dimension. However, the image will be clipped to fit, like this:- 
+            <br>
+            <img src="Image17.jpg" alt="Paris" class="cover">
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Using the object-position Property 
+        </h2>
+
+        <p>
+            Let's say that the part of the image that is shown, is not positioned as we want. To position the image, we will use the <span class="edit">object-position</span> property. 
+            <br>
+            Here we will use the <span class="edit">object-position</span> property to position the image so that the great old building is in center. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" alt="Paris" class="objpos1">
+
+            <br>
+            <br>
+
+            Here we will use the <span class="edit">object-position</span> property to position the image so that the famous Eiffel Tower is in center. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image17.jpg" alt="Paris" class="objpos2">
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Object-* Properties 
+        </h2>
+
+        <p>
+            The following table lists the CSS object-* properties:- 
+            <br>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>object-fit</td>
+                    <td>Specifies how an &lt;img&gt; or &lt;video&gt; should be resized to fit its container</td>
+                </tr>
+                <tr>
+                    <td>object-position</td>
+                    <td>Specifies how an &lt;img&gt; or &lt;video&gt; should be positioned with x/y coordinates inside its "own content box"</td>
+                </tr>
+            </table>
+
+        </p>
+    </body>
+</html>
