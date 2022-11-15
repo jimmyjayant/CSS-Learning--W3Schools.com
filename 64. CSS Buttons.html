@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Buttons 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .button {
+                background-color:#2ecc71;
+                padding:16px 24px;
+                color:white;
+                font-size:16px;
+                margin:5px;
+                border:none;
+                text-align:center;
+                text-decoration:none;
+                display:inline-block;
+                cursor:pointer;
+            }
+            .button2 {
+                background-color:blue;
+            }
+            .button3 {
+                background-color:red;
+            }
+            .button4 {
+                background-color:#e7e7e7;
+                color:black;
+            }
+            .button5 {
+                background-color:black;
+                color:white;
+            }
+            .button10px {
+                font-size:10px;
+            }
+            .button12px {
+                font-size:12px;
+            }
+            .button16px {
+                font-size:16px;
+            }
+            .button20px {
+                font-size:20px;
+            }
+            .button24px {
+                font-size:24px;
+            }
+            .bpad1024 {
+                padding:10px 24px;
+            }
+            .bpad1228 {
+                padding:12px 28px;
+            }
+            .bpad1440 {
+                padding:14px 40px;
+            }
+            .bpad3216 {
+                padding:32px 16px;
+            }
+            .bpad16 {
+                padding:16px;
+            }
+            .borrad2 {
+                border-radius:2px;
+            }
+            .borrad4 {
+                border-radius:4px;
+            }
+            .borrad8 {
+                border-radius:8px;
+            }
+            .borrad12 {
+                border-radius:12px;
+            }
+            .borrad50p {
+                border-radius:50%;
+            }
+
+
+            .but {
+                color:black;
+                padding:16px 24px;
+                margin:5px;
+                background-color:white;
+                text-align:center;
+                font-size:16px;
+                border-radius:4px;
+            }
+            .borgreen {
+                border:2px solid green;
+            }
+            .borblue {
+                border:2px solid blue;
+            }
+            .borred {
+                border:2px solid red;
+            }
+            .borgray {
+                border:2px solid gray;
+            }
+            .bhovergreen {
+                transition:background-color 0.4s;
+                border:2px solid #2ecc71;
+                border-radius:4px;
+            }
+            .bhovergreen:hover {
+                background-color:white;
+                color:black;
+            }
+            .bhoverblue {
+                transition:background-color 0.4s;
+                border:2px solid blue;
+                border-radius:4px;
+            }
+            .bhoverblue:hover {
+                background-color:white;
+                color:black;
+            }
+            .bhoverred {
+                transition:background-color 0.4s;
+                border:2px solid red;
+                border-radius:4px;
+            }
+            .bhoverred:hover {
+                background-color:white;
+                color:black;
+            }
+            .bhovergrey {
+                transition:background-color 0.4s;
+                border:2px solid #e7e7e7;
+                border-radius:4px;
+            }
+            .bhovergrey:hover {
+                background-color:white;
+                color:black;
+            }
+            .bhoverblack {
+                transition:background-color 0.4s;
+                border:2px solid black;
+                border-radius:4px;
+            }
+            .bhoverblack:hover {
+                background-color:white;
+                color:black;
+            }
+            .buttonshadow {
+                color:white;
+                background-color:#2ecc71;
+                padding:16px 24px;
+                margin:5px;
+                border:2px solid #2ecc71;
+                font-size:16px;
+                box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+            .hovershadow {
+                color:white;
+                border:2px solid #2ecc71;
+                text-align:center;
+                padding:16px 24px;
+                margin:10px;
+                background-color:#2ecc71;
+                font-size:16px;
+                transition:0.4s;
+            }
+            .hovershadow:hover {
+                box-shadow:0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+            .disabled {
+                opacity:0.6;
+                cursor:not-allowed;
+            }
+            .w1 {
+                width:250px;
+            }
+            .w2 {
+                width:50%;
+            }
+            .w3 {
+                width:100%;
+                margin:0;
+            }
+            .group {
+                float:left;
+                margin:0;
+            }
+            .clearfloat::after {
+                content:"";
+                clear:both;
+                display:table;
+            }
+            .borbut {
+                float:left;
+                margin:0;
+                border:1px solid black;
+                border-collapse:collapse;
+            }
+            .borbut:not(:last-child) {
+                border-right:none;
+            }
+            .borbut:hover {
+                background-color:#00b894;
+            }
+            .block {
+                display:block;
+                padding:16px 40px;
+                margin:0;
+                border:1px solid black;
+            }
+            .block:not(:last-child) {
+                border-bottom:none;
+            }
+            .block:hover {
+                background-color:#00b894;
+            }
+            .back {
+                position:relative;
+                background-image:url('Image12.jpg');
+                width:400px;
+                height:300px;
+            }
+            .backbut {
+                position:absolute;
+                top:50%;
+                left:50%;
+                padding:12px 16px;
+                transform:translate(-50%,-50%);
+                font-size:16px;
+                text-align:center;
+                border-radius:4px;
+                border:none;
+            }
+            .backbut:hover {
+                background-color:black;
+                color:white;
+                cursor:pointer;
+            }
+            .anibut {
+                display:inline-block;
+                width:200px;
+                color:white;
+                border:none;
+                border-radius:4px;
+                padding:30px 50px;
+                background-color:#ee5253;
+                font-size:30px;
+                margin:10px;
+                text-align:center;
+                cursor:pointer;
+                transition:all 0.5s;
+            }
+            .hov {
+                cursor:pointer;
+                display:inline-block;
+                position:relative;
+                transition:0.5s;
+            }
+            .hov:after {
+                content:'\00bb';
+                position:absolute;
+                opacity:0;
+                top:0;
+                right:-15px;
+                transition:0.5s;
+            }
+            .anibut:hover .hov {
+                padding-right:20px;
+            }
+            .anibut:hover .hov:after {
+                opacity:1;
+                right:0;
+            }
+            .press {
+                color:white;
+                display:inline-block;
+                font-weight:bold;
+                font-size:30px;
+                background-color:#2ecc71;
+                border:none;
+                border-radius:20px;
+                padding:20px 50px;
+                box-shadow:0 9px #999;
+                cursor:pointer;
+            }
+            .press:hover {
+                background:#00b894;
+            }
+            .press:active {
+                background:#00b894;
+                box-shadow:0 5px #666;
+                transform:translateY(4px);
+            }
+            .fadein {
+                display:inline-block;
+                color:white;
+                border:none;
+                padding:20px 40px;
+                font-size:20px;
+                font-weight:bold;
+                text-align:center;
+                opacity:0.6;
+                background-color:#ee5253;
+                cursor:pointer;
+                transition:0.3s;
+            }
+            .fadein:hover {
+                opacity:1;
+            }
+            .ripple {
+                position:relative;
+                display:inline-block;
+                color:white;
+                font-size:20px;
+                font-weight:bold;
+                padding:20px 50px;
+                background-color:#2ecc71;
+                border:none;
+                text-align:center;
+                margin:10px;
+                transition:0.4s;
+                overflow:hidden;
+            }
+            .ripple:after {
+                content:"";
+                background:#f1f1f1;
+                display:block;
+                position:absolute;
+                padding-top:100%;
+                padding-left:150%;
+                margin-left:-50px !important;
+                margin-top:-50%;
+                opacity:0;
+                transition:all 0.8s;
+            }
+            .ripple:active:after {
+                padding:0;
+                margin:0;
+                opacity:1;
+                transition:0s;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Buttons 
+        </h1>
+
+        <hr>
+
+        <p>
+            Learn how to style buttons using CSS. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Basic Button Styling 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <button type="button" value="Default Button">Default Button</button>
+            <a href="#" class="button">Link Button</a>
+            <button class="button">Button</button>
+            <input type="button" class="button" value="Input Button">
+        </p>
+
+        <hr>
+
+        <h2>
+            Button Colors 
+        </h2>
+
+        <p>
+            Use the <span class="edit">background-color</span> property to change the background color of a button. 
+            <br>
+            Example:- 
+            <br>
+            <button class="button">Green</button>
+            <button class="button button2">Blue</button>
+            <button class="button button3">Red</button>
+            <button class="button button4">Gray</button>
+            <button class="button button5">Black</button>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Button Sizes 
+        </h2>
+
+        <p>
+            Use the <span class="edit">font-size</span> property to change the font size of a button. 
+            <br>
+            Example:- 
+            <br>
+            <button class="button button10px">10px</button>
+            <button class="button button2 button12px">12px</button>
+            <button class="button button3 button16px">16px</button>
+            <button class="button button4 button20px">20px</button>
+            <button class="button button5 button24px">24px</button>
+
+            <br>
+            <br>
+
+            Use the <span class="edit">padding</span> property to change the padding of a button. 
+            <br>
+            Example:- 
+            <br>
+            <button class="button bpad1024">10px 24px</button>
+            <button class="button button2 bpad1228">12px 28px</button>
+            <button class="button button3 bpad1440">14px 40px</button>
+            <button class="button button4 bpad3216">32px 16px</button>
+            <button class="button button5 bpad16">16px</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            Rounded Buttons 
+        </h2>
+
+        <p>
+            Use the <span class="edit">border-radius</span> property to add rounded corners to a button. 
+            <br>
+            Example:- 
+            <br>
+            <button class="button borrad2">2px</button>
+            <button class="button button2 borrad4">4px</button>
+            <button class="button button3 borrad8">8px</button>
+            <button class="button button4 borrad12">12px</button>
+            <button class="button button5 borrad50p">50%</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            Colored Button Borders 
+        </h2>
+
+        <p>
+            Use the <span class="edit">border</span> property to add a colored border to a button. 
+            <br>
+            Example:- 
+            <br>
+            <button class="but borgreen">Green</button>
+            <button class="but borblue">Blue</button>
+            <button class="but borred">Red</button>
+            <button class="but borgray">Gray</button>
+            <button class="but borblack">Black</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            Hoverable Buttons 
+        </h2>
+
+        <p>
+            Use the <span class="edit">:hover</span> selector to change the style of a button when you move the mouse over it. 
+            <br>
+            <strong>Tip: </strong>Use the <span class="edit">transition-duration</span> property to determine the speed of the "hover" effect. 
+            <br>
+            Example:- 
+            <br>
+            <button class="button bhovergreen">Green</button>
+            <button class="button button2 bhoverblue">Blue</button>
+            <button class="button button3 bhoverred">Red</button>
+            <button class="button button4 bhovergrey">Grey</button>
+            <button class="button button5 bhoverblack">Black</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            Shadow Buttons 
+        </h2>
+
+        <p>
+            Use the <span class="edit">box-shadow</span> property to add shadows to a button. 
+            <br>
+            Example:- 
+            <br>
+            <button class="buttonshadow">Shadow Button</button>
+            <button class="hovershadow">Shadow on hover</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            Disabled Buttons 
+        </h2>
+
+        <p>
+            Use the <span class="edit">opacity</span> property to add transparency to a button (creates a "disabled" look). 
+            <br>
+            <strong>Tip: </strong>You can also add the <span class="edit">cursor</span> property with a value of "not-allowed", which will display a "no parking sign" when you mouse over the button. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" value="Normal Button" class="button">Normal Button</button>
+            <button type="button" value="Disabled Button" class="button disabled">Disabled Button</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            Button Width 
+        </h2>
+
+        <p>
+            By default, the size of the button is determined by its text content (as wide as its content). Use the <span class="edit">width</span> property to change the width of a button. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" class="button w1">250px</button>
+            <br>
+            <button type="button" class="button w2 button2">50%</button>
+            <br>
+            <button type="button" class="button w3 button3">100%</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            Button Groups 
+        </h2>
+
+        <p>
+            Remove margins and add <span class="edit">float:left</span> to each button to create a button group. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" class="button group">Button</button>
+            <button type="button" class="button group">Button</button> 
+            <button type="button" class="button group">Button</button> 
+            <button type="button" class="button group">Button</button>
+            <div class="clearfloat"></div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Bordered Button Group 
+        </h2>
+
+        <p>
+            Use the <span class="edit">border</span> property to create a bordered button group. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" class="button borbut">Button</button>
+            <button type="button" class="button borbut">Button</button>
+            <button type="button" class="button borbut">Button</button>
+            <button type="button" class="button borbut">Button</button>
+            <div class="clearfloat"></div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Vertical Button Group 
+        </h2>
+
+        <p>
+            Use <span class="edit">display:block</span> instead of <span class="edit">float:left</span> to group the buttons below each other, instead of side by side. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" class="button block">Button</button>
+            <button type="button" class="button block">Button</button>
+            <button type="button" class="button block">Button</button>
+            <button type="button" class="button block">Button</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            Button on Image 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <div class="back">
+                <button type="button" class="backbut">Button</button>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Animated Buttons 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            Add an arrow on hover:- 
+            <br>
+            <button type="button" class="anibut" style="vertical-align:middle;"><span class="hov">Hover </span></button>
+
+            <br>
+            <br>
+            Add a "pressed" effect on click:- 
+            <br>
+            <button type="button" class="press">Click</button>
+
+            <br>
+            <br>
+            Fade in on hover:- 
+            <br>
+            <button type="button" class="fadein">Fade In</button>
+
+            <br>
+            <br>
+            Add a "ripple" effect on click:- 
+            <br>
+            <button type="button" class="ripple">Click Me</button>
+        </p>
+
+
+
+
+    </body>
+</html>
