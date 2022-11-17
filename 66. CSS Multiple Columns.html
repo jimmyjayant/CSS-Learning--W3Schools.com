@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Multiple Columns 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .container {
+                border:1px solid #ddd;
+                width:100%;
+                margin:0;
+            }
+            .header {
+                background-color:#f1f1f1;
+                text-align:center;
+                font-size:30px;
+                padding:40px 0;
+            }
+            .parent {
+                width:100%;
+                margin:0;
+            }
+            .child1, .child2, .child3 {
+                float:left;
+                max-width:33%;
+                padding:10px;
+                box-sizing:border-box;
+            }
+            .child1, .child2 {
+                border-right:1px solid #ddd;
+            }
+            .parent::after {
+                content:"";
+                clear:both;
+                display:table;
+            }
+
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 th {
+                text-align:left;
+                font-weight:normal;
+                padding-left:10px;
+                border:1px solid #ddd;
+            }
+            .table1 td {
+                text-align:center;
+                border:1px solid #ddd;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .columncount {
+                column-count:3;
+            }
+            .columngap {
+                column-count:3;
+                column-gap:40px;
+            }
+            .columnrulestyle {
+                column-count:3;
+                column-gap:40px;
+                column-rule-style:solid;
+            }
+            .columnrulewidth {
+                column-count:3;
+                column-gap:40px;
+                column-rule-style:solid;
+                column-rule-width:1px;
+            }
+            .columnrulecolor {
+                column-count:3;
+                column-gap:40px;
+                column-rule-style:solid;
+                column-rule-width:1px;
+                column-rule-color:lightblue;
+            }
+            .columnrule {
+                column-count:3;
+                column-gap:40px;
+                column-rule:1px solid lightblue;
+            }
+            .columnspan {
+                column-count:3;
+                column-gap:40px;
+                column-rule:1px solid lightblue;
+            }
+            .columnspan h2 {
+                column-span:all;
+                text-align:center;
+            }
+            .columnwidth {
+                column-width:100px;
+            }
+            .table2 {
+                width:70%;
+                border:1px solid #f1f1f1;
+                border-collapse:collapse;
+            }
+            .table2 tr {
+                height:40px;
+            }
+            .table2 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table2 th {
+                text-align:left;
+                padding-left:10px;
+            }
+            .table2 td:first-child {
+                padding-left:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Multiple Columns 
+        </h1>
+
+        <hr>
+
+        <h2>
+            CSS Multi-column Layout 
+        </h2>
+
+        <p>
+            The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers. 
+            <br>
+            Example:- 
+            <br>
+            <div class="container">
+                <div class="header">
+                    Daily Ping 
+                </div>
+
+                <div class="parent">
+                    <div class="child1">
+                        <h2>
+                            Lorem ipsum 
+                        </h2>
+
+                        <p>
+                            dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+                        </p>
+                    </div>
+
+                    <div class="child2">
+                        <p>
+                            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio 
+                        </p>
+                    </div>
+
+                    <div class="child3">
+                        <p>
+                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Multi-column Properties 
+        </h2>
+
+        <p>
+            In this chapter you will learn about the following multi-column properties:- 
+            <br>
+            <ul>
+                <li><span class="edit">column-count</span></li>
+                <li><span class="edit">column-gap</span></li>
+                <li><span class="edit">column-rule-style</span></li>
+                <li><span class="edit">column-rule-width</span></li>
+                <li><span class="edit">column-rule-color</span></li>
+                <li><span class="edit">column-rule</span></li>
+                <li><span class="edit">column-span</span></li>
+                <li><span class="edit">column-width</span></li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The numbers in the table specify the first browser version that fully supports the property. 
+            <br>
+            <table class="table1">
+              <tr>
+                <th>Property</th>
+                <td><img src="Image23.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                <td><img src="Image24.png" height="35" width="35" alt="Microsoft Edge"></td>
+                <td><img src="Image25.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                <td><img src="Image26.png" height="35" width="35" alt="Apple Safari"></td>
+                <td><img src="Image27.png" height="35" width="35" alt="Opera"></td>
+              </tr>
+              <tr>
+                <th>column-count</th>
+                <td>50.0</td>
+                <td>10.0</td>
+                <td>52.0</td>
+                <td>9.0</td>
+                <td>37.0</td>
+              </tr>
+              <tr>
+                <th>column-gap</th>
+                <td>50.0</td>
+                <td>10.0</td>
+                <td>52.0</td>
+                <td>9.0</td>
+                <td>37.0</td>
+              </tr>
+              <tr>
+                <th>column-rule</th>
+                <td>50.0</td>
+                <td>10.0</td>
+                <td>52.0</td>
+                <td>9.0</td>
+                <td>37.0</td>
+              </tr>
+              <tr>
+                <th>column-rule-color</th>
+                <td>50.0</td>
+                <td>10.0</td>
+                <td>52.0</td>
+                <td>9.0</td>
+                <td>37.0</td>
+              </tr>
+              <tr>
+                <th>column-rule-style</th>
+                <td>50.0</td>
+                <td>10.0</td>
+                <td>52.0</td>
+                <td>9.0</td>
+                <td>37.0</td>
+              </tr>
+              <tr>
+                <th>column-rule-width</th>
+                <td>50.0</td>
+                <td>10.0</td>
+                <td>52.0</td>
+                <td>9.0</td>
+                <td>37.0</td>
+              </tr>
+              <tr>
+                <th>column-span</th>
+                <td>50.0</td>
+                <td>10.0</td>
+                <td>71.0</td>
+                <td>9.0</td>
+                <td>37.0</td>
+              </tr>
+              <tr>
+                <th>column-width</th>
+                <td>50.0</td>
+                <td>10.0</td>
+                <td>52.0</td>
+                <td>9.0</td>
+                <td>37.0</td>
+              </tr>
+            </table>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            CSS Create Multiple Columns 
+        </h2>
+
+        <p>
+            The <span class="edit">column-count</span> property specifies the number of columns an element should be divided into. 
+            <br>
+            The following example will divide the text in the &lt;div&gt; element into 3 columns. 
+            <br>
+            Example:- 
+            <br>
+            <div class="columncount">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Specify the Gap Between Columns 
+        </h2>
+
+        <p>
+            The <span class="edit">column-gap</span> property specifies the gap between the columns. 
+            <br>
+            The following example specifies a 40 pixels gap between the columns. 
+            <br>
+            Example:- 
+            <br>
+            <div class="columngap">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Column Rules 
+        </h2>
+
+        <p>
+            The <span class="edit">column-rule-style</span> property specifies the style of the rule between columns. 
+            <br>
+            Example:- 
+            <br>
+            <div class="columnrulestyle">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+            </div>
+
+            <br>
+            <br>
+
+            The <span class="edit">column-rule-width</span> property specifies the width of the rule between columns. 
+            <br>
+            Example:- 
+            <br>
+            <div class="columnrulewidth">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+            </div>
+
+            <br>
+            <br>
+
+            The <span class="edit">column-rule-color</span> property specifies the color of the rule between columns. 
+            <br>
+            Example:- 
+            <br>
+            <div class="columnrulecolor">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+            </div>
+
+            <br>
+            <br>
+
+            The <span class="edit">column-rule</span> property is a shorthand property for setting all the column-rule-* properties above. 
+            <br>
+            The following example sets the width, style, and color of the rule between columns. 
+            <br>
+            Example:- 
+            <br>
+            <div class="columnrule">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Specify How Many Columns an Element Should Span 
+        </h2>
+
+        <p>
+            The <span class="edit">column-span</span> property specifies how many columns an element should span across. 
+            <br>
+            The following example specifies that the &lt;h2&gt; element should span across all columns. 
+            <br>
+            Example:- 
+            <br>
+            <div class="columnspan">
+                <h2>
+                    Lorem Ipsum Dolor Sit Amet 
+                </h2>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Specify The Column Width 
+        </h2>
+
+        <p>
+            The <span class="edit">column-width</span> property specifies a suggested, optimal width for the columns. 
+            <br>
+            The following example specifies that the suggested, optimal width for the columns should be 100px. 
+            <br>
+            Example:- 
+            <br>
+            <div class="columnwidth">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Multi-columns Properties 
+        </h2>
+
+        <p>
+            The following table lists all the multi-columns properties. 
+            <br>
+            <table class="table2">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>column-count</td>
+                    <td>Specifies the number of columns an element should be divided into</td>
+                </tr>
+                <tr>
+                    <td>column-fill</td>
+                    <td>Specifies how to fill columns</td>
+                </tr>
+                <tr>
+                    <td>column-gap</td>
+                    <td>Specifies the gap between the columns</td>
+                </tr>
+                <tr>
+                    <td>column-rule</td>
+                    <td>A shorthand property for setting all the column-rule-* properties</td>
+                </tr>
+                <tr>
+                    <td>column-rule-color</td>
+                    <td>Specifies the color of the rule between columns</td>
+                </tr>
+                <tr>
+                    <td>column-rule-style</td>
+                    <td>Specifies the style of the rule between columns</td>
+                </tr>
+                <tr>
+                    <td>column-rule-width</td>
+                    <td>Specifies the width of the rule between columns</td>
+                </tr>
+                <tr>
+                    <td>column-span</td>
+                    <td>Specifies how many columns an element should span across</td>
+                </tr>
+                <tr>
+                    <td>column-width</td>
+                    <td>Specifies a suggested, optimal width for the columns</td>
+                </tr>
+                <tr>
+                    <td>columns</td>
+                    <td>A shorthand property for setting column-width and column-count</td>
+                </tr>
+            </table>
+        </p>
+
+
+
+
+    </body>
+</html>

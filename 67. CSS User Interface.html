@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS User Interface 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding-left:10px;
+                border:1px solid #ddd;
+            }
+            .table1 td {
+                text-align:center;
+                border:1px solid #ddd;
+            }
+            .resizehor {
+                border:2px solid black;
+                padding:20px;
+                overflow:auto;
+                resize:horizontal;
+                width:300px;
+            }
+            .resizever {
+                border:2px solid black;
+                padding:20px;
+                overflow:auto;
+                resize:vertical;
+                width:300px;
+            }
+            .resizeboth {
+                border:2px solid black;
+                padding:20px;
+                overflow:auto;
+                width:300px;
+                resize:both;
+            }
+            .textareanotresizable {
+               resize:none;
+            }
+            .offset1 {
+                margin:20px;
+                border:1px solid black;
+                outline:4px solid red;
+                outline-offset:15px;
+            }
+            .offset2 {
+                margin:10px;
+                border:1px solid black;
+                outline:5px dashed blue;
+                outline-offset:5px;
+            }
+            .table2 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table2 tr {
+                height:40px;
+            }
+            .table2 tr:nth-child(even) {
+                background-color:#f1f1f1;
+                border:1px solid #ddd;
+            }
+            .table2 th {
+                text-align:left;
+            }
+            .table2 th:first-child {
+                padding-left:10px;
+            }
+            .table2 td:first-child {
+                padding-left:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS User Interface 
+        </h1>
+
+        <hr>
+
+        <h2>
+            CSS User Interface 
+        </h2>
+
+        <p>
+            In this chapter you will learn about the following CSS user interface properties:- 
+            <br>
+            <ul>
+                <li><span class="edit">resize</span></li>
+                <li><span class="edit">outline-offset</span></li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The numbers in the table specify the first browser version that fully supports the property. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <td><img src="Image23.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image24.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image25.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image26.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image27.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <th>resize</th>
+                    <td>4.0</td>
+                    <td>79.0</td>
+                    <td>5.0</td>
+                    <td>4.0</td>
+                    <td>15.0</td>
+                </tr>
+                <tr>
+                    <th>outline-offset</th>
+                    <td>4.0</td>
+                    <td>15.0</td>
+                    <td>5.0</td>
+                    <td>4.0</td>
+                    <td>9.5</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Resizing 
+        </h2>
+
+        <p>
+            The <span class="edit">resize</span> property specifies if (and how) an element should be resizable by the user. 
+            <br>
+            The following example lets the user resize only the width of a &lt;div&gt; element. 
+            <br>
+            Example:- 
+            <br>
+            <div class="resizehor">
+                <p>
+                    Let the user resize only the width of this div element. 
+                </p>
+                <p>
+                    To resize: Click and drag the bottom right corner of this div element. 
+                </p>
+            </div>
+
+            <br>
+            <br>
+
+            The following example lets the user resize only the height of a &lt;div&gt; element. 
+            <br>
+            Example:- 
+            <br>
+            <div class="resizever">
+                <p>
+                    Let the user resize only the height of this div element. 
+                </p>
+                <p>
+                    To resize: Click and drag the bottom right corner of this div element. 
+                </p>
+            </div>
+
+            <br>
+            <br>
+
+            The following example lets the user resize both the height and width of a &lt;div&gt; element. 
+            <br>
+            Example:- 
+            <br>
+            <div class="resizeboth">
+                <p>
+                    Let the user resize both the width and the height of this div element. 
+                </p>
+                <p>
+                    To resize: Click and drag the bottom right corner of this div element. 
+                </p>
+            </div>
+
+            <br>
+            <br>
+
+            In many browsers, &lt;textarea&gt; is resizable by default. Here, we have used the resize property to disable the resizability. 
+            <br>
+            Example:- 
+            <br>
+            <textarea class="textarearesizable">
+                Textarea - Resizable (default) 
+            </textarea>
+
+            <br>
+            <br>
+
+            <textarea class="textareanotresizable">
+                Textarea - Not resizable 
+            </textarea>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Outline Offset 
+        </h2>
+
+        <p>
+            The <span class="edit">outline-offset</span> property adds space between an outline and the edge or border of an element. 
+            <br>
+            <p class="edit1">
+                <strong>Note: </strong>Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline. 
+            </p>
+
+            <br>
+
+            The following example uses the <span class="edit">outline-offset</span> property to add space between the border and the outline. 
+            <br>
+            Example:- 
+            <br>
+            <div style="height:30px;"></div>
+
+            <div class="offset1">
+                This div has a 4 pixels solid red outline 15 pixels outside the border edge. 
+            </div>
+            <br>
+            <div class="offset2">
+                This div has a 5 pixels dashed blue outline 5 pixels outside the border edge. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS User Interface Properties 
+        </h2>
+
+        <p>
+            The following table lists all the user interface properties:- 
+            <br>
+            <table class="table2">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>outline-offset</td>
+                    <td>Adds space between an outline and the edge or border of an element</td>
+                </tr>
+                <tr>
+                    <td>resize</td>
+                    <td>Specifies whether or not an element is resizable by the user</td>
+                </tr>
+            </table>
+        </p>
+
+    </body>
+
+</html>
