@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            CSS Variables in Media Queries 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                border:1px solid #ddd;
+                padding-left:10px;
+            }
+            .table1 td {
+                text-align:center;
+                border:1px solid #ddd;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Using Variables in Media Queries 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Using Variables in Media Queries 
+        </h2>
+
+        <p>
+            Now we want to change a variable value inside a media query. 
+            <br>
+            <p class="edit1">
+                <strong>Tip: </strong>Media Queries are about defining different style rules for different devices (screens, tablets, mobile phones, etc.). 
+            </p>
+
+            <br>
+
+            Here, we first declare a new local variable named --fontsize for the <span class="edit">.container</span> class. We set its value to 25 pixels. Then we use it in the <span class="edit">.container</span> class further down. Then, we create a <span class="edit">@media</span> rule that says "When the browser's width is 450px or wider, change the --fontsize variable value of the <span class="edit">.container</span> class to 50px." 
+            <br>
+            Example:- 
+            <br>
+            <a href="68. CSS Variables-Variables in Media Queries-Example 1.html" target="_blank">Example 1</a>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <p>
+            Here is another example where we also change the value of the --blue variable in the <span class="edit">@media</span> rule.  
+            <br>
+            Example:- 
+            <br>
+            <a href="68. CSS Variables-Variables in Media Queries-Example 2.html" target="_blank">Example 2</a>
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The numbers in the table specify the first browser version that fully supports the <span class="edit">var()</span> function. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Function</th>
+                    <td><img src="Image23.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image24.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image25.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image26.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image27.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <th>var()</th>
+                    <td>49.0</td>
+                    <td>15.0</td>
+                    <td>31.0</td>
+                    <td>9.1</td>
+                    <td>36.0</td>
+                </tr>
+            </table>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Variables and JavaScript
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding-left:15px;
+                border:1px solid #ddd;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+
+            .table2 {
+                width: 50%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table2 tr {
+                height:40px;
+            }
+            .table2 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table2 th {
+                text-align:left;
+                padding-left:15px;
+            }
+            .table2 td {
+                padding-left:15px;
+            }
+        </style>
+    </head>
+        <body>
+            <h1>
+                CSS Change Variables With JavaScript 
+            </h1>
+
+            <hr>
+
+            <h2>
+                Change Variables With JavaScript 
+            </h2>
+
+            <p>
+                CSS variables have access to the DOM, which means that you can change them with JavaScript. 
+                <br>
+                Here is an example of how you can create a script to display and change the --blue varible from the example used in the previous pages. For now, do not worry if you are not familiar with JavaScript. 
+                <br>
+                Example:- 
+                <br>
+                <a href="68. CSS Variables-Variables and JavaScript-Example 1.html" target="_blank">Example 1</a>
+            </p>
+
+            <hr>
+
+            <h2>
+                Browser Support 
+            </h2>
+
+            <p>
+                The numbers in the table specify the first browser version that fully supports the <span class="edit">var()</span> function. 
+                <br>
+                <table class="table1">
+                    <tr>
+                        <th>Function</th>
+                        <td><img src="Image23.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                        <td><img src="Image24.png" height="35" width="35" alt="Microsoft Edge"></td>
+                        <td><img src="Image25.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                        <td><img src="Image26.png" height="35" width="35" alt="Apple Safari"></td>
+                        <td><img src="Image27.png" height="35" width="35" alt="Opera"></td>
+                    </tr>
+                    <tr>
+                        <th>var()</th>
+                        <td>49.0</td>
+                        <td>15.0</td>
+                        <td>31.0</td>
+                        <td>9.1</td>
+                        <td>36.0</td>
+                    </tr>
+                </table>
+            </p>
+
+            <hr>
+
+            <h2>
+                CSS var() Function 
+            </h2>
+
+            <table class="table2">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>var()</td>
+                    <td>Inserts the value of a CSS variable</td>
+                </tr>
+            </table>
+        </body>
+</html>

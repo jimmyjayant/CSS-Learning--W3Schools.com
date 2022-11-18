@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Variables 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .trad {
+                width:100%;
+                height:500px;
+                background-color:#1e90ff;
+            }
+            .trad h2 {
+                margin:15px;
+                padding:10px;
+            }
+            .trad h3 {
+                border-bottom:2px solid #1e90ff;
+            }
+            .trad .container {
+                color:#1e90ff;
+                background-color:white;
+                padding:15px;
+                margin:10px;
+            }
+            .container button {
+                background-color:white;
+                color:#1e90ff;
+                border:1px solid #1e90ff;
+                padding:5px;
+            }
+            .table1 {
+                width: 70%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 th {
+                text-align:left;
+            }
+            .table1 th:first-child {
+                padding-left:5px;
+            }
+            .table1 td:first-child {
+                padding-left:5px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table2 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table2 tr {
+                height:40px;
+            }
+            .table2 th {
+                text-align:left;
+                border:1px solid #ddd;
+                padding-left:10px;
+            }
+            .table2 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table2 td {
+                text-align:center;
+                border:1px solid #ddd;
+                padding:5px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Variables - The var() Function 
+        </h1>
+
+        <hr>
+
+        <h2>
+            CSS Variables 
+        </h2>
+
+        <p>
+            The <span class="edit">var()</span> function is used to insert the value of a CSS variable. 
+            <br>
+            CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries. 
+            <br>
+            A good way to use CSS variables is when it comes to the colors of your design. Instead of copy and paste the same colors over and over again, you can place them in variables. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The Traditional Way 
+        </h2>
+
+        <p>
+            The following example shows the traditional way of defining some colors in a style sheet (by defining the colors to use, for each specific element):- 
+            <br>
+            Example:- 
+            <br>
+            <div class="trad">
+                <h2>
+                    The Traditional Way 
+                </h2>
+              <div class="container">
+                <h3>
+                    Lorem Ipsum 
+                </h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. 
+                </p>
+                <p>
+                    <button>Yes</button>
+                    <button>No</button>
+                </p>
+              </div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            Syntax of the var() Function 
+        </h2>
+
+        <p>
+            The <span class="edit">var()</span> function is used to insert the value of a CSS variable. 
+            <br>
+            The syntax of the <span class="edit">var()</span> function is as follows:- 
+            <br>
+            <p style="border:1px solid #ddd;margin:10px;padding:15px;">
+            var(--<i>name, value</i>)
+            </p>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><i>name</i></td>
+                    <td>Required. The variable name (must start with two dashes)</td>
+                </tr>
+                <tr>
+                    <td><i>value</i></td>
+                    <td>Optional. The fallback value (used if the variable is not found)</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            <strong>Note: </strong>The variable name must begin with two dashes (--) and it is case sensitive! 
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            How var() Works 
+        </h2>
+
+        <p>
+            First of all: CSS variables can have a global or local scope. 
+            <br>
+            Global variables can be accessed/used through the entire document, while local variables can be used only inside the selector where it is declared. 
+            <br>
+            To create a variable with global scope, declare it inside the <span class="edit">:root</span> selector. The <span class="edit"><u>:root</u></span> selector matches the document's root element. 
+            <br>
+            To create a variable with local scope, declare it inside the selector that is going to use it. 
+            <br>
+            The following example is equal to the example above, but here we use the <span class="edit">var()</span> function. 
+            <br>
+            First, we declare two global variables (--blue and --white). Then, we use the <span class="edit">var()</span> function to insert the value of the variables later in the style sheet. 
+            <br>
+            Example:- 
+            <br>
+            <a href="68. CSS Variables-var() Function Example.html" target="_blank">The var() Function Example</a>
+
+            <br>
+            <br>
+
+            Advantages f using var() are:- 
+            <br>
+            <ul>
+                <li>makes the code easier to read (more understandable)</li>
+                <li>makes it much easier to change the color values</li>
+            </ul>
+            <br>
+            To change the blue and white color to a softer blue and white, you just need to change the two variable values. 
+            <br>
+            Example:- 
+            <br>
+            <a href="68. CSS Variables-var() Function Example 1.html" target="_blank">The var() Function Example 1</a>
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The numbers in the table specify the first browser version that fully supports the <span class="edit">var()</span> function. 
+            <br>
+            <table class="table2">
+                <tr>
+                    <th>Function</th>
+                    <td><img src="Image23.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image24.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image25.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image26.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image27.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <th>var()</th>
+                    <td>49.0</td>
+                    <td>15.0</td>
+                    <td>31.0</td>
+                    <td>9.1</td>
+                    <td>36.0</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS var() Function 
+        </h2>
+
+        <table class="table1">
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>var()</td>
+                <td>Inserts the value of a CSS variable</td>
+            </tr>
+
+        </table>
+
+    </body>
+</html>
