@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Box Sizing 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .div1 {
+                width:300px;
+                height:100px;
+                border:1px solid blue;
+            }
+            .div2 {
+                width:300px;
+                height:100px;
+                padding:50px;
+                border:1px solid red;
+            }
+            .borderbox {
+                box-sizing:border-box;
+            }
+
+            .div3 * {
+                box-sizing:border-box;
+                margin:0;
+            }
+            .div3 input, .div3 textarea {
+                width:100%;
+            }
+            table {
+                width: 60%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            tr {
+                height:40px;
+            }
+            tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            th {
+                text-align:left;
+                padding-left:15px;
+            }
+            td {
+                padding-left:15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Box Sizing 
+        </h1>
+
+        <hr>
+
+        <h2>
+            CSS Box Sizing 
+        </h2>
+
+        <p>
+            The CSS <span class="edit">box-sizing</span> property allows us to include the padding and border in an element's total width and height <b>but not the MARGIN</b>. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Without the CSS box-sizing Property 
+        </h2>
+
+        <p>
+            By default, the width and height of an element is calculated like this:- 
+            <br>
+            width + padding + border = actual width of an element 
+            <br>
+            height + padding + border = actual height of an element 
+            <br>
+            This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height). 
+            <br>
+            The following illustration shows two &lt;div&gt; elements with the same specified width and height:- 
+            <br>
+            Example:- 
+            <br>
+            The two &lt;div&gt; elements end up with different sizes in the result (because div2 has a padding specified). 
+            <br>
+            <div class="div1">
+                This div is smaller (width is 300px and height is 100px). 
+            </div>
+            
+            <br>
+            <br>
+
+            <div class="div2">
+                This div is bigger (width is also 300px and height is 100px). 
+            </div>
+
+            <br>
+            <br>
+
+            The <span class="edit">box-sizing</span> property solves this problem. 
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            With the CSS box-sizing Property 
+        </h2>
+
+        <p>
+            The <span class="edit">box-sizing</span> property allows us to include the padding and border in an element's total width and height. 
+            <br>
+            If you set <span class="edit">box-sizing: border-box;</span> on an element, padding and border are included in the width and height. 
+            <br>
+            Example:- 
+            <br>
+            Here is the same example as above, with <span class="edit">box-sizing: border-box;</span> added to both &lt;div&gt; elements. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div1 borderbox">
+                This div is smaller (width is 300px and height is 100px). 
+            </div>
+            <br>
+            <br>
+            <div class="div2 borderbox">
+                This div is bigger (width is also 300px and height is 100px). 
+            </div>
+
+            <br>
+            <br>
+
+            Since the result of using the <span class="edit">box-sizing: border-box;</span> is so much better, many developers want all elements on their pages to work this way. 
+            <br>
+            The code below ensures that all elements are sized in this more intuitive way. Many browsers already use <span class="edit">box-sizing: border-box;</span> for many form elements (but not all - which is why inputs and text areas look different at width: 100%;). 
+            <br>
+            Applying this to all elements is safe and wise. 
+            <br>
+            Example:- 
+            <br>
+            <div class="div3">
+                <form action="https://www.w3schools.com/action_page.php">
+                    First Name: 
+                    <br>
+                    <input type="text" name="firstname" value="Mickey">
+                    <br>
+                    Last Name: 
+                    <br>
+                    <input type="text" name="lastname" value="Mouse">
+                    <br>
+                    Comments: 
+                    <br>
+                    <textarea name="message" rows="5" cols="30">
+
+                    </textarea>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+
+                <br>
+                <br>
+
+                <strong>Tip: </strong>Try to remove the box-sizing property from the style element and look what happens. Notice that the width of input, textarea, and submit button will go outside of the screen. 
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Box Sizing Property 
+        </h2>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>box-sizing</td>
+                <td>Defines how the width and height of an element are calculated: should they include padding and borders, or not</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
