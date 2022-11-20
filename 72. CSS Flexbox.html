@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Flexbox 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .flexcontainer {
+                display:flex;
+                flex-wrap:nowrap;
+                background-color:DodgerBlue;
+            }
+
+            .flexcontainer > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                text-align:center;
+                line-height:75px;
+                font-size:30px;
+            }
+            .table1 {
+                width:100%;
+                border-collapse:collapse;
+                border:1px solid #ddd;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                border:1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Flexbox 
+        </h1>
+
+        <hr>
+
+        <p>
+            Example:- 
+            <br>
+            <div class="flexcontainer">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+
+            <br>
+            <br>
+            Try to resize the browser window. 
+            <br>
+            A container with "flex-wrap:nowrap;" will never wrap its items. 
+            <br>
+            <strong>Note: </strong>Flexbox is not supported in Internet Explorer 10 or earlier versions. 
+        </p>
+
+        <hr>
+
+        <h2>
+            CSS Flexbox Layout Module 
+        </h2>
+
+        <p>
+            Before the Flexbox Layout Module, there were four layout modules:- 
+            <br>
+            <ul>
+                <li>Block, for sections in a webpage</li>
+                <li>Inline, for text</li>
+                <li>Table, for two-dimensional table data</li>
+                <li>Positioned, for explicit position of an element</li>
+            </ul>
+
+            <br>
+            <br>
+
+            The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The flexbox properties are supported in all modern browsers. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image23.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image24.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image25.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image26.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image27.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>29.0</td>
+                    <td>11.0</td>
+                    <td>22.0</td>
+                    <td>10</td>
+                    <td>48</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            Flexbox Elements 
+        </h2>
+
+        <p>
+            To start using the Flexbox model, you need to first define a flex container. 
+            <br>
+            The element below represents a flex container (the blue area) with three flex items. 
+            <br>
+            Example:- 
+            <br>
+            <div class="flexcontainer">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            A Flexible Layout must have a parent element with the <i>display</i> property set to <i>flex</i>. 
+            <br>
+            Direct child element(s) of the flexible container automatically becomes flexible items. 
+        </p>
+    </body>
+</html>
