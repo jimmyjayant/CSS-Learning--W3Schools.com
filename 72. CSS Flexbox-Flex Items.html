@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Flex Items 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .flexcontainer1 {
+                display:flex;
+                background-color:#f1f1f1;   
+            }
+            .flexcontainer1 > div {
+                background-color:dodgerblue;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+                color:white;
+            }
+            .orderproperty {
+                display:flex;
+                background-color:#f1f1f1;
+                align-items:stretch;
+            }
+            .orderproperty > div {
+                background-color:dodgerblue;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+                color:white;
+            }
+            .flexgrowproperty {
+                background-color:#f1f1f1;
+                display:flex;
+                align-items:stretch;
+            }
+            .flexgrowproperty > div {
+                background-color:dodgerblue;
+                color:white;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .flexgrowproperty > div:nth-child(1) {
+                flex-grow:1;
+            }
+            .flexgrowproperty > div:nth-child(2) {
+                flex-grow:1;
+            }
+            .flexgrowproperty > div:nth-child(3) {
+                flex-grow:3;
+            }
+            .flexshrinkproperty {
+                background-color:#f1f1f1;
+                display:flex;
+                align-items:stretch;
+            }
+            .flexshrinkproperty > div {
+                background-color:dodgerblue;
+                font-size:30px;
+                line-height:75px;
+                text-align:center;
+                color:white;
+                margin:10px;
+                width:100px;
+            }
+            .flexshrinkproperty > div:nth-child(3) {
+                flex-shrink:0;
+            }
+            .flexbasisproperty {
+                background-color:#f1f1f1;
+                display:flex;
+                align-items:stretch;
+            }
+            .flexbasisproperty > div {
+                background-color:dodgerblue;
+                color:white;
+                width:100px;
+                margin:10px;
+                text-align:center;
+                line-height:75px;
+                font-size:30px;
+            }
+            .flexbasisproperty > div:nth-child(3) {
+                flex-basis:200px;
+            }
+            .flexshorthandproperty {
+                display:flex;
+                background-color:#f1f1f1;
+                align-items:stretch;
+            }
+            .flexshorthandproperty > div {
+                background-color:dodgerblue;
+                width:100px;
+                margin:10px;
+                text-align:center;
+                line-height:75px;
+                font-size:30px;
+                color:white;
+            }
+            .flexshorthandproperty > div:nth-child(3) {
+                flex:0 0 200px; /*flex: flex-grow flex-shrink flex-basis;*/
+            }
+            .alignself {
+                background-color:#f1f1f1;
+                display:flex;
+                height:200px;
+            }
+            .alignself > div {
+                background-color:dodgerblue;
+                color:white;
+                font-size:30px;
+                line-height:75px;
+                width:100px;
+                margin:10px;
+                text-align:center;
+                align-items:stretch;
+            }
+            .alignself > div:nth-child(3) {
+                align-self:center; /*The align-self property overrides the align-item property of the container*/
+            }
+
+            .alignself1 {
+                background-color:#f1f1f1;
+                display:flex;
+                height:200px;
+            }
+            .alignself1 > div {
+                background-color:dodgerblue;
+                width:100px;
+                margin:10px;
+                color:white;
+                font-size:30px;
+                line-height:75px;
+                text-align:center;
+            }
+            .alignself1 > div:nth-child(2) {
+                align-self:flex-start;
+            }
+            .alignself1 > div:nth-child(3) {
+                align-self:flex-end;
+            }
+            .table1 {
+                width: 70%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding-left:15px;
+            }
+            .table1 td {
+                padding-left:15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Flex Items 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Child Elements (Items) 
+        </h2>
+
+        <p>
+            The direct child elements of a flex container automatically becomes flexible (flex) items. 
+            <br>
+            The element above represents four blue flex items inside a grey flex container. 
+            <br>
+            Example:- 
+            <br>
+            <div class="flexcontainer1">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <br>
+            The elements above represents four blue flex items inside a grey flex container. 
+
+            <br>
+            <br>
+            The flex item properties are:- 
+            <br>
+            <ul>
+                <li><span class="edit">order</span></li>
+                <li><span class="edit">flex-grow</span></li>
+                <li><span class="edit">flex-shrink</span></li>
+                <li><span class="edit">flex-basis</span></li>
+                <li><span class="edit">flex</span></li>
+                <li><span class="edit">align-self</span></li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            The order Property 
+        </h2>
+
+        <p>
+            The <span class="edit">order</span> property specifies the order of the flex items. 
+            <br>
+            The first flex item in the code does not have to appear as the first item in the layout. 
+            <br>
+            The order value must be a number, default value is 0. 
+            <br>
+            Example:- 
+            <br>
+            The <i>order</i> property can change the order of the flex items. 
+            <br>
+            <div class="orderproperty">
+                <div style="order:3">1</div>
+                <div style="order:2">2</div>
+                <div style="order:4">3</div>
+                <div style="order:1">4</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The flex-grow Property 
+        </h2>
+
+        <p>
+            The <span class="edit">flex-grow</span> property specifies how much a flex item will grow relative to the rest of the flex items. 
+            <br>
+            The value must be a number, default value is 0. 
+            <br>
+            Example:- 
+            <br>
+            Make the third flex item grow eight times faster than the other flex items. 
+            <br>
+            <div class="flexgrowproperty">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+        
+        <h2>
+            The flex-shrink Property 
+        </h2>
+
+        <p>
+            The <span class="edit">flex-shrink</span> property specifies how much a flex item will shrink relative to the rest of the flex items. 
+            <br>
+            The value must be a number, default value is 1. 
+            <br>
+            Example:- 
+            <br>
+            Do not let the third flex item shrink as much as the other flex items. 
+            <br>
+            <div class="flexshrinkproperty">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The flex-basis Property 
+        </h2>
+
+        <p>
+            The <span class="edit">flex-basis</span> property specifies the initial length of a flex item. 
+            <br>
+            Example:- 
+            <br>
+            Set the initial length of the third flex item to 200 pixels. 
+            <br>
+            <div class="flexbasisproperty">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The flex Property 
+        </h2>
+
+        <p>
+            The <span class="edit">flex</span> property is a shorthand property for the <span class="edit">flex-grow</span>, <span class="edit">flex-shrink</span>, and <span class="edit">flex-basis</span> properties. 
+            <br>
+            Example:- 
+            <br>
+            Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels. 
+            <br>
+            <div class="flexshorthandproperty">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The align-self Property 
+        </h2>
+
+        <p>
+            The <span class="edit">align-self</span> property specifies the alignment for the selected item inside the flexible container. 
+            <br>
+            The <span class="edit">align-self</span> property overrides the default alignment set by the container's <span class="edit">align-items</span> property. 
+            <br>
+            In these examples we use a 200 pixels high container, to better demonstrate the <span class="edit">align-self</span> property. 
+            <br>
+            Example:- 
+            <br>
+            Align the third flex item in the middle of the container. 
+            <br>
+            <div class="alignself">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+
+            <br>
+            <br>
+
+            Example:- 
+            <br>
+            Align the second flex item at the top of the container, and the third flex item at the bottom of the container. 
+            <br>
+            <div class="alignself1">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The CSS Flexbox Items Properties 
+        </h2>
+
+        <p>
+            The following table lists all the CSS Flexbox Items properties:- 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>align-self</td>
+                    <td>Specifies the alignment for a flex item (overrides the flex container's align-items property)</td>
+                </tr>
+                <tr>
+                    <td>flex</td>
+                    <td>A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties</td>
+                </tr>
+                <tr>
+                    <td>flex-basis</td>
+                    <td>Specifies the initial length of a flex item</td>
+                </tr>
+                <tr>
+                    <td>flex-grow</td>
+                    <td>Specifies how much a flex item will grow relative to the rest of the flex items inside the same container</td>
+                </tr>
+                <tr>
+                    <td>flex-shrink</td>
+                    <td>Specifies how much a flex item will shrink relative to the rest of the flex items inside the same container</td>
+                </tr>
+                <tr>
+                    <td>order</td>
+                    <td>Specifies the order of the flex items inside the same container</td>
+                </tr>
+            </table>
+        </p>
+
+
+    </body>
+</html>

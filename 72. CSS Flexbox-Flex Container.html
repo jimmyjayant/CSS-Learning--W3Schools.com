@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Flex Container 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .flexcontainer {
+                display:flex;
+                background-color:dodgerblue;
+            }
+            .flexcontainer > div {
+                background-color:#f1f1f1;
+                margin:10px;
+                padding:20px;
+                font-size:30px;
+            }
+            .flexdirectioncolumn {
+                display:flex;
+                flex-direction:column;
+                background-color:dodgerblue;
+            }
+            .flexdirectioncolumn > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                text-align:center;
+                line-height:75px;
+                font-size:30px;
+            }
+            .flexdirectioncolumnreverse {
+                display:flex;
+                flex-direction:column-reverse;
+                background-color:dodgerblue;
+            }
+            .flexdirectioncolumnreverse > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                text-align:center;
+                line-height:75px;
+                font-size:30px;
+            }
+            .flexdirectionrow {
+                background-color:dodgerblue;
+                display:flex;
+                flex-direction:row;
+            }
+            .flexdirectionrow > div {
+                width:100px;
+                line-height:75px;
+                font-size:30px;
+                margin:10px;
+                background-color:#f1f1f1;
+                text-align:center;
+            }
+            .flexdirectionrowreverse {
+                background-color:dodgerblue;
+                display:flex;
+                flex-direction:row-reverse;
+            }
+            .flexdirectionrowreverse > div {
+                background-color:#f1f1f1;
+                margin:10px;
+                width:100px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .flexwrap {
+                display:flex;
+                flex-wrap:wrap;
+                background-color:dodgerblue;
+            }
+            .flexwrap > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .flexnowrap {
+                display:flex;
+                flex-wrap:nowrap;
+                background-color:dodgerblue;
+            }
+            .flexnowrap > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .flexwrapreverse {
+                display:flex;
+                flex-wrap:wrap-reverse;
+                background-color:dodgerblue;
+            }
+            .flexwrapreverse > div {
+                background-color:#f1f1f1;
+                width:100px;
+                line-height:75px;
+                margin:10px;
+                text-align:center;
+                font-size:30px;
+            }
+            .flexflow {
+                display:flex;
+                flex-flow:row wrap;
+                background-color:dodgerblue;
+            }
+            .flexflow > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .justifycontentcenter {
+                background-color:dodgerblue;
+                display:flex;
+                justify-content:center;
+            }
+            .justifycontentcenter > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .justifycontentflexstart {
+                background-color:dodgerblue;
+                display:flex;
+                justify-content:flex-start;
+            }
+            .justifycontentflexstart > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .justifycontentflexend {
+                background-color:dodgerblue;
+                display:flex;
+                justify-content:flex-end;
+            }
+            .justifycontentflexend > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .justifycontentspacearound {
+                background-color:dodgerblue;
+                display:flex;
+                justify-content:space-around;
+            }
+            .justifycontentspacearound > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .justifycontentspacebetween {
+                background-color:dodgerblue;
+                display:flex;
+                justify-content:space-between;
+            }
+            .justifycontentspacebetween > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+            .alignitemscenter {
+                background-color:dodgerblue;
+                display:flex;
+                align-items:center;
+                height:200px;
+            }
+            .alignitemscenter > div {
+                background-color:#f1f1f1;
+                width:100px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+                margin:10px;
+            }
+
+            .alignitemsflexstart {
+                background-color:dodgerblue;
+                display:flex;
+                align-items:flex-start;
+                height:200px;
+            }
+            .alignitemsflexstart > div {
+                background-color:#f1f1f1;
+                width:100px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+                margin:10px;
+            }
+
+            .alignitemsflexend {
+                background-color:dodgerblue;
+                display:flex;
+                align-items:flex-end;
+                height:200px;
+            }
+            .alignitemsflexend > div {
+                background-color:#f1f1f1;
+                width:100px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+                margin:10px;
+            }
+
+            .alignitemsstretch {
+                background-color:dodgerblue;
+                display:flex;
+                align-items:stretch;
+                height:200px;
+            }
+            .alignitemsstretch > div {
+                background-color:#f1f1f1;
+                width:100px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+                margin:10px;
+            }
+            .alignitemsbaseline {
+                display:flex;
+                background-color:dodgerblue;
+                align-items:baseline;
+                height:200px;
+            }
+            .alignitemsbaseline > div:nth-child(1) {
+                background-color:#f1f1f1;
+                margin:10px;
+                width:100px;
+                text-align:center;
+                font-size: 30px;
+                line-height:75px;
+            }
+            .alignitemsbaseline > div:nth-child(2) {
+                background-color:#f1f1f1;
+                margin:10px;
+                width:100px;
+                text-align:center;
+                font-size: 90px;
+                line-height:150px;
+            }
+            .alignitemsbaseline > div:nth-child(3) {
+                background-color:#f1f1f1;
+                margin:10px;
+                width:100px;
+                text-align:center;
+                font-size: 150px;
+                line-height:180px;
+            }
+            .alignitemsbaseline > div:nth-child(4) {
+                background-color:#f1f1f1;
+                margin:10px;
+                width:100px;
+                text-align:center;
+                font-size: 10px;
+                line-height:50px;
+            }
+            .aligncontentspacebetween {
+                background-color:dodgerblue;
+                display:flex;
+                flex-wrap:wrap;
+                overflow:scroll;
+                align-content:space-between;
+                height:600px;
+            }
+            .aligncontentspacebetween > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                text-align:center;
+                line-height:75px;
+                font-size:30px;
+            }
+
+            .aligncontentspacearound {
+                background-color:dodgerblue;
+                display:flex;
+                flex-wrap:wrap;
+                overflow:scroll;
+                align-content:space-around;
+                height:600px;
+            }
+            .aligncontentspacearound > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                text-align:center;
+                line-height:75px;
+                font-size:30px;
+            }
+
+            .aligncontentstretch {
+                background-color:dodgerblue;
+                display:flex;
+                flex-wrap:wrap;
+                align-content:stretch;
+                height:600px;
+                overflow:scroll;
+            }
+            .aligncontentstretch > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                font-size:30px;
+                line-height:75px;
+                text-align:center;
+            }
+
+            .aligncontentcenter {
+                background-color:dodgerblue;
+                height:600px;
+                display:flex;
+                flex-wrap:wrap;
+                align-content:center;
+                overflow:scroll;
+            }
+            .aligncontentcenter > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center; 
+            }
+
+            .aligncontentflexstart {
+                display:flex;
+                flex-wrap:wrap;
+                overflow:scroll;
+                background-color:dodgerblue;
+                align-content:flex-start;
+                height:600px;
+            }
+            .aligncontentflexstart > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                font-size:30px;
+                line-height:75px;
+                text-align:center;
+            }
+            .aligncontentflexend {
+                height:600px;
+                background-color:dodgerblue;
+                display:flex;
+                flex-wrap:wrap;
+                align-content:flex-end;
+                overflow:scroll;
+            }
+            .aligncontentflexend > div {
+                background-color:#f1f1f1;
+                width:100px;
+                margin:10px;
+                line-height:75px;
+                font-size:30px;
+                text-align:center;
+            }
+
+            .perfectcentering {
+                background-color:dodgerblue;
+                height:300px;
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:center;
+                align-items:center;
+            }
+            .perfectcentering > div {
+                background-color:#f1f1f1;
+                width:100px;
+                height:100px;
+            }
+            .table1 {
+                width:70%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+            }
+            .table1 th:first-child {
+                padding-left:10px;
+            }
+            .table1 td:first-child {
+                padding-left:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Flex Container 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Parent Element (Container) 
+        </h2>
+
+        <p>
+            Like we specified in the previous chapter, this is a flex <b>container</b> (the blue area) with three flex <b>items</b>. 
+            <br>
+            The flex container becomes flexible by setting the <span class="edit">display</span> property to <span class="edit">flex</span>. 
+            <br>
+            Example:- 
+            <br>
+            <div class="flexcontainer">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+
+            The flex container properties are:- 
+            <br>
+            <ul>
+                <li><span class="edit">flex-direction</span></li>
+                <li><span class="edit">flex-wrap</span></li>
+                <li><span class="edit">flex-flow</span></li>
+                <li><span class="edit">justify-content</span></li>
+                <li><span class="edit">align-items</span></li>
+                <li><span class="edit">align-content</span></li>
+            </ul>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The flex-direction Property 
+        </h2>
+
+        <p>
+            The <span class="edit">flex-direction</span> property defines in which direction the container wants to stack the flex items. 
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">column</span> value stacks the flex items vertically (from top to bottom). 
+            <br>
+            <div class="flexdirectioncolumn">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">column-reverse</span> value stacks the flex items vertically (but from bottom to top). 
+            <br>
+            <div class="flexdirectioncolumnreverse">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+
+            Example:- 
+            <br>
+            The <span class="edit">row</span> value stacks the flex items horizontally (from left to right). 
+            <br>
+            <div class="flexdirectionrow">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>Example:- 
+            <br>
+            The <span class="edit">row-reverse</span> value stacks the flex items horizontally (but from right to left). 
+            <br>
+            <div class="flexdirectionrowreverse">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The flex-wrap Property 
+        </h2>
+
+        <p>
+            The <span class="edit">flex-wrap</span> property specifies whether the flex items should wrap or not. 
+            <br>
+            The examples below have 12 flex items, to better demonstrate the <span class="edit">flex-wrap</span> property. 
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">wrap</span> value specifies that the flex items will wrap if necessary. 
+            <br>
+            <div class="flexwrap">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">nowrap</span> value specifies that the flex items will not wrap (this is default). 
+            <br>
+            <div class="flexnowrap">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">wrap-reverse</span> value specifies that the flexible items will wrap if necessary, in reverse order. 
+            <br>
+            <div class="flexwrapreverse">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The flex-flow Property 
+        </h2>
+
+        <p>
+            The <span class="edit">flex-flow</span> property is a shorthand property for setting both the <span class="edit">flex-direction</span> and <span class="edit">flex-wrap</span> properties. 
+            <br>
+            Example:- 
+            <br>
+            <div class="flexflow">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The justify-content Property 
+        </h2>
+
+        <p>
+            The <span class="edit">justify-content</span> property is used to align the flex items. 
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">center</span> value aligns the flex items at the center of the container. 
+            <br>
+            <div class="justifycontentcenter">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">flex-start</span> value aligns the flex items at the beginning of the container (this is default). 
+            <br>
+            <div class="justifycontentflexstart">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">flex-end</span> value aligns the flex items at the end of the container. 
+            <br>
+            <div class="justifycontentflexend">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">space-around</span> value displays the flex items with space before, between, and after the lines. 
+            <br>
+            <div class="justifycontentspacearound">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">space-between</span> value displays the flex items with space between the lines. 
+            <br>
+            <div class="justifycontentspacebetween">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The align-items Property 
+        </h2>
+
+        <p>
+            The <span class="edit">align-items</span> property is used to align the flex items. 
+            <br>
+            Example:- 
+            <br>
+            In these examples we use a 200 pixels high container, to better demonstrate the <span class="edit">align-items</span> property. 
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">center</span> value aligns the flex items in the middle of the container. 
+            <br>
+            <div class="alignitemscenter">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">flex-start</span> value aligns the flex items at the top of the container. 
+            <br>
+            <div class="alignitemsflexstart">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">flex-end</span> value aligns the flex items at the bottom of the container. 
+            <br>
+            <div class="alignitemsflexend">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">stretch</span> value stretches the flex items to fill the container (this is default). 
+            <br>
+            <div class="alignitemsstretch">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">baseline</span> value aligns the flex items such as their baselines aligns. 
+            <br>
+            <div class="alignitemsbaseline">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The align-content Property 
+        </h2>
+
+        <p>
+            The <span class="edit">align-content</span> property is used to align the flex lines. 
+            <br>
+            In these examples we use a 600 pixels high container, with the <span class="edit">flex-wrap</span> property set to <span class="edit">wrap</span>, to better demonstrate the <span class="edit">align-content</span> property. 
+            <br>
+            Example:- 
+            <br>
+            <div class="aligncontentspacebetween">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">space-around</span> value displays the flex lines with space before, between, and after them. 
+            <br>
+            <div class="aligncontentspacearound">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+            
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">stretch</span> value stretches the flex lines to take up the remaining space (this is default). 
+            <br>
+            <div class="aligncontentstretch">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">center</span> value displays the flex lines in the middle of the container. 
+            <br>
+            <div class="aligncontentcenter">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">flex-start</span> value displays the flex lines at the start of the container. 
+            <br>
+            <div class="aligncontentflexstart">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">flex-end</span> value displays the flex lines at the end of the container. 
+            <br>
+            <div class="aligncontentflexend">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+        </p>
+
+        <hr>
+        
+        <h2>
+            Perfect Centering 
+        </h2>
+
+        <p>
+            In the following example we will solve a very common style problem: perfect centering. 
+            <br>
+            <strong>SOLUTION: </strong>Set both the <span class="edit">justify-content</span> and <span class="edit">align-items</span> properties to <span class="edit">center</span>, and the flex item will be perfectly centered. 
+            <br>
+            Example:- 
+            <br>
+            <div class="perfectcentering">
+                <div></div>
+            </div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The CSS Flexbox Container Properties 
+        </h2>
+
+        <p>
+            The following table lists all the CSS Flexbox Container properties:- 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>align-content</td>
+                    <td>Modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines</td>
+                </tr>
+                <tr>
+                    <td>align-items</td>
+                    <td>Vertically aligns the flex items when the items do not use all available space on the cross-axis</td>
+                </tr>
+                <tr>
+                    <td>display</td>
+                    <td>Specifies the type of box used for a HTML element</td>
+                </tr>
+                <tr>
+                    <td>flex-direction</td>
+                    <td>Specifies the direction of the flexible items inside a flex container</td>
+                </tr>
+                <tr>
+                    <td>flex-flow</td>
+                    <td>A shorthand property for flex-direction and flex-wrap</td>
+                </tr>
+                <tr>
+                    <td>flex-wrap</td>
+                    <td>Specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line</td>
+                </tr>
+                <tr>
+                    <td>justify-content</td>
+                    <td>Horizontally aligns the flex items when the items do not use all available space on the main-axis</td>
+                </tr>
+            </table>
+        </p>
+
+    </body>
+</html>
