@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            CSS Flex Responsive 
+        </title>
+        <style>
+            * {
+                box-sizing:border-box;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .table1 {
+                width: 100%;
+                border:1px solid grey;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:400px;
+            }
+            .table1 td {
+                width:50%;
+            }
+            .flexcontainer1 {
+                display:flex;
+                border:1px solid #ddd;
+                margin:10px 10px 10px 0;
+                flex-direction:row;
+            }
+            .flexcontainer1 > div {
+                background-color:#f1f1f1;
+                border:1px solid #ddd;
+                color:black;
+                text-align:center;
+                margin:0;
+                font-weight:bold;
+                font-size:30px;
+                flex:33.33%;
+                line-height:80px;
+            }
+
+            .flexcontainer2 {
+                display:flex;
+                border:1px solid #ddd;
+                margin:10px 10px 10px 0;
+                flex-direction:column;
+            }
+            .flexcontainer2 > div {
+                background-color:#f1f1f1;
+                border:1px solid #ddd;
+                text-align:center;
+                margin:0;
+                font-weight:bold;
+                font-size:30px;
+                flex:100%;
+                line-height:80px;
+            }
+
+            .flexcontainer3 {
+                display:flex;
+                flex-direction:row;
+            }
+            .flexcontainer3 > div:first-child {
+                background-color:#f1f1f1;
+                text-align:center;
+                font-weight:bold;
+                flex:50%;
+                font-size:30px;
+                line-height:70px;
+            }
+            .flexcontainer3 > div:nth-child(2) {
+                background-color:dodgerblue;
+                text-align:center;
+                font-weight:bold;
+                flex:50%;
+                font-size:30px;
+                line-height:70px;
+            }
+            @media only screen and (max-width:800px) {
+                .flexcontainer3 {
+                 flex-direction:column;
+
+                }
+            }
+
+            .flexcontainer4 {
+                display:flex;
+                flex-wrap:wrap;
+            }
+            .flexcontainer4 > div:nth-child(1) {
+                flex:50%;
+                background-color:#f1f1f1;
+                text-align:center;
+                font-size:30px;
+                font-weight:bold;
+                line-height:80px;
+                margin:0;
+            }
+            .flexcontainer4 > div:nth-child(2) {
+                flex:50%;
+                background-color:dodgerblue;
+                text-align:center;
+                font-size:30px;
+                font-weight:bold;
+                line-height:80px;
+                margin:0;
+            }
+            @media only screen and (max-width:800px) {
+                .flexcontainer4 > div:nth-child(1), .flexcontainer4 > div:nth-child(2) {
+                    flex:100%;
+                }
+            }
+
+            .flexcontainer5 {
+                display:flex;
+                flex-wrap:wrap;
+            }
+            .flexitem1 {
+                max-width:25%;
+            }
+            .flexcontainer5 img {
+               width:100%;
+               margin-top:8px;
+            }
+            .flexitem1, .flexitem2, .flexitem3, .flexitem4 {
+                flex:25%;
+                max-width:25%;
+                padding:0 4px;
+            }
+            @media only screen and (max-width:800px) {
+                .flexitem1, .flexitem2, .flexitem3, .flexitem4 {
+                    flex:50%;
+                    max-width:50%;
+                }
+            }
+            @media only screen and (max-width:600px) {
+                .flexitem1, .flexitem2, .flexitem3, .flexitem4 {
+                    flex:100%;
+                    max-width:100%;
+                }
+            }
+
+            .flexiblewebsite {
+                margin:0;
+                width:100%;
+                box-sizing:border-box;
+            }
+
+            .note {
+                font-weight:bold;
+                text-align:center;
+                background-color:yellow;
+                font-size:20px;
+                padding:10px;
+                margin:0;
+            }
+
+            .header {
+                background-color:#1abc9c;
+                color:white;
+                text-align:center;
+                padding:50px;
+            }
+            .header h1 {
+                font-size:40px;
+            }
+            .header p {
+                font-size:20px;
+            }
+            .navbar {
+                display:flex;
+                flex-wrap:wrap;
+                background-color:#333;
+                color:white;
+            }
+            .navbar a {
+                text-align:center;
+                text-decoration:none;
+                font-size:20px;
+                padding:10px 16px;
+            }
+            .navbar a:hover {
+                color:black;
+                background-color:#ddd;
+                cursor:pointer;
+            }
+
+            .maincontent {
+                display:flex;
+                flex-wrap:wrap;
+            }
+            .column1 {
+                background-color:#f1f1f1;
+                flex:30%;
+                padding:10px;
+            }
+            .image {
+                background-color:grey;
+                padding:10px;
+                margin:10px 0;
+            }
+            .column2 {
+                background-color:white;
+                flex:70%;
+                padding:10px;
+            }
+            .footer {
+                font-size:30px;
+                font-weight:bold;
+                text-align:center;
+                padding:40px 0;
+                background-color:#ddd;
+            }
+
+            @media only screen and (max-width:700px) {
+                .maincontent, .navbar {
+                    flex-direction:column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Flex Responsive 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Responsive Flexbox 
+        </h2>
+
+        <p>
+            You learned from the CSS Media Queries chapter that you can use media queries to create different layouts for different screen sizes and devices. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td>
+                        Laptops and Desktops:- 
+                        <br>
+                        <div class="flexcontainer1">
+                          <div>1</div>
+                          <div>2</div>
+                          <div>3</div>
+                        </div>
+                    </td>
+                    <td>
+                        Mobile phones and Tablets:- 
+                        <br>
+                        <div class="flexcontainer2">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            For example, if you want to create a two-column layout for most screen sizes, and a one-column layout for small screen sizes (such as phones and tablets), you can change the <span class="edit">flex-direction</span> from <span class="edit">row</span> to <span class="edit">column</span> at a specific breakpoint (800px in the example below). 
+            <br>
+            Example:- 
+            <br>
+            <div class="flexcontainer3">
+                <div>1</div>
+                <div>2</div> 
+            </div>
+
+            <br>
+            <br>
+            The "flex-direction:row;" stacks the flex items horizontally (from left to right). 
+            <br>
+            The "flex-direction:column;" stacks the flex items vertically (from top to bottom). 
+            <br>
+            <b>
+            Resize the browser window to see that the direction changes when the screen size is 800px wide or smaller. 
+            </b>
+
+            <br>
+            <br>
+
+            Another way is to change the percentage of the <span class="edit">flex</span> property of the flex items to create different layouts for different screen sizes. Note that we also have to include <span class="edit">flex-wrap: wrap;</span> on the flex container for this example to work. 
+            <br>
+            Example:- 
+            <br>
+            <div class="flexcontainer4">
+                <div>1</div>
+                <div>2</div> 
+            </div>
+
+            <br>
+            <br>
+            In this example, we change the percentage of flex to create different layouts for different screen sizes. 
+            <br>
+            <b>
+                Resize the browser window to see that the direction changes when the screen size is 800px wide or smaller. 
+            </b>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Responsive Image Gallery using Flexbox 
+        </h2>
+
+        <p>
+            Use flexbox to create a responsive image gallery that varies between four, two or full-width images, depending on screen size. 
+            <br>
+            Example:- 
+            <br>
+            <div class="flexcontainer5">
+                <div class="flexitem1">
+                <img src="Image34.jpg">
+                <img src="Image35.jpg">
+                <img src="Image36.jpg">
+                <img src="Image17.jpg">
+                <img src="Image37.jpg">
+                <img src="Image38.jpg">
+                <img src="Image17.jpg">
+                </div>
+                <div class="flexitem2">
+                    <img src="Image39.jpg">
+                    <img src="Image40.jpg">
+                    <img src="Image34.jpg">
+                    <img src="Image41.jpg">
+                    <img src="Image35.jpg">
+                    <img src="Image39.jpg">
+                </div>
+                <div class="flexitem3">
+                    <img src="Image34.jpg">
+                    <img src="Image35.jpg">
+                    <img src="Image36.jpg">
+                    <img src="Image17.jpg">
+                    <img src="Image37.jpg">
+                    <img src="Image38.jpg">
+                    <img src="Image17.jpg">
+                </div>
+                <div class="flexitem4">
+                    <img src="Image39.jpg">
+                    <img src="Image40.jpg">
+                    <img src="Image34.jpg">
+                    <img src="Image41.jpg">
+                    <img src="Image35.jpg">
+                    <img src="Image39.jpg">
+                </div>
+            </div>
+        </p>
+
+        <hr>
+        
+        <h2>
+            Responsive Website using Flexbox 
+        </h2>
+
+        <p>
+            Use flexbox to create a responsive website, containing a flexible navigation bar and flexible content. 
+            <br>
+            Example:- 
+            <br>
+            <div class="flexiblewebsite">
+                <div class="note">
+                    <p>
+                        Resize the browser window to see the responsive effect. 
+                    </p>
+                </div>
+
+                <div class="header">
+                    <h1>
+                        My Website 
+                    </h1>
+                    <p>
+                        With a <b>flexible</b> layout. 
+                    </p>
+                </div>
+
+                <div class="navbar">
+                    <a>Link 1</a>
+                    <a>Link 2</a>
+                    <a>Link 3</a>
+                    <a>Link 4</a>
+                </div>
+
+                <div class="maincontent">
+                    <div class="column1">
+                      <h2>
+                        About Me 
+                      </h2>
+
+                      <h3>
+                        Photo of me: 
+                      </h3>
+
+                      <div class="image" style="height:200px">
+                        Image 
+                      </div>
+
+                      <p>Some text about me in culpa qui officia deserunt mollit anim... </p>
+
+                      <h2>
+                        More Text 
+                      </h2>
+
+                      <p>Lorem ipsum dolor sit ame.</p>
+
+                      <div class="image" style="height:60px">
+                        Image 
+                      </div>
+                      <div class="image" style="height:60px">
+                        Image 
+                      </div>
+                      <div class="image" style="height:60px">
+                        Image 
+                      </div>
+                    </div>
+
+                    <div class="column2">
+                    <h2>
+                        TITLE HEADING 
+                    </h2>
+
+                    <h4>
+                        Title description, Dec 7, 2017 
+                    </h4>
+
+                    <div class="image" style="height:200px">
+                        Image 
+                    </div>
+
+                    <p>
+                        Some text.. 
+                        <br>
+                        <br>
+                        Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. 
+                    </p>
+                    
+                    <br>
+                    <br>
+
+                    <h2>
+                        TITLE HEADING 
+                    </h2>
+
+                    <h4>
+                        Title description, Dec 7, 2017 
+                    </h4>
+
+                    <div class="image" style="height:200px">
+                        Image 
+                    </div>
+
+                    <p>
+                        Some text.. 
+                        <br>
+                        <br>
+                        Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. 
+                    </p>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    Footer 
+                </div>
+            </div>
+        </p>
+
+
+    </body>
+</html>
