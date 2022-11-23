@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            CSS RWD Intro 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            * {
+                box-sizing:border-box;
+            }
+            .flexcontainer1 {
+                display:flex;
+                flex-wrap:wrap;
+            }
+            .image1 {
+                flex:50%;
+                text-align:center;
+                font-weight:bold;
+            }
+            .flexcontainer1 img {
+                border:2px solid #ddd;
+            }
+            .image2 {
+                flex:30%;
+                text-align:center;
+                font-weight:bold;
+            }
+            .image3 {
+                flex:20%;
+                text-align:center;
+                font-weight:bold;
+            }
+            @media only screen and (max-width:800px) {
+                .image1, .image2, .image3 {
+                    flex:100%;
+                }
+            }
+
+            /*Header Class*/
+            .header {
+                background-color:#8e44ad;
+                color:white;
+                text-align:center;
+                padding:25px 0;
+                font-size:20px;
+            }
+
+            /*maincontent class*/
+
+            .maincontent {
+                display:flex;
+                flex-wrap:wrap;
+            }
+            .sidebar {
+                flex:15%;
+            }
+            .sidebar ul {
+                list-style-type:none;
+                padding:0;
+                margin:5px;
+            }
+            .sidebar ul li {
+                background-color:#0abde3;
+                color:white;
+                padding:5px;
+                font-size:20px;
+                margin:5px;
+            }
+            /*article class*/
+            .article {
+                flex:60%;
+            }
+            .article p {
+                font-size:20px;
+            }
+
+            /*aside class*/
+            .aside {
+                color:white;
+                background-color:#0abde3;
+                flex:22%;
+                text-align:center;
+                margin:5px;
+            }
+            /*Footer Class*/
+            .footer {
+                background-color:#2e86de;
+                color:white;
+                text-align:center;
+                padding:15px 0;
+            }
+            .footer h4 {
+                font-weight:normal;
+            }
+
+            @media only screen and (max-width:600px) {
+                .sidebar, .article, .aside {
+                    flex:100%;
+                }
+            }
+            @media only screen and (min-width:601px) and (max-width:768px) {
+                .sidebar {
+                    flex:30%;
+                }
+                .article {
+                    flex:70%;
+                }
+                .aside {
+                    flex:100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Responsive Web Design - Introduction 
+        </h1>
+
+        <hr>
+
+        <h2>
+            What is Responsive Web Design? 
+        </h2>
+
+        <p>
+           Responsive Web Design makes your web page look good on all devices. 
+           <br>
+           Responsive web design uses only HTML and CSS. 
+           <br>
+           Responsive web design is not a program or a JavaScript.  
+        </p>
+
+        <hr>
+
+        <h2>
+            Designing For The Best Experience For All Users 
+        </h2>
+
+        <p>
+            Web pages can be viewed using many different devices: desktops, tablets, and phones. Your web page should look good, and be easy to use, regardless of the device. 
+            <br>
+            Web pages should not leave out information to fit smaller devices, but rather adapt its content to fit any device. 
+            <br>
+            <div class="flexcontainer1">
+                <div class="image1">
+                    <img src="Image42.png">
+                    <p>Desktop</p>
+                </div>
+                <div class="image2">
+                    <img src="Image43.png">
+                    <p>Tablet</p>
+                </div>
+                <div class="image3">
+                    <img src="Image44.png">
+                    <p>Phone</p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            It is called responsive web design when you use CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen. 
+            <br>
+            Don't worry if you don't understand the example below, we will break down the code, step-by-step, in the next chapters. 
+            <br>
+            <hr>
+            <br>
+            Example:- 
+            <br>
+            <br>
+            <div class="flexcontainer2">
+                <div class="header">
+                 <h1>
+                    Chania 
+                 </h1>
+                </div>
+                <div class="maincontent">
+                    <div class="sidebar">
+                        <ul>
+                            <li>The Flight</li>
+                            <li>The City</li>
+                            <li>The Island</li>
+                            <li>The Food</li>
+                        </ul>
+                    </div>
+
+                    <div class="article">
+                        <h1>
+                            The City 
+                        </h1>
+
+                        <p>
+                            Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city. 
+                        </p>
+                    </div>
+
+                    <div class="aside">
+                        <h2>
+                             What? 
+                        </h2>
+                        <p>Chania is a city on the island of Crete.</p>
+                        <h2>
+                             Where? 
+                        </h2>
+                        <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                        <h2>
+                            How? 
+                        </h2>
+                        <p>You can reach Chania airport from all over Europe.</p>
+                    </div>
+                </div>
+                <div class="footer">
+                 <h4>
+                    Resize the browser window to see how the content respond to the resizing. 
+                 </h4>
+                </div>
+            </div>
+        </p>
+    </body>
+</html>
