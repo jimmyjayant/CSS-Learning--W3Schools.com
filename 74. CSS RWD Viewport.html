@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            CSS RWD Viewport 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Responsive Web Design - The Viewport 
+        </h1>
+
+        <hr>
+
+        <h2>
+            What is The Viewport? 
+        </h2>
+
+        <p>
+            The viewport is the user's visible area of a web page. 
+            <br>
+            The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen. 
+            <br>
+            Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size. 
+            <br>
+            Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen. 
+            <br>
+            This was not perfect! But a quick fix. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Setting The Viewport 
+        </h2>
+
+        <p>
+           HTML5 introduced a method to let web designers take control over the viewport, through the <span class="edit">&lt;meta&gt;</span> tag. 
+           <br>
+           You should include the following <span class="edit">&lt;meta&gt;</span> viewport element in all your web pages. 
+           <br>
+           <p style="border:1px solid #ddd;padding:10px;font-family:arial">
+           <span style="color:blue">&lt;</span><span style="color:brown">meta</span> <span style="color:red">name</span><span style="color:blue">="viewport"</span> <span style="color:red">content</span><span style="color:blue">="width=device-width, initial-scale=1.0"&gt;</span> 
+           </p>
+
+           <br>
+
+           This gives the browser instructions on how to control the page's dimensions and scaling. 
+           <br>
+           The <span class="edit">width=device-width</span> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device). 
+           <br>
+           The <span class="edit">initial-scale=1.0</span> part sets the initial zoom level when the page is first loaded by the browser. 
+           <br>
+           Here is an example of a web page <i>without</i> the viewport meta tag, and the same web page <i>with</i> the viewport meta tag. 
+           <br>
+           <img src="Image45.png" alt="Website without the viewport meta tag">
+           <img src="Image46.png" alt="Website with the viewport meta tag">
+
+           <br>
+           <br>
+
+           <p class="edit1">
+            <strong>Tip: </strong>If you are browsing the page with a phone or a tablet, you can click on the two links above to see the difference. 
+           </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Size Content to The Viewport 
+        </h2>
+
+        <p>
+            Users are used to scroll websites vertically on both desktop and mobile devices - but not horizontally! 
+            <br>
+            So, if the user is forced to scroll horizontally, or zoom out, to see the whole web page it results in a poor user experience. 
+            <br>
+            Some additional rules to follow:- 
+            <br>
+            <ol>
+                <li><Strong>Do NOT use large fixed width elements</Strong> - For example, if an image is displayed at a width wider than the viewport it can cause the viewport to scroll horizontally. Remember to adjust this content to fit within the width of the viewport.</li>
+                <li><strong>Do NOT let the content rely on a particular viewport width to render well</strong> - Since screen dimensions and width in CSS pixels vary widely between devices, content should not rely on a particular viewport width to render well.</li>
+                <li><strong>Use CSS media queries to apply different styling for small and large screens</strong> - Setting large absolute CSS widths for page elements will cause the element to be too wide for the viewport on a smaller device. Instead, consider using relative width values, such as width: 100%. Also, be careful of using large absolute positioning values. It may cause the element to fall outside the viewport on small devices.</li>
+            </ol>
+        </p>
+
+    </body>
+</html>
