@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            CSS RWD Images 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .imagecontainer1 {
+                width:50%;
+                height:auto;
+            }
+            .imagecontainer2 {
+                max-width:100%;
+                height:auto;
+            }
+
+            .imagecontainer3 {
+                width:100%;
+                height:400px;
+                background-image:url('Image48.jpg');
+                background-repeat:no-repeat;
+                background-size:contain;
+                border:1px solid red;
+            }
+
+            .imagecontainer4 {
+                width:100%;
+                height:400px;
+                border:1px solid red;
+                background-image:url('Image48.jpg');
+                background-repeat:no-repeat;
+                background-size:100% 100%;
+            }
+
+            .imagecontainer5 {
+                width:100%;
+                height:400px;
+                border:1px solid red;
+                background-image:url('Image48.jpg');
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+
+            .imagecontainer6 {
+                width:100%;
+                height:350px;
+                background-image:url('Image48.jpg');
+                background-repeat:no-repeat;
+            }
+            
+
+            .imagecontainer7 {
+                width:100%;
+                height:350px;
+                background-image:url('Image49.jpg');
+                background-repeat:no-repeat;
+            }
+
+            @media only screen and (max-width:400px) {
+                .imagecontainer6 {
+                    background-image:url('Image49.jpg');
+                }
+            }
+
+            @media only screen and (min-device-width:400px) {
+                .imagecontainer7 {
+                    background-image:url('Image48.jpg');
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Responsive Web Design - Images 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Using The width Property 
+        </h2>
+
+        <p>
+            If the <span class="edit">width</span> property is set to a percentage and the <span class="edit">height</span> property is set to "auto", the image will be responsive and scale up and down. 
+            <br>
+            Example:- 
+            <br>
+                <img src="Image47.jpg" width="460" height="345" class="imagecontainer1">
+                <br>
+                <b>Resize the browser window to see how the image would scale. </b>
+
+            <br>
+            <br>
+            
+            Notice that in the example above, the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the <span class="edit">max-width</span> property instead. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Using The max-width Property 
+        </h2>
+
+        <p>
+           If the <span class="edit">max-width</span> property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size. 
+           <br>
+           Example:- 
+           <br>
+           <img src="Image47.jpg" width="460" height="345" class="imagecontainer2">
+           <br>
+           <b>Resize the browser window to see how the image will scale when the width is less than 460px. </b>
+        </p>
+
+        <hr>
+
+        <h2>
+            Add an Image to The Example Web Page 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <a href="77. CSS RWD Images-Example Webpage.html" target="_blank">Example Webpage</a>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Background Images 
+        </h2>
+
+        <p>
+            Background images can also respond to resizing and scaling. 
+            <br>
+            Here we will show three different methods:- 
+            <br>
+            <ol>
+                <li>
+                    If the <span class="edit">background-size</span> property is set to "contain", the background image will scale, and try to fit the content area. However, the image will keep its aspect ratio (the proportional relationship between the image's width and height).  
+                <br>
+                Example:- 
+            <br>
+                <div class="imagecontainer3"></div>
+                <br>
+                <b>Resize the browser window to see the effect. </b>
+                </li>
+
+                <br>
+
+                <hr>
+
+                <li>
+                     If the <span class="edit">background-size</span> property is set to "100% 100%", the background image will stretch to cover the entire content area. 
+                     <br>
+                     Example:- 
+                     <br>
+                     <div class="imagecontainer4"></div>
+                     <br>
+                     <b>Resize the browser window to see the effect.</b>
+                </li>
+
+                <br>
+
+                <hr>
+
+                <li>
+                    If the <span class="edit">background-size</span> property is set to "cover", the background image will scale to cover the entire content area. Notice that the "cover" value keeps the aspect ratio, and some part of the backround image may be clipped. 
+                    <br>
+                    Example:- 
+                    <br>
+                    <div class="imagecontainer5"></div>
+                     <br>
+                     <b>Resize the browser window to see the effect.</b>
+                </li>
+            </ol>
+        </p>
+
+        <hr>
+
+        <h2>
+            Different Images for Different Devices 
+        </h2>
+
+        <p>
+            A large image can be perfect on a big computer screen, but useless on a small device. Why load a large image when you have to scale it down anyway? To reduce the load, or for any other reasons, you can use media queries to display different images on different devices. 
+            <br>
+            Here is one large image and one smaller image that will be displayed on different devices. 
+            <br>
+            Example:- 
+            <br>
+            <div class="imagecontainer6"></div>
+            <br>
+            <b>Resize the browser width and the background image will change at 400px.</b>
+
+            <br>
+            <br>
+
+            You can use the media query <span class="edit">min-device-width</span>, instead of <span class="edit">min-width</span>, which checks the device width, instead of the browser width. Then the image will not change when you resize the browser window. 
+            <br>
+            Example:- 
+            <br>
+            <div class="imagecontainer7"></div>
+        </p>
+
+        <hr>
+
+        <h2>
+            The HTML &lt;picture&gt; Element 
+        </h2>
+
+        <p>
+            The HTML <span class="edit">&lt;picture&gt;</span> element gives web developers more flexibility in specifying image resources. 
+            <br>
+            The most common use of the <span class="edit">&lt;picture&gt;</span> element will be for images used in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport. 
+            <br>
+            The <span class="edit">&lt;picture&gt;</span> element works similar to the <span class="edit">&lt;video&gt;</span> and <span class="edit">&lt;audio&gt;</span> elements. You set up different sources, and the first source that fits the preferences is the one being used. 
+            <br>
+            Example:- 
+            <br>
+            <picture>
+                <source srcset="Image49.jpg" media="(max-width:400px)">
+                <source srcset="Image48.jpg">
+                <img src="Image48.jpg" alt="Flowers">
+            </picture>
+
+            <br>
+            <br>
+
+            The <span class="edit">srcset</span> attribute is required, and defines the source of the image. 
+            <br>
+            The <span class="edit">media</span> attribute is optional, and accepts the media queries you find in CSS @media rule. 
+            <br>
+            You should also define an <span class="edit">&lt;img&gt;</span> element for browsers that do not support the <span class="edit">&lt;picture&gt;</span> element. 
+        </p>
+
+    </body>
+</html>

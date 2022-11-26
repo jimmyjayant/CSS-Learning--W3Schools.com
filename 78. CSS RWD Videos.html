@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS RWD Videos 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .video1 {
+                width:50%;
+                height:auto;
+            }
+            .video2 {
+                max-width:100%;
+                height:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Responsive Web Design - Videos 
+        </h1>
+
+        <hr>
+
+        <h2>
+           Using The width Property   
+        </h2>
+
+        <p>
+            If the <span class="edit">width</span> property is set to 100%, the video player will be responsive and scale up and down. 
+            <br>
+            Example:- 
+            <br>
+            <video width="400" controls class="video1">
+                <source src="Video1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video. 
+            </video>
+            <br>
+            <b>Resize the browser window to see how the size of the video player will scale.</b>
+
+            <br>
+            <br>
+
+            Notice that in the example above, the video player can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the <span class="edit">max-width</span> property instead. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Using The max-width Property 
+        </h2>
+
+        <p>
+            If the <span class="edit">max-width</span> property is set to 100%, the video player will scale down if it has to, but never scale up to be larger than its original size. 
+            <br>
+            Example:- 
+            <br>
+            <video width="400" controls class="video2">
+                <source src="Video1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video. 
+            </video>
+            <br>
+            <b>Resize the browser window to see how the size of the video player will scale when the width is less than 400px.</b>
+        </p>
+
+        <hr>
+
+        <h2>
+            Add a Video to the Example Web Page 
+        </h2>
+
+        <p>
+            We want to add a video in our example web page. The video will be resized to always take up all the available space. 
+            <br>
+            Example:- 
+            <br>
+            <a href="78. CSS RWD Videos-Example Web Page.html" target="_blank">Example Web Page</a>
+        </p>
+    </body>
+</html>
