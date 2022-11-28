@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Band Template 
+        </title>
+        <style>
+           * {
+            box-sizing:border-box;
+           }
+
+           body {
+            margin:0;
+            padding:0;
+            font-family:arial;
+           }
+
+           .hornavbar::after {
+            content:"";
+            clear:both;
+            display:table;
+           }
+
+           .hornavbar ul {
+            list-style-type:none;
+            overflow:hidden;
+            background-color:black;
+            margin:0;
+            padding:0;
+            position:fixed;
+            top:0;
+            width:100%;
+           }
+
+           .hornavbar li {
+            float:left;
+            margin:0;
+            padding:0;
+           }
+
+           .hornavbar li > a {
+            display:inline-block;
+            padding:12px 20px;
+            text-align:center;
+            text-decoration:none;
+            color:white;
+            font-size:20px;
+            margin:0;
+           }
+
+           .hornavbar li > a:not(.searchicon):hover {
+            background-color:#ddd;
+            color:black;
+           }
+
+           .hornavbar .searchicon:hover {
+            background-color:red;
+           }
+
+           .dropdown:hover .dropdownbtn {
+            background-color:#ddd;
+            color:black;
+           }
+
+           .dropdown:hover .dropdownbtn::after {
+            border-color:black transparent transparent transparent;
+           }
+
+           .dropdownbtn {
+            position:relative;
+           }
+
+           .dropdownbtn::after {
+            content:" ";
+            border-style:solid;
+            border-width:5px;
+            border-color:white transparent transparent transparent;
+            position:absolute;
+            top:20px;
+           }
+
+           .dropdownlist {
+            display:none;
+            max-width:160px;
+            background-color:white;
+            z-index:1;
+            position:absolute;
+           }
+
+           .dropdownlist > a {
+            display:block;
+            text-decoration:none;
+            font-size:20px;
+            color:black;
+            padding:12px 24px;
+            margin:0;
+            text-align:center;
+            background-color:#f1f1f1;
+           }
+
+           .dropdownlist > a:hover {
+            background-color:#ddd;
+           }
+           
+           .dropdown:hover .dropdownlist {
+            display:block;
+           }
+           
+           /*Imageshow background image animation*/
+           .imageshow {
+            position:relative;
+            background-image:url('Image51.jpg');
+            background-repeat:no-repeat;
+            background-size:contain;
+            height:0;
+            width:100%;
+            margin-top:47px;
+            padding-top:50%;
+            animation-name:bgimgshow;
+            animation-duration:16s;
+            animation-iteration-count:infinite;
+           }
+
+           @keyframes bgimgshow {
+            0% {
+                background-image:url('Image51.jpg');
+            }
+            25% {
+                background-image:url('Image52.jpg');
+            }
+            50% {
+                background-image:url('Image53.jpg');
+            }
+            100% {
+                background-image:url('Image51.jpg');
+            }
+           }
+
+           .losangeles {
+            display:none;
+            position:absolute;
+            bottom:20%;
+            left:50%;
+            text-align:center;
+            animation-name:absolutetext;
+            animation-duration:16s;
+            animation-iteration-count:infinite;
+           }
+        </style>
+    </head>
+    <body>
+    <div class="hornavbar">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">BAND</a></li>
+            <li><a href="#">TOUR</a></li>
+            <li><a href="#">CONTACT</a></li>
+            
+            <li class="dropdown">
+               <a href="#" class="dropdownbtn">MORE</a>
+                <div class="dropdownlist">
+                    <a href="#">Merchandise</a>
+                    <a href="#">Extras</a>
+                    <a href="#">Media</a>
+                </div>
+              </li>
+            
+            <li style="float:right">
+               <a href="#" class="searchicon">
+                  <img src="Image50.png" style="height:16px;">
+               </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="imageshow">
+        <!--<img src="Image51.jpg" style="visibility:hidden;"> And set the background-image of div imageshow to this image.-->
+        <div class="losangeles">
+        <h2>Los Angeles</h2>
+        <h3>We had the best time playing at Venice beach!</h3>
+        </div>
+    </div>
+    </body>
+</html>

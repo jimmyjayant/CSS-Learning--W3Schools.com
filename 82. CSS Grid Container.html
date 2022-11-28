@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Grid Container 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            .grid-container-1 {
+                background-color:aqua;
+                padding:10px;
+                display:grid;
+                grid-template-columns:auto auto auto auto;
+                gap:10px;
+            }
+            .grid-container-1 > div {
+                background-color:lightblue;
+                font-size:30px;
+                text-align:center;
+                padding:20px;
+                border:1px solid black;
+            }
+            .fourcolgrid {
+                display:grid;
+                grid-template-columns:auto auto auto auto;
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+            }
+            .fourcolgrid > div {
+                background-color:aqua;
+                font-size:30px;
+                padding:20px;
+                text-align:center;
+                border:1px solid black;
+            }
+
+            .fourcolgrid1 {
+                display:grid;
+                grid-template-columns:80px 200px auto 40px;
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+            }
+            .fourcolgrid1 > div {
+                background-color:aqua;
+                font-size:30px;
+                padding:20px;
+                text-align:center;
+                border:1px solid black;
+            }
+
+            .threecolgrid {
+                display:grid;
+                grid-template-columns:auto auto auto;
+                grid-template-rows:80px 200px;
+                background-color:lightblue;
+                padding:10px;
+                gap:10px;
+            }
+            .threecolgrid > div {
+                background-color:aqua;
+                padding:20px;
+                font-size:30px;
+                text-align:center;
+                border:1px solid black;
+            }
+            .justifycontentprop1 {
+                display:grid;
+                grid-template-columns:50px 50px 50px; /*Make the grid smaller than the container*/
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+                justify-content:space-evenly;
+            }
+            
+            .justifycontentprop1 > div {
+                background-color:aqua;
+                text-align:center;
+                padding:20px;
+                font-size:30px;
+                border:1px solid black;
+            }
+
+            .justifycontentprop2 {
+                display:grid;
+                grid-template-columns:50px 50px 50px; /*Make the grid smaller than the container*/
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+                justify-content:space-around;
+            }
+            
+            .justifycontentprop2 > div {
+                background-color:aqua;
+                text-align:center;
+                padding:20px;
+                font-size:30px;
+                border:1px solid black;
+            }
+            .justifycontentprop3 {
+                display:grid;
+                grid-template-columns:50px 50px 50px; /*Make the grid smaller than the container*/
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+                justify-content:space-between;
+            }
+            
+            .justifycontentprop3 > div {
+                background-color:aqua;
+                text-align:center;
+                padding:20px;
+                font-size:30px;
+                border:1px solid black;
+            }
+
+            .justifycontentprop4 {
+                display:grid;
+                grid-template-columns:50px 50px 50px; /*Make the grid smaller than the container*/
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+                justify-content:center;
+            }
+            
+            .justifycontentprop4 > div {
+                background-color:aqua;
+                text-align:center;
+                padding:20px;
+                font-size:30px;
+                border:1px solid black;
+            }
+
+            .justifycontentprop5 {
+                display:grid;
+                grid-template-columns:50px 50px 50px; /*Make the grid smaller than the container*/
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+                justify-content:start;
+            }
+            
+            .justifycontentprop5 > div {
+                background-color:aqua;
+                text-align:center;
+                padding:20px;
+                font-size:30px;
+                border:1px solid black;
+            }
+
+            .justifycontentprop6 {
+                display:grid;
+                grid-template-columns:50px 50px 50px; /*Make the grid smaller than the container*/
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+                justify-content:end;
+            }
+            
+            .justifycontentprop6 > div {
+                background-color:aqua;
+                text-align:center;
+                padding:20px;
+                font-size:30px;
+                border:1px solid black;
+            }
+
+            .aligncontentprop1 {
+                display:grid;
+                height:400px;
+                align-content:center;
+                grid-template-columns:auto auto auto;
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+            }
+            .aligncontentprop1 > div {
+                background-color:aqua;
+                border:1px solid black;
+                padding:20px;
+                font-size:30px;
+                text-align:center;
+            }
+
+            .aligncontentprop2 {
+                display:grid;
+                height:400px;
+                align-content:space-evenly;
+                grid-template-columns:auto auto auto;
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+            }
+            .aligncontentprop2 > div {
+                background-color:aqua;
+                border:1px solid black;
+                padding:20px;
+                font-size:30px;
+                text-align:center;
+            }
+
+            .aligncontentprop3 {
+                display:grid;
+                height:400px;
+                align-content:space-around;
+                grid-template-columns:auto auto auto;
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+            }
+            .aligncontentprop3 > div {
+                background-color:aqua;
+                border:1px solid black;
+                padding:20px;
+                font-size:30px;
+                text-align:center;
+            }
+
+            .aligncontentprop4 {
+                display:grid;
+                height:400px;
+                align-content:space-between;
+                grid-template-columns:auto auto auto;
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+            }
+            .aligncontentprop4 > div {
+                background-color:aqua;
+                border:1px solid black;
+                padding:20px;
+                font-size:30px;
+                text-align:center;
+            }
+
+            .aligncontentprop5 {
+                display:grid;
+                height:400px;
+                align-content:start;
+                grid-template-columns:auto auto auto;
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+            }
+            .aligncontentprop5 > div {
+                background-color:aqua;
+                border:1px solid black;
+                padding:20px;
+                font-size:30px;
+                text-align:center;
+            }
+
+            .aligncontentprop6 {
+                display:grid;
+                height:400px;
+                align-content:end;
+                grid-template-columns:auto auto auto;
+                gap:10px;
+                background-color:lightblue;
+                padding:10px;
+            }
+            .aligncontentprop6 > div {
+                background-color:aqua;
+                border:1px solid black;
+                padding:20px;
+                font-size:30px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            CSS Grid Container 
+        </h1>
+
+        <hr>
+        <p>
+            A Grid Container consists of grid items arranged in columns and rows. 
+            <br>
+            <br>
+        
+
+          <div class="grid-container-1">
+            <div class="grid-item-1">1</div>
+            <div class="grid-item-1">2</div>
+            <div class="grid-item-1">3</div>
+            <div class="grid-item-1">4</div>
+            <div class="grid-item-1">5</div>
+            <div class="grid-item-1">6</div>
+            <div class="grid-item-1">7</div>
+            <div class="grid-item-1">8</div>
+          </div>
+
+       </p>
+
+       <hr>
+
+       <h2>
+        Grid Container 
+       </h2>
+
+       <p>
+        To make a HTML element behave as a grid container, you have to set the <span class="edit">display</span> property to <span class="edit">grid</span> or <span class="edit">inline-grid</span>. 
+        <br>
+        Grid containers consist of grid items, placed inside columns and rows. 
+       </p>
+
+       <hr>
+
+       <h2>
+        The grid-template-columns Property 
+       </h2>
+
+       <p>
+        The <span class="edit">grid-template-columns</span> property defines the number of columns in your grid layout, and it can define the width of each column. 
+        <br>
+        The value is a space-separated list, where each value defines the width of the respective column. 
+        <br>
+        If you want your grid layout to contain 4 columns, specify the width of the 4 columns, or "auto" if all columns should have the same width. 
+        <br>
+        Example:- 
+        <br>
+        Make a grid with 4 columns. 
+        <br>
+        <div class="fourcolgrid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+
+        <br>
+        <br>
+
+        <p class="edit1">
+            <strong>Note: </strong>If you have more than 4 items in a 4 columns grid, the grid will automatically add a new row to put the items in. 
+        </p>
+
+        <br>
+        <br>
+
+        The <span class="edit">grid-template-columns</span> property can also be used to specify the size (width) of the columns. 
+        <br>
+        Example:- 
+        <br>
+        Set a size for the 4 columns. 
+        <br>
+        <div class="fourcolgrid1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+       </p>
+
+       <hr>
+
+       <h2>
+        The grid-template-rows Property 
+       </h2>
+
+       <p>
+        The <span class="edit">grid-template-rows</span> property defines the height of each row. 
+        <br>
+        The value is a space-separated list, where each value defines the height of the respective row. 
+        <br>
+        Example:- 
+        <br>
+        <div class="threecolgrid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+       </p>
+
+       <hr>
+       <br>
+       <br>
+       <hr>
+
+       <h2>
+        The justify-content Property 
+       </h2>
+
+       <p>
+        The <span class="edit">justify-content</span> property is used to align the whole grid inside the container. 
+        <br>
+        <p class="edit1">
+            <strong>Note: </strong>The grid's total width has to be less than the container's width for the <span class="edit">justify-content</span> property to have any effect. 
+        </p>
+        <br>
+        Example:- 
+        <br>
+        <div class="justifycontentprop1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "space-evenly" will give the columns equal amount of space between, and around them. 
+        </strong>
+
+        <br>
+        <br>
+
+        Example:- 
+        <br>
+        <div class="justifycontentprop2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "space-around" will give the columns equal amount of space around them. 
+        </strong>
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        <div class="justifycontentprop3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "space-between" will give the columns equal amount of space between them. 
+        </strong>
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        <div class="justifycontentprop4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "center" will align the grid in the middle of the container. 
+        </strong>
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        <div class="justifycontentprop5">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "start" will align the grid at the beginning of the container. 
+        </strong>
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        <div class="justifycontentprop6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "end" will align the grid at the end of the container. 
+        </strong>
+       </p>
+
+       <hr>
+
+       <h2>
+        The align-content Property 
+       </h2>
+
+       <p>
+        The <span class="edit">align-content</span> property is used to <em>vertically</em> align the whole grid inside the container. 
+        <br>
+        <p class="edit1">
+            <strong>Note: </strong>The grid's total height has to be less than the container's height for the <span class="edit">align-content</span> property to have any effect. 
+        </p>
+        <br>
+        Example:- 
+        <br>
+        <div class="aligncontentprop1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "center" will align the rows in the middle of the container. 
+        </strong>
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        <div class="aligncontentprop2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+             The value "space-evenly" will give the rows equal amount of space between, and around them. 
+        </strong>
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        <div class="aligncontentprop3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+           The value "space-around" will give the rows equal amount of space around them.  
+        </strong>
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        <div class="aligncontentprop4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "space-between" will give the rows equal amount of space between them. 
+        </strong>
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        <div class="aligncontentprop5">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "start" will align the rows at the beginning of the container. 
+        </strong>
+        
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        <div class="aligncontentprop6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br>
+        <strong>
+            The value "end" will align the rows at the end of the container. 
+        </strong>
+
+       </p>
+       
+
+
+    </body>
+</html>
