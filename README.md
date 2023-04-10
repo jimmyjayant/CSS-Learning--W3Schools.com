@@ -1,2 +1,5 @@
-# CSS-Learning--W3Schools.com
-The HTML and CSS files which I have learned from CSS Tutorials from W3Schools.com
+<h1>
+CSS-Learning--W3Schools.com
+</h1>
+
+The CSS Tutorials that I learned from W3Schools.com. It is also the repository that I am working on with Git and Github.
