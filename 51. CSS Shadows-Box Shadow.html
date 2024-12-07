@@ -37,6 +37,17 @@
                 background-color:coral;
                 box-shadow:10px 10px 5px 12px lightblue;
             }
+
+            .spreadshadow1 {
+                width:300px;
+                height:100px;
+                padding:15px;
+                background-color:coral;
+                box-shadow:0 0 0 100px lightblue;
+                outline:10px solid blue;
+                margin:150px;
+            }
+
             .insetpara {
                 width:300px;
                 height:100px;
@@ -177,6 +188,18 @@
             <br>
             <div class="spreadshadow">
                 A &lt;div&gt; element with a blurred, lightblue box-shadow, with a spread radius of 12px 
+            </div>
+
+            <br>
+            <br>
+            <strong>
+                The shadow is visually outside the element. It does not occupy any space in the document flow. It is just a purely visual effect. You cannot see the box-shadow or outline as part of the element's box model. It does not affect the element's actual layout and dimensions.
+            </strong>
+            <br>
+            Example:- 
+            <br>
+            <div class="spreadshadow1">
+                A &lt;div&gt; element with just a spread radius and color shadow. And also the outline of the element. 
             </div>
         </p>
 
